@@ -1,0 +1,135 @@
+@import './sizes.scss';
+@import './variables.scss';
+
+.hero_section {
+  color: $color-gray-900;
+  padding-top: px(40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: px(40);
+
+  .text_content {
+    height: 100%;
+    display: flex;
+    width: 100%;
+
+    &_inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: px(40);
+
+      h2 {
+        font-size: px(32);
+        font-family: 'thiccboi-extrabold';
+        font-weight: normal;
+        margin: px(16) 0;
+      }
+
+      p {
+        color: $color-gray-500;
+      }
+
+      .btn_container {
+        display: flex;
+        gap: px(16);
+        margin-top: px(56);
+        width: 100%;
+
+        button {
+          gap: px(16);
+        }
+      }
+    }
+  }
+
+  .img_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 90%;
+      height: 100%;
+    }
+  }
+
+  @media only screen and (min-width: #{$tablet}) {
+    height: 100vh;
+
+    .text_content {
+      width: 45%;
+      padding-right: px(40);
+      display: flex;
+      justify-content: flex-end;
+      &_inner {
+        width: 90%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: #{$tabletMidWidth}) {
+    flex-direction: row;
+    padding: 0;
+
+    .text_content {
+      width: 50%;
+    }
+
+    .img_container {
+      width: 65%;
+      padding: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.benefits {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin: px(40) 0;
+
+  .benefits_inner {
+    gap: px(16);
+    padding: px(48) 0;
+    width: 90%;
+  }
+
+  .benefit {
+    padding: px(24);
+    margin: px(24) 0;
+    border: px(1) solid $color-gray-100;
+
+    .icon {
+      color: $color-primary;
+    }
+
+    h3 {
+      font-size: px(16);
+      color: $color-gray-900;
+      margin: px(24) 0;
+    }
+  }
+
+  @media only screen and (min-width: #{$tabletMidWidth}) {
+    margin: 0;
+
+    .benefits_inner {
+      grid-template-columns: auto auto auto;
+      display: grid;
+      width: 80%;
+    }
+  }
+}

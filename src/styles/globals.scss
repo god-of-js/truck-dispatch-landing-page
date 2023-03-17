@@ -1,0 +1,57 @@
+
+@use 'sass:math';
+@import './variables.scss';
+
+
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap);
+}
+@font-face {
+  font-family: 'Audiowide';
+  src: url(https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap);
+}
+
+@font-face {
+  font-family: 'thiccboi-extrabold';
+  src: url('/fonts/thicccboi/TTF/THICCCBOI-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'thiccboi-medium';
+  src: url('/fonts/thicccboi/TTF/THICCCBOI-Medium.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'thiccboi-medium', sans-serif;
+  font-weight: 400;
+  color: var(--color-gray-900);
+}
+
+body {
+  background: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+@function px($px, $base-size: 16px) {
+  @return math.div($px * 1px, $base-size) * 1rem; 
+}   
