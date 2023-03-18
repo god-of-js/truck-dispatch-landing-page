@@ -10,8 +10,10 @@ export const IntercomProvider = ({ children }) => {
   const router = useRouter();
 
   if (typeof window !== "undefined") {
-    loadIntercom();
-    bootIntercom();
+    window.onload = () => {
+      loadIntercom();
+      bootIntercom();
+    }
   }
 
   useEffect(() => {
