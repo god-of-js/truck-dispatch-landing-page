@@ -10,16 +10,19 @@
 @font-face {
   font-family: 'Audiowide';
   src: url(https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'thiccboi-extrabold';
   src: url('/fonts/thicccboi/TTF/THICCCBOI-ExtraBold.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'thiccboi-medium';
   src: url('/fonts/thicccboi/TTF/THICCCBOI-Medium.ttf');
+  font-display: swap;
 }
 
 * {
