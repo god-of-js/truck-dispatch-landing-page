@@ -53,7 +53,7 @@ export default function FAQList({ isMini }: Props) {
             <UiIcon icon={isActive(item.question) ? 'CaretUp' : 'CaretDown'} />
           </div>
           {isActive(item.question) && (
-            <div
+            <p
               className={styles.answer}
               dangerouslySetInnerHTML={{ __html: item.answer }}
             />

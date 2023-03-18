@@ -13,12 +13,12 @@ export default function TopNav() {
           <Image src="/truck-dispatch-logo-with-text.svg" alt="Truckdispatch logo" width="250" height="250" />
         </Link>
         <div className={styles.actions_container}>
-          <a href="https://www.gettruckdispatch.com/auth/join/agent" className={styles.get_started}>
+          <a href="https://dashboard.gettruckdispatch.com/auth/join/agent" className={styles.get_started}>
             <UiButton size="s" textCasing="capitalize" isSquare>
               Get Started
             </UiButton>
           </a>
-          <a href="https://www.gettruckdispatch.com/auth/join/agent">
+          <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
             <UiButton
               size="s"
               textCasing="capitalize"

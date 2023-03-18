@@ -117,12 +117,12 @@ export default function Home() {
                 experience.
               </p>
               <div className={styles.btn_container}>
-                <a href="https://www.gettruckdispatch.com/auth/join/agent">
+                <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
                   <UiButton>
                     Get Started <UiIcon icon="ArrowUpRight" />
                   </UiButton>
                 </a>
-                <a href="https://www.gettruckdispatch.com/auth/join/agent">
+                <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
                   <UiButton variant="secondary">
                     I am a transporter
                   </UiButton>
@@ -190,12 +190,12 @@ export default function Home() {
                 with TruckDispatch.
               </p>
               <div className={styles.actions_container}>
-                <a href="https://www.gettruckdispatch.com/auth/join/agent">
+                <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
                   <UiButton isSquare>
                     Join Now <UiIcon icon="ArrowUpRight" />
                   </UiButton>
                 </a>
-                <a href="https://www.gettruckdispatch.com/auth/join/agent">
+                <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
                   <UiButton variant="secondary" isSquare>
                     I am an Agent
                   </UiButton>

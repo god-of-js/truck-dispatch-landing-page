@@ -28,7 +28,7 @@
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
+  // margin: 0;
 }
 
 html,
@@ -38,6 +38,7 @@ body {
   font-family: 'thiccboi-medium', sans-serif;
   font-weight: 400;
   color: var(--color-gray-900);
+  margin: 0;
 }
 
 body {
