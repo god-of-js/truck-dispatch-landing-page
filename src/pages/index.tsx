@@ -122,7 +122,7 @@ export default function Home() {
                     Get Started <UiIcon icon="ArrowUpRight" />
                   </UiButton>
                 </a>
-                <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
+                <a href="https://dashboard.gettruckdispatch.com/auth/join/transporter">
                   <UiButton variant="secondary">
                     I am a transporter
                   </UiButton>
@@ -167,7 +167,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <Link href="/auth/join/agent">
+            <Link href="https://dashboard.gettruckdispatch.com/auth/join/agent">
               <UiButton isSquare variant="dark">
                 Get Started <UiIcon icon="ArrowUpRight" />
               </UiButton>
@@ -190,9 +190,9 @@ export default function Home() {
                 with TruckDispatch.
               </p>
               <div className={styles.actions_container}>
-                <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
+                <a href="https://dashboard.gettruckdispatch.com/auth/join/transporter">
                   <UiButton isSquare>
-                    Join Now <UiIcon icon="ArrowUpRight" />
+                    Join As a transporter <UiIcon icon="ArrowUpRight" />
                   </UiButton>
                 </a>
                 <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">

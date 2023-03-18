@@ -18,7 +18,7 @@ export default function TopNav() {
               Get Started
             </UiButton>
           </a>
-          <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
+          <a href="https://dashboard.gettruckdispatch.com/auth/login">
             <UiButton
               size="s"
               textCasing="capitalize"
