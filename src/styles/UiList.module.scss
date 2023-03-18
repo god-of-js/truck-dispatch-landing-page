@@ -1,0 +1,47 @@
+@import './sizes.scss';
+@import './variables.scss';
+
+.ui_list {
+    display: flex;
+    gap: px(28);
+    cursor: pointer;
+    margin: px(32) 0;
+
+    &:first-child {
+        margin: 0 0;
+    }
+
+    .content {
+        .heading {
+            font-size: px(20);
+            margin-top: px(-8);
+            color: white;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: px(16);
+            margin-top: px(16);
+            color: white;
+        }
+    }
+}
+
+.indicator {
+
+    &_inner {
+        display: flex;
+        align-items: center;
+
+        .square{
+            width: px(6);
+            height: px(6);
+            border: 1px solid white;
+        }
+
+        .line {
+            width: px(52);
+            border-top: 1px solid 'transparent';
+        }
+    }
+}

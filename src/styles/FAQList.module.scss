@@ -1,0 +1,33 @@
+@import './sizes.scss';
+@import './variables.scss';
+
+.faqs {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.faq_item {
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-gray-200;
+        cursor: pointer;
+        padding: px(20);
+        font-weight: bold;
+    }
+
+    &:last-child {
+        .header {
+            border-bottom: transparent;
+        }
+    }
+
+    .answer {
+        padding: 0 px(40);
+        font-size: px(16);
+        color: $color-gray-500;
+    }
+}
