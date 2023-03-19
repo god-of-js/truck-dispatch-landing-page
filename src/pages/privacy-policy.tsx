@@ -237,7 +237,7 @@ export default function PrivacyPolicy() {
           <p>
             If you have questions, comments, suggestions, or concerns regarding
             this privacy terms, you can reach out to us at{' '}
-            <a href="mailto:support@truckdispatch.ng">support@truckdispatch.ng</a>{' '}
+            <a href="mailto:support@gettruckdispatch.com">support@gettruckdispatch.com</a>{' '}
             You may also contact our customer care by clicking on the customer
             care chat button at the bottom right
           </p>
