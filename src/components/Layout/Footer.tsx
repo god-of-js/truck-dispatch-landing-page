@@ -33,8 +33,8 @@ export default function Footer() {
             title: 'Contact',
             children: [
                 {
-                    title: 'support@truckdispatch.ng',
-                    link: 'mailto:support@truckdispatch.ng',
+                    title: 'support@gettruckdispatch.com',
+                    link: 'mailto:support@gettruckdispatch.com',
                     isExternal: true,
                 },
             ],
