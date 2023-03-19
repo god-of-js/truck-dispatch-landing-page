@@ -19,7 +19,7 @@ export default function ListComponent({ data }: Props) {
           <div className={styles.indicator}>
             <div className={styles.indicator_inner}>
               <div className={styles.line} style={item.title === active ? { borderTop: `1px solid ${activeColor}`} : {}} />
-              <div className={styles.square} style={item.title === active? {background: activeColor} : {}} />
+              <div className={styles.square} style={item.title === active? {background: 'white'} : {}} />
             </div>
           </div>
           <div className={styles.content}>
