@@ -5,10 +5,15 @@
   padding: px(160) 0;
   width: 90%;
   margin: auto;
+  font-size: px(20);
 
   * {
     font-weight: 400;
     color: $color-gray-600;
+  }
+
+  ul {
+    margin-left: 48px;
   }
 
   h2 {
@@ -36,8 +41,12 @@
     color: #000;
   }
   b {
-    font-weight: 600;
+    font-weight: 900;
     color: #000;
+  }
+
+  p {
+    font-weight: 400 !important;
   }
 
   @media only screen and (min-width: #{$tabletMidWidth}) {
