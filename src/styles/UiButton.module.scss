@@ -6,23 +6,25 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   letter-spacing: 0.4px;
   line-height: 1.45;
   text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-transform: uppercase;
+  text-transform: uppercase ;
+  font-weight: 600;
+  font-family: 'thiccboi-Regular';
+  border-radius: 8px;
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
+  transition: all .2s ease-in;
 
   &.primary {
     background-color: $color-primary;
     color: white;
 
     &:hover {
-      background-color: $color-primary-600;
+      box-shadow: rgb(20, 0, 13) 5px 5px,
     }
   }
   &.danger {

@@ -5,6 +5,9 @@ import { Icons } from '@/components/ui/UiIcon';
 import styles from '@/styles/Home.module.scss'
 import TruckImage from '../assets/truck-image.jpeg';
 import AgentWithTrailer from '../assets/agent-with-trailer.jpeg';
+import TruckImgRounded from '../assets/Truck-img-rounded.svg';
+import HeroTruck from '../assets/Hero-Truck.svg'
+import verifiedCheck from '../assets/verified-check.svg'
 
 import Link from 'next/link';
 import ListComponent from '@/components/ui/UiList';
@@ -102,37 +105,50 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <section className={styles.hero_section}>
-          <div className={styles.text_content}>
-            <div className={styles.text_content_inner}>
+        <section id='home' className={styles.hero_section}>
+          <div className={styles.hero_section_inner}>
+            <div className={styles.hero_text}>
               <h2>
-                The fastest, secure and most sustainable solution for road freight
-                transport
+                Transform <Image src={TruckImgRounded} alt='truck image'/> your Road Freight Transport Experience
               </h2>
-              <p>
-                Transport Management. Vetted and verified transporters. Goods
-                Security. Goods Insurance. The best customer experience. Thanks to
-                its powerful network of professional transporters, Truckdispatch
-                makes road freight transport a swift, reliable, and sustainable
-                experience.
-              </p>
-              <div className={styles.btn_container}>
+            </div>
+            <div className={styles.hero_subtitle}>
+              <div>
+                <p>
+                  With vetted transporters, goods security, insurance, we promise a swift, reliable, and sustainable road freight transport.
+                </p>
                 <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
                   <UiButton>
-                    Get Started <UiIcon icon="ArrowUpRight" />
-                  </UiButton>
-                </a>
-                <a href="https://dashboard.gettruckdispatch.com/auth/join/transporter">
-                  <UiButton variant="secondary">
-                    I am a transporter
+                    Get Started
                   </UiButton>
                 </a>
               </div>
             </div>
+            <div className={styles.achievements}>
+              <div>
+                <h3>40 +</h3>
+                <p>BUSINESS EXPERIENCE</p>
+              </div>
+              <div>
+                <h3>500 +</h3>
+                <p> TRUCKS & VANS</p>
+              </div>
+              <div>
+                <h3>50 +</h3>
+                <p>TRANSPORTERS NETWORK</p>
+              </div>
+              <div className={styles.verified_container}>
+                <Image src={verifiedCheck} alt='verified check mark'/>
+              </div>
+            </div>
+            <div className={styles.highway_images}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia enim quo obcaecati ab doloremque cumque maiores aliquid facere numquam fugiat inventore dolorum, praesentium fugit dignissimos. Et, dolores, illum minus accusamus alias vero, consequuntur impedit a maxime commodi at ipsam autem incidunt. Voluptate numquam quos ipsum a eos ad ab!
+              <div className={styles.truck_image}>
+                <Image src={HeroTruck} alt='truck'/>
+              </div>
+            </div>
           </div>
-          <div className={styles.img_container}>
-            <Image src={TruckImage} alt="Truckdispatch hero" layout="responsive" objectFit="contain" />
-          </div>
+          
         </section>
         <section className={styles.benefits}>
           <div className={styles.benefits_inner}>

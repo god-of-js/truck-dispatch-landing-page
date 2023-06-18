@@ -9,23 +9,23 @@ export default function TopNav() {
   return (
     <nav className={styles.top_nav}>
       <div className={styles.top_nav_inner}>
-        <Link href="/">
-          <Image src="/truck-dispatch-logo-with-text.svg" alt="Truckdispatch logo" width="250" height="250" />
+        <Link href="/" className={styles.logo_container}>
+          <span>Truck <br /> Dispatch</span>
         </Link>
+        <div className={styles.nav_links}>
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
         <div className={styles.actions_container}>
           <a href="https://dashboard.gettruckdispatch.com/auth/join/agent" className={styles.get_started}>
-            <UiButton size="s" textCasing="capitalize" isSquare>
+            <UiButton>
               Get Started
-            </UiButton>
-          </a>
-          <a href="https://dashboard.gettruckdispatch.com/auth/login">
-            <UiButton
-              size="s"
-              textCasing="capitalize"
-              isSquare
-              variant="secondary"
-            >
-              Login
             </UiButton>
           </a>
         </div>

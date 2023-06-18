@@ -51,7 +51,7 @@ export default function UiButton({
 
   function getSize() {
     const sizeFiller = (padding: number, height: number): Record<string, string> => ({
-      padding: `${padding}px`,
+      padding: ` 16px ${padding}px`,
       height: `${height}px`
     })
 
@@ -63,7 +63,7 @@ export default function UiButton({
       return sizeFiller(16, 52)
     }
 
-    return sizeFiller(16, 44)
+    return sizeFiller(46, 46)
 
   }
 
