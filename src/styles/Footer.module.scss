@@ -16,46 +16,62 @@
       justify-content: space-between;
       align-items: center;
       color: black;
+      border-bottom: 1px solid $color-gray-400;
 
       h3 {
         color: $color-gray-900;
       }
     }
-
-    .logo_container {
-      width: 25%;
-      img {
-        margin: px(-40) px(-40) 0;
-      }
-    }
-    .list_container {
-      color: black;
-      width: 75%;
-      display: grid;
-      grid-template-columns: auto;
-      ul {
-        list-style: none;
-
-        .list_title {
-          font-size: px(16);
-          font-weight: bold;
+    .logo_links_container{
+      border-bottom: 1px solid $color-gray-400;
+      .logo_container {
+        h3{
+          font-size: 1rem;
+          margin-bottom: 1.8rem;
         }
 
-        li {
-          margin: px(12) 0;
-          a {
-            color: $color-gray-500;
-            font-weight: 400;
+        p {
+          color: $color-gray-600;
+          font-size: 0.8rem;
+          font-weight: 400;
+          font-family: 'thiccboi-Regular';
+          line-height: 1.375rem;
+        }
+    
+      }
+      .list_container {
+        color: black;
+        width: 75%;
+        display: grid;
+        grid-template-columns: auto;
+        ul {
+          list-style: none;
+  
+          .list_title {
+            font-size: px(16);
+            font-weight: bold;
+            margin-bottom: 1.31rem;
+          }
+  
+          li {
+            a {
+              line-height: 2.5rem;
+
+              color: $color-gray-900;
+              font-size: .875rem;
+              font-weight: 400;
+              font-family: 'thiccboi-Regular';
+            }
           }
         }
       }
     }
+    
 
     @media only screen and (min-width: #{$mobile}) {
       // width: 80%;
       flex-direction: row;
       .list_container {
-        padding-top: px(32);
         display: grid;
         grid-template-columns: auto auto;
       }
@@ -64,16 +80,15 @@
       // width: 80%;
       flex-direction: row;
       .list_container {
-        padding-top: px(32);
         display: grid;
         grid-template-columns: auto auto auto;
+        column-gap: 3rem;
       }
     }
 
     @media only screen and (min-width: #{$tabletLargeWidth}) {
       .footer_cta {
         padding-bottom: 4rem;
-        border-bottom: 1px solid $color-gray-400;
         h3 {
           max-width:511px;
           font-size: 2rem;
@@ -81,11 +96,34 @@
         }
       }
 
-      .list_container {
-        padding-top: px(32);
-        display: grid;
-        grid-template-columns: auto auto auto;
+      .logo_links_container {
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        gap: 7rem;
+        padding: 3.75rem 0;
+
+        
+
+
+        .logo_container{
+          width: 35%;
+          p{
+            margin-bottom: 1.875rem;
+          }
+          .social_links{
+            display: flex;
+            align-items: center;
+            gap: 2.1rem;
+          }
+        }
+        .list_container {
+          width: 45%;
+          display: grid;
+          grid-template-columns: auto auto auto;
+        }
       }
+
     }
   }
 }

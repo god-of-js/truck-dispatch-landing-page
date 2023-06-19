@@ -2,41 +2,70 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from '@/styles/Footer.module.scss';
 import UiButton from "../ui/UiButton";
+import twitter from '../../assets/twitter (2).svg';
+import github from '../../assets/github.svg';
+import instagram from '../../assets/ingstagram.svg';
+import facebook from '../../assets/facebook (2).svg'
 
 export default function Footer() {
     const lists = [
         {
-            title: 'TruckDispatch',
+            title: 'Company',
             children: [
                 {
-                    title: 'Frequently Asked Questions',
-                    link: '/faqs',
+                    title: 'About',
+                    link: '',
                     isExternal: false,
                 },
+                {
+                  title: 'Contact',
+                  link: '',
+                  isExternal: false,
+              },
+              {
+                title: 'Services',
+                link: '',
+                isExternal: false,
+            },
             ],
         },
         {
-            title: 'Legal',
+            title: 'Help',
             children: [
                 {
-                    title: 'Privacy Policy',
-                    link: '/privacy-policy',
+                    title: 'Customer Support',
+                    link: '',
                     isExternal: false,
                 },
                 {
-                    title: 'Terms and Conditions',
+                    title: 'Terms & Conditions',
                     link: '/terms-and-conditions',
                     isExternal: false,
                 },
+                {
+                  title: 'Privacy Policy',
+                  link: '',
+                  isExternal: false,
+              },
             ],
         },
         {
-            title: 'Contact',
+            title: 'Resources',
             children: [
                 {
-                    title: 'support@gettruckdispatch.com',
-                    link: 'mailto:support@gettruckdispatch.com',
+                    title: 'Press Kitl ',
+                    link: '',
                     isExternal: true,
+                },
+                {
+                  title: 'How to-Blog',
+                  link: '',
+                  isExternal: false,
+                },
+                {
+                  title: 'Youtube Playlist',
+                  link: '',
+                  isExternal: false,
                 },
             ],
         },
@@ -54,11 +83,20 @@ export default function Footer() {
                   </UiButton>
                 </a>
 					</div>
-					
+          <div className={styles.logo_links_container}>
             <div className={styles.logo_container}>
                 <Link href="/">
-                    <Image src="/truck-dispatch-logo-with-text.svg" alt="Truckdispatch logo" width="250" height="250" />
+                  <h3>TruckDispatch</h3>
                 </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum aliquet accumsan porta lectus ridiculus in mattis. Netus sodales in volutpat ullamcorper amet adipiscing fermentum.
+                </p>
+                <div className={styles.social_links}>
+                  <a href=""><Image src={twitter} alt="twitter logo"/></a>
+                  <a href=""><Image src={facebook} alt="facebook logo"/></a>
+                  <a href=""><Image src={instagram} alt="instagram logo"/></a>
+                  <a href=""><Image src={github} alt="github logo"/></a>
+                </div>
             </div>
             <div className={styles.list_container}>
                 {lists.map((item, index) => (
@@ -78,6 +116,8 @@ export default function Footer() {
                     </ul>
                 ))}
             </div>
+          </div>
+					
         </div>
     </footer>)
 }
