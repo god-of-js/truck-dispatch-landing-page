@@ -2,16 +2,25 @@
 @import './variables.scss';
 
 .footer {
-    background-color: $color-gray-900;
+  background-color: $color-gray-200;
   display: flex;
   justify-content: center;
-
+  padding: 5rem 0;
   .footer_inner {
-    width: 90%;
+    width: 83%;
+    max-width: 1400px;
     color: $color-gray-100;
     min-height: px(100);
-    display: flex;
-    flex-direction: column;
+    .footer_cta{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: black;
+
+      h3 {
+        color: $color-gray-900;
+      }
+    }
 
     .logo_container {
       width: 25%;
@@ -20,6 +29,7 @@
       }
     }
     .list_container {
+      color: black;
       width: 75%;
       display: grid;
       grid-template-columns: auto;
@@ -42,7 +52,7 @@
     }
 
     @media only screen and (min-width: #{$mobile}) {
-      width: 80%;
+      // width: 80%;
       flex-direction: row;
       .list_container {
         padding-top: px(32);
@@ -51,8 +61,26 @@
       }
     }
     @media only screen and (min-width: #{$tabletMidWidth}) {
-      width: 80%;
+      // width: 80%;
       flex-direction: row;
+      .list_container {
+        padding-top: px(32);
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+    }
+
+    @media only screen and (min-width: #{$tabletLargeWidth}) {
+      .footer_cta {
+        padding-bottom: 4rem;
+        border-bottom: 1px solid $color-gray-400;
+        h3 {
+          max-width:511px;
+          font-size: 2rem;
+          line-height: 2.8rem;
+        }
+      }
+
       .list_container {
         padding-top: px(32);
         display: grid;

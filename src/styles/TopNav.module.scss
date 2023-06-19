@@ -24,6 +24,9 @@
         align-items: center;        
         
 				.logo_container{
+          display: flex;
+          align-items: center;
+          gap: .2rem;
 					span {
 						font-weight: bold;
             font-size: 1.43rem;

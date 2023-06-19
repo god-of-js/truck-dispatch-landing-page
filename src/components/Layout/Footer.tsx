@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from '@/styles/Footer.module.scss';
+import UiButton from "../ui/UiButton";
 
 export default function Footer() {
     const lists = [
@@ -41,8 +42,19 @@ export default function Footer() {
         },
     ];
 
-    return (<footer className={styles.footer}>
+    return (
+		<footer className={styles.footer}>
         <div className={styles.footer_inner}>
+					
+			    <div className={styles.footer_cta}>
+            <h3>Let’s Transform your Road Freight Transport Experience</h3>
+						<a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
+                  <UiButton>
+                    Get Started
+                  </UiButton>
+                </a>
+					</div>
+					
             <div className={styles.logo_container}>
                 <Link href="/">
                     <Image src="/truck-dispatch-logo-with-text.svg" alt="Truckdispatch logo" width="250" height="250" />

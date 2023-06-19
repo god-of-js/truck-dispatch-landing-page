@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/TopNav.module.scss'
+import logo from '../../assets/logo (1).svg'
 
 import UiButton from '../ui/UiButton';
 
@@ -10,6 +11,7 @@ export default function TopNav() {
     <nav className={styles.top_nav}>
       <div className={styles.top_nav_inner}>
         <Link href="/" className={styles.logo_container}>
+          <Image src={logo} alt='truck dispatch logo'/>
           <span>Truck <br /> Dispatch</span>
         </Link>
         <div className={styles.nav_links}>

@@ -3,11 +3,11 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { Icons } from '@/components/ui/UiIcon';
 import styles from '@/styles/Home.module.scss'
-import TruckImage from '../assets/truck-image.jpeg';
 import AgentWithTrailer from '../assets/agent-with-trailer.jpeg';
 import TruckImgRounded from '../assets/Truck-img-rounded.svg';
-import HeroTruck from '../assets/Hero-Truck.svg'
+import HeroTruck from '../assets/hero-truck-full.svg'
 import verifiedCheck from '../assets/verified-check.svg'
+import RoadImage from '../assets/Road.svg'
 
 import Link from 'next/link';
 import ListComponent from '@/components/ui/UiList';
@@ -124,29 +124,35 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className={styles.achievements}>
-              <div>
-                <h3>40 +</h3>
-                <p>BUSINESS EXPERIENCE</p>
+            <div className={styles.achievements_highway_images_container}>
+              <div className={styles.achievements}>
+                <div>
+                  <h3>40 +</h3>
+                  <p>BUSINESS EXPERIENCE</p>
+                </div>
+                <div>
+                  <h3>500 +</h3>
+                  <p> TRUCKS & VANS</p>
+                </div>
+                <div>
+                  <h3>50 +</h3>
+                  <p>TRANSPORTERS NETWORK</p>
+                </div>
+                <div className={styles.verified_container}>
+                  <Image src={verifiedCheck} alt='verified check mark'/>
+                </div>
               </div>
-              <div>
-                <h3>500 +</h3>
-                <p> TRUCKS & VANS</p>
-              </div>
-              <div>
-                <h3>50 +</h3>
-                <p>TRANSPORTERS NETWORK</p>
-              </div>
-              <div className={styles.verified_container}>
-                <Image src={verifiedCheck} alt='verified check mark'/>
+              <div className={styles.highway_images}>
+                <div className={styles.road_image}>
+                  <Image  src={RoadImage} alt='image of a road'/>
+                </div>
+                <div className={styles.truck_image}>
+                  <Image src={HeroTruck} alt='truck'/>
+                </div>
               </div>
             </div>
-            <div className={styles.highway_images}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia enim quo obcaecati ab doloremque cumque maiores aliquid facere numquam fugiat inventore dolorum, praesentium fugit dignissimos. Et, dolores, illum minus accusamus alias vero, consequuntur impedit a maxime commodi at ipsam autem incidunt. Voluptate numquam quos ipsum a eos ad ab!
-              <div className={styles.truck_image}>
-                <Image src={HeroTruck} alt='truck'/>
-              </div>
-            </div>
+            
+            
           </div>
           
         </section>
