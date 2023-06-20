@@ -70,7 +70,7 @@ export default function Footer() {
             ],
         },
     ];
-
+    const year = new Date().getFullYear();
     return (
 		<footer className={styles.footer}>
         <div className={styles.footer_inner}>
@@ -117,6 +117,9 @@ export default function Footer() {
                 ))}
             </div>
           </div>
+          <p className={styles.copyright}>
+            COPYRIGHT © {year}. TRUCKDISPATCH. ALL RIGHTS RESERVED
+          </p>
 					
         </div>
     </footer>)
