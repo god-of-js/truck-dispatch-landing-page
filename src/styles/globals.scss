@@ -32,8 +32,19 @@
 }
 
 @font-face {
+  font-family: 'thiccboi-Bold';
+  src: url('/fonts/thicccboi/TTF/THICCCBOI-Bold.ttf');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'thiccboi-Regular';
   src: url('/fonts/thicccboi/TTF/THICCCBOI-Regular.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'thiccboi-Thin';
+  src: url('/fonts/thicccboi/TTF/THICCCBOI-Thin.ttf');
   font-display: swap;
 }
 

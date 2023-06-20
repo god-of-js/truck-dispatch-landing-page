@@ -233,11 +233,12 @@ export default function Home() {
 
           <div className={styles.faqs_inner}>
             <div className={styles.go_to_faqs}>
-              <h3>DO YOU HAVE ANY QUESTIONS ABOUT TRUCKDISPATCH?</h3>
+              <h3>Do you have any questions about TruckDispatch?</h3>
+              <p>We have answered some here, but if you want more, go to our full FAQ page</p>
               <div className={styles.action_btns}>
                 <Link href="/faqs">
                   <UiButton isSquare>
-                    Go To FAQs <UiIcon icon="ArrowUpRight" />
+                    Go To FAQs 
                   </UiButton>
                 </Link>
               </div>

@@ -44,7 +44,7 @@ export default function FAQList({ isMini }: Props) {
         <li key={index} className={styles.faq_item}>
           <div
             className={styles.header}
-            style={isActive(item.question) ? {borderBottom: 'transparent'} : {}}
+            style={isActive(item.question) ? {color: '#15131B'} : {}}
             onClick={() =>
               setActive(isActive(item.question) ? '' : item.question)
             }
