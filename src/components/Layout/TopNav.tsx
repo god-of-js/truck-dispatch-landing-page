@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '@/styles/TopNav.module.scss'
+import styles from './TopNav.module.scss'
 import logo from '../../assets/logo (1).svg'
 
 import UiButton from '../ui/UiButton';

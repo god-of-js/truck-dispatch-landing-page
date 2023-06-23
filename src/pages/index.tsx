@@ -2,15 +2,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { Icons } from '@/components/ui/UiIcon';
-import styles from '@/styles/Home.module.scss'
-import AgentWithTrailer from '../assets/agent-with-trailer.jpeg';
+import styles from './index.module.scss'
 import TruckImgRounded from '../assets/Truck-img-rounded.svg';
 import HeroTruck from '../assets/hero-truck-full.svg'
 import verifiedCheck from '../assets/verified-check.svg'
 import RoadImage from '../assets/Road.svg'
-
-import Link from 'next/link';
-import ListComponent from '@/components/ui/UiList';
 
 const UiIcon = dynamic(() => import('@/components/ui/UiIcon'));
 const UiButton = dynamic(() => import('@/components/ui/UiButton'));
@@ -155,98 +151,6 @@ export default function Home() {
             
           </div>
           
-        </section>
-        <section className={styles.benefits}>
-          <div className={styles.benefits_inner}>
-            {benefits.map((benefit, index) => (
-              <div key={index} className={styles.benefit}>
-                <div className={styles.icon}>
-                  <UiIcon icon={benefit.icon} size="40" />
-                </div>
-                <h3>{benefit.title}</h3>
-                <p>{benefit.subtitle}</p>
-              </div>
-            ))}
-
-          </div>
-        </section>
-        <section className={styles.personal_interaction}>
-          <div className={styles.text_content}>
-            <h3>Logistics is a {"people's"} business</h3>
-            <p>We are convinced the best value is created by personal touch.</p>
-            <ul>
-              {personalInteractionData.map((item, index) => (
-                <li key={index}>
-                  <div className={styles.icon_container}>
-                    <UiIcon icon="Checks" size="24" />
-                  </div>
-                  <div className={styles.list_text_content}>
-                    <div className={styles.list_text_content__title}>{item.title}</div>
-                    <div className={styles.list_text_content__subtitle}>
-                      {item.subtitle}
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <Link href="https://dashboard.gettruckdispatch.com/auth/join/agent">
-              <UiButton isSquare variant="dark">
-                Get Started <UiIcon icon="ArrowUpRight" />
-              </UiButton>
-            </Link>
-          </div>
-          <div className={styles.img_container}>
-            <Image src={AgentWithTrailer} alt="Truck dispatch agent" />
-          </div>
-        </section>
-        <section className={styles.become_our_partner}>
-          <div className={styles.become_our_partner_inner}>
-            <div className={styles.main_content}>
-              <h3>
-                WE IMPROVE THE WORKING EXPERIENCE OF MORE THAN 200 TRANSPORTERS
-                REGISTERED IN OUR NETWORK
-              </h3>
-              <p>
-                The quality of our road freight service would not be possible
-                without the professionalism of the transporters that collaborate
-                with TruckDispatch.
-              </p>
-              <div className={styles.actions_container}>
-                <a href="https://dashboard.gettruckdispatch.com/auth/join/transporter">
-                  <UiButton isSquare>
-                    Join As a transporter <UiIcon icon="ArrowUpRight" />
-                  </UiButton>
-                </a>
-                <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
-                  <UiButton variant="secondary" isSquare>
-                    I am an Agent
-                  </UiButton>
-                </a>
-              </div>
-            </div>
-            <div className={styles.list_content}>
-              <ListComponent data={becomeParterData} />
-            </div>
-          </div>
-        </section>
-        <section className={styles.faqs}>
-
-          <div className={styles.faqs_inner}>
-            <div className={styles.go_to_faqs}>
-              <h3>Do you have any questions about TruckDispatch?</h3>
-              <p>We have answered some here, but if you want more, go to our full FAQ page</p>
-              <div className={styles.action_btns}>
-                <Link href="/faqs">
-                  <UiButton isSquare>
-                    Go To FAQs 
-                  </UiButton>
-                </Link>
-              </div>
-            </div>
-            <div className={styles.faq_list}>
-              <FAQList isMini />
-            </div>
-          </div>
         </section>
       </main>
     </>

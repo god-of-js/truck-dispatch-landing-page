@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '@/styles/UiList.module.scss';
+import styles from './UiList.module.scss';
 
 interface Data {
   title: string;

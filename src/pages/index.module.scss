@@ -1,0 +1,104 @@
+@import '../styles/sizes.scss';
+@import '../styles/variables.scss';
+
+.hero_section {
+  padding-top: 12rem;
+  &_inner{
+    margin: 0 auto;
+    
+    @media only screen and (min-width: #{$tabletMidWidth}) {
+      
+    }
+    @media only screen and (min-width: #{$tablet}) {
+
+    }
+    @media only screen and (min-width: #{$tabletLargeWidth}) {
+      width: 83%;
+      max-width: 1400px;
+      .hero_text{
+        h2 {
+          font-size: 6rem;
+          font-weight: 700;
+          line-height: 6.25rem;
+          max-width: 1119px;
+        }
+      }
+      .hero_subtitle{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -2rem;
+        margin-bottom: 6rem;
+        max-width: 1200px;
+        p {
+          max-width: 497px;
+          font-size: 1.5rem;
+          line-height: 2.1rem;
+          color: $color-gray-800;
+          font-family: 'thiccboi-Regular';
+          font-weight: 400;
+          margin-bottom: 1rem;
+        }
+      }
+      .achievements_highway_images_container{
+        position: relative;
+        .achievements {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: .2rem;
+          border: 1px solid $color-gray-400;
+          background-color: $color-gray-200;
+          padding: 2rem;
+          border-radius: 0.25rem;
+  
+  
+          h3 {
+            font-size: 2rem;
+            line-height: 2.75rem;
+          }
+  
+          p {
+            font-size: 1rem;
+            font-weight: 400;
+            font-family:'thiccboi-Regular' ;
+            line-height: 1.5rem;
+            width: 90%;
+            color: $color-gray-800;
+          }
+          .verified_container{
+            background-color: $color-primary-200;
+            padding: 1rem;
+            border-radius: 8px;
+          }
+        }
+  
+        .highway_images{
+          margin-top: 5rem;
+  
+          .truck_image{
+            position: absolute;
+            bottom: 0;
+            left: -45%;
+            bottom: -80px;
+          }
+  
+          .road_image{
+            position: absolute;
+            bottom: -100px;
+            left: -550px;
+            width: 2500px;
+            margin: 0 auto;
+            
+            img {
+              width: 100%;
+              min-width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  
+}

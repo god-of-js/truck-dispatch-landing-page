@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from '@/styles/Footer.module.scss';
+import styles from './Footer.module.scss';
 import UiButton from "../ui/UiButton";
 import twitter from '../../assets/twitter (2).svg';
 import github from '../../assets/github.svg';

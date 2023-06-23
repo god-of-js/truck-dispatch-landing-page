@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/UiButton.module.scss';
+import styles from './UiButton.module.scss';
 
 const textTransformations = ['uppercase', 'lowercase', 'capitalize'];
 interface Props {

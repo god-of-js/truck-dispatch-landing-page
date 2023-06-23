@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '@/styles/FAQList.module.scss';
+import styles from './FAQList.module.scss';
 import UiIcon from '../ui/UiIcon';
 interface Props {
   isMini?: boolean;
