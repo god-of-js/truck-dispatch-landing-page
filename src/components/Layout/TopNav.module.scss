@@ -21,6 +21,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: px(16);
+    padding-right: px(16);
 
     .logo_container {
       display: flex;
@@ -49,12 +51,6 @@
       }
     }
 
-    .actions_container {
-      .get_started {
-        display: none;
-      }
-    }
-
     @media only screen and (min-width: #{$mobileSmall}) {
       .actions_container {
         display: flex;
@@ -67,9 +63,13 @@
       }
     }
 
-    @media only screen and (min-width: #{$tabletLargeWidth}) {
+    @media screen and (min-width: #{$laptopWidth}) {
+      width: 80%;
+      padding: px(0);
+    }
+
+    @media screen and (min-width: #{$desktopWidth}) {
       width: 70%;
-      max-width: 1400px;
     }
   }
 }

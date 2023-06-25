@@ -90,7 +90,13 @@
 .client-user-type-group {
   border-bottom: px(1) solid $color-gray-400;
 }
-
+.service-user-type-group {
+  header {
+    h2 {
+      padding-bottom: 0 !important;
+    }
+  }
+}
 .client-user-type-group,
 .service-user-type-group {
   header {
