@@ -130,15 +130,11 @@
       background: $color-gray-200;
       border-radius: px(102);
       display: flex;
-      gap: px(24);
-      overflow: hidden;
+      gap: px(16);
 
       .avatar {
+        border: px(8) solid rgba(255, 255, 255, 0.50);
         border-radius: px(95);
-        border: 8px solid rgba(255, 255, 255, 0.50);
-        width: px(95);
-        height: px(95);
-        overflow: hidden;
       }
     }
 
@@ -181,6 +177,66 @@
   &__inner {
     display: grid;
     gap: px(64);
+
+    .peoples-business-hero-section {
+      display: grid;
+      gap: px(28);
+
+      h3 {
+        font-size: px(24);
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: px(-0.48);
+      }
+
+      button {
+        margin-top: px(12);
+      }
+    }
+    .people-business-list {
+      width: 100%;
+
+      .list-item {
+        border-bottom: px(1) solid $color-gray-400;
+        display: flex;
+        gap: px(20);
+        padding: px(24) 0;
+
+        &:last-child {
+          border-bottom: transparent;
+        }
+
+        h4 {
+          color: $color-neutral-black;
+          font-weight: 600;
+          line-height: 140%;
+          font-size: px(20);
+          margin-bottom: px(8);
+        }
+
+        p {
+          color: $color-gray-800;
+          line-height: px(24);
+          font-size: px(16);
+        }
+      }
+
+      .check-container {
+        width: px(34);
+        height: px(34);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-primary-20;
+        padding: px(10);
+        border-radius: px(24);
+
+        svg {
+          width: px(30);
+          height: px(30);
+        }
+      }
+    }
   }
 }
 
@@ -271,17 +327,9 @@
         background: $color-gray-200;
         border-radius: px(102);
         display: flex;
-        gap: px(24);
+        gap: px(16);
         overflow: hidden;
         width: 50%;
-
-        .avatar {
-          border-radius: px(95);
-          border: 8px solid rgba(255, 255, 255, 0.50);
-          width: px(95);
-          height: px(95);
-          overflow: hidden;
-        }
       }
 
       &__details {
@@ -342,6 +390,7 @@
           line-height: 140%;
           letter-spacing: px(-0.64);
         }
+
         button {
           margin-top: px(12);
         }

@@ -30,7 +30,6 @@ import {
   UsersThree,
   X,
 } from 'phosphor-react';
-
 // These icons should be arranged alphabetically for easy sorting
 const icons = {
   ArrowLeft: <ArrowLeft />,
