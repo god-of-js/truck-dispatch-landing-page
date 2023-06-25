@@ -26,7 +26,7 @@ interface Props {
   onClick?: () => void;
 }
 
-type Sizes = 'large' | 'md' | 's';
+type Sizes = 'large' | 'md' | 's' | 'text';
 
 export default function UiButton({
   children,
@@ -39,7 +39,7 @@ export default function UiButton({
   size = 'md',
   isFullWidth = false,
 }: Props) {
-  function generateStyleBasedOnprops(): Record<string, string> {
+  function generateStyleBasedOnprops(): Record<string, string | number> {
     const styledObj = getSize();
 
     styledObj.opacity = disabled || loading ? '0.6' : '1';
@@ -55,6 +55,16 @@ export default function UiButton({
       height: `${height}px`
     })
 
+    const textStyling: Record<string, string | number> = {
+        fontSize: '12px',
+        fontWeight: 600,
+        lineHeight: '12px',
+        letterSpacing: '0.24px'
+      }
+
+    if (size === 'text') {
+      return textStyling;
+    }
     if (size === 's') {
       return sizeFiller(16, 36)
     }

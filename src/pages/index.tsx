@@ -6,24 +6,26 @@ import TruckImgRounded from '../assets/Truck-img-rounded.svg';
 import HeroTruck from '../assets/hero-truck-full.svg'
 import verifiedCheck from '../assets/verified-check.svg'
 import RoadImage from '../assets/Road.svg'
+import Shipper1 from '../assets/shipper-1.jpeg'
+import Shipper2 from '../assets/shipper-2.jpeg'
+import Shipper3 from '../assets/shipper-3.jpeg'
+import Shipper4 from '../assets/shipper-4.jpeg'
+import Shipper5 from '../assets/shipper-5.jpeg'
+import Van from '../assets/van.jpeg'
+
 
 const UiButton = dynamic(() => import('@/components/ui/UiButton'));
+const UiAvatar = dynamic(() => import('@/components/ui/UiAvatar'));
+const UiIcon = dynamic(() => import('@/components/ui/UiIcon'));
 
 export default function Home() {
-  const achievements = [
-    {
-      title: 'BUSINESS EXPERIENCE ',
-      stat: '40 +'
-    },
-    {
-      title: 'TRUCKS & VANS ',
-      stat: '1000 +'
-    },
-    {
-      title: 'TRANSPORTER NETWORK',
-      stat: '300 + '
-    },
-  ]
+  const shipperAvatars = [
+    Shipper1,
+    Shipper2,
+    Shipper3,
+    Shipper4,
+    Shipper5
+  ];
 
   return (
     <>
@@ -37,13 +39,13 @@ export default function Home() {
         <section id='home' className={styles['hero-section']}>
           <div className={styles['hero-section__inner']}>
             <div className={styles["page-width"]}>
-              <h2>
+              <h1>
                 Transform <Image src={TruckImgRounded} alt='truck image' /> your Road Freight Transport Experience
-              </h2>
+              </h1>
               <div className={styles['hero-subtitle-container']}>
                 <div className={styles['hero-subtitle-container__inner']}>
                   <p>
-                    With vetted transporters, goods security, insurance, we promise a swift, reliable, and sustainable road freight transport.
+                    With vetted professional transporters, goods security, insurance, we promise a swift, reliable, and sustainable road freight transport.
                   </p>
                   <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
                     <UiButton>
@@ -57,27 +59,96 @@ export default function Home() {
             <div className={`${styles.achievements} ${styles['page-width']}`}>
               <div className={styles["achievements__inner"]}>
 
-              <div className={styles.achievement}>
-                <h3>40 +</h3>
-                <p>YEARS OF <br />  EXPERIENCE </p>
-              </div>
-              <div className={styles.achievement}>
-                <h3>1000 +</h3>
-                <p>TRUCKS &  <br />VANS </p>
-              </div>
-              <div className={styles.achievement}>
-                <h3>300 + </h3>
-                <p>TRANSPORTER <br /> NETWORK</p>
-              </div>
-              <div className={styles['verified-container']}>
-                <Image src={verifiedCheck} alt='verified check mark' />
-              </div>
+                <div className={styles.achievement}>
+                  <h3>40 +</h3>
+                  <p>YEARS OF <br />  EXPERIENCE </p>
+                </div>
+                <div className={styles.achievement}>
+                  <h3>1000 +</h3>
+                  <p>TRUCKS &  <br />VANS </p>
+                </div>
+                <div className={styles.achievement}>
+                  <h3>300 + </h3>
+                  <p>TRANSPORTER <br /> NETWORK</p>
+                </div>
+                <div className={styles['verified-container']}>
+                  <Image src={verifiedCheck} alt='verified check mark' />
+                </div>
               </div>
             </div>
 
             <div className={styles['highway-images']}>
               <Image src={HeroTruck} className={styles['truck-image']} alt='truck' />
               <Image src={RoadImage} className={styles['road-image']} alt='image of a road' />
+            </div>
+          </div>
+        </section>
+        <section id="client-user-type-group" className={`${styles['page-width']} ${styles['client-user-type-group']}`}>
+          <header>
+            <h2>
+              Transport solutions for Businesses & Individuals to  <span className={styles.highlight}>Solve</span> any cargo transport problems
+            </h2>
+            <p className={styles['with-border-top']}>Whether you’re an individual or a company, we have solutions available for you. See the category that best fits you.</p>
+          </header>
+          <div className={styles['user-type']}>
+            <div className={styles['user-type__avatars']}>
+              {shipperAvatars.map((avatar, index) => (<div key={index} className={styles.avatar}><UiAvatar avatar={avatar} /></div>))}
+            </div>
+            <div className={styles['user-type__details']}>
+              <h3>Shippers / Agents</h3>
+              <p>Shippers/Agents are individuals who directly or indirectly have  cargo in need of Transport</p>
+              <a href="">
+                <UiButton variant="primary-text" size="text"> <span>CONTINUE AS A SHIPPER</span><UiIcon icon="ArrowRight" /></UiButton>
+              </a>
+            </div>
+          </div>
+          <div className={`${styles['user-type']} ${styles['invert']}`}>
+            <div className={styles['user-type__avatars']}>
+              {shipperAvatars.map((avatar, index) => (<div key={index} className={styles.avatar}><UiAvatar avatar={avatar} /></div>))}
+            </div>
+            <div className={styles['user-type__details']}>
+              <h3>Companies</h3>
+              <p>These are institutions or organizations of any size who directly or indirectly have  cargo in need of Transport.</p>
+              <a href="">
+                <UiButton variant="primary-text" size="text"> <span>CONTINUE AS A COMPANY</span><UiIcon icon="ArrowRight" /></UiButton>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="service-user-type-group" className={`${styles['page-width']} ${styles['service-user-type-group']}`}>
+          <header>
+            <div className={styles["van-image"]}>
+              <Image src={Van} alt="Truckdispatch van image" />
+            </div>
+            <div className='heading-content-beside-image'>
+              <h2>
+                 <span className={styles.highlight}>Better</span> working experience & proper Truck Management 
+              </h2>
+              <p>Whether you’re an individual or a company, we have solutions available for you. See the category that best fits you.</p>
+            </div>
+          </header>
+          <div className={`${styles['user-type']} ${styles['invert']}`}>
+            <div className={styles['user-type__avatars']}>
+              {shipperAvatars.map((avatar, index) => (<div key={index} className={styles.avatar}><UiAvatar avatar={avatar} /></div>))}
+            </div>
+            <div className={styles['user-type__details']}>
+              <h3>Shippers / Agents</h3>
+              <p>Shippers/Agents are individuals who directly or indirectly have  cargo in need of Transport</p>
+              <a href="">
+                <UiButton variant="primary-text" size="text"> <span>CONTINUE AS A SHIPPER</span><UiIcon icon="ArrowRight" /></UiButton>
+              </a>
+            </div>
+          </div>
+          <div className={`${styles['user-type']}`}>
+            <div className={styles['user-type__avatars']}>
+              {shipperAvatars.map((avatar, index) => (<div key={index} className={styles.avatar}><UiAvatar avatar={avatar} /></div>))}
+            </div>
+            <div className={styles['user-type__details']}>
+              <h3>Companies</h3>
+              <p>These are institutions or organizations of any size who directly or indirectly have  cargo in need of Transport.</p>
+              <a href="">
+                <UiButton variant="primary-text" size="text"> <span>CONTINUE AS A COMPANY</span><UiIcon icon="ArrowRight" /></UiButton>
+              </a>
             </div>
           </div>
         </section>

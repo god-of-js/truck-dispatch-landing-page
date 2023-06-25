@@ -2,12 +2,12 @@
 @import '../styles/variables.scss';
 
 .hero-section {
-  padding-top: px(200);
+  padding-top: px(116);
 
   &__inner {
     margin: 0 auto;
 
-    h2 {
+    h1 {
       padding: px(16);
       font-size: px(64);
       font-weight: 700;
@@ -87,6 +87,99 @@
   }
 }
 
+.client-user-type-group,
+.service-user-type-group {
+  border-bottom: px(1) solid $color-gray-400;
+
+  header {
+    padding: px(100) 0 px(50) 0;
+    gap: px(100);
+
+    h2 {
+      font-size: px(32);
+      font-weight: 700;
+      line-height: 140%;
+      letter-spacing: px(-0.96);
+      padding-bottom: px(32);
+      border-bottom: px(1) solid $color-gray-400;
+      color: $color-neutral-black;
+    }
+
+    p {
+      color: $color-gray-800;
+      font-size: px(20);
+      line-height: 140%;
+      padding: px(24) 0 px(50) 0;
+      border-bottom: px(1) solid $color-gray-400;
+    }
+
+    button {
+      margin-top: px(6);
+    }
+  }
+
+  .user-type {
+    display: grid;
+    gap: px(50);
+    padding: px(32) 0;
+
+    &__avatars {
+      padding: px(36) 0 px(36) px(36);
+      background: $color-gray-200;
+      border-radius: px(102);
+      display: flex;
+      gap: px(24);
+      overflow: hidden;
+
+      .avatar {
+        border-radius: px(95);
+        border: 8px solid rgba(255, 255, 255, 0.50);
+        width: px(95);
+        height: px(95);
+        overflow: hidden;
+      }
+    }
+
+    &__details {
+      display: grid;
+      gap: px(12);
+
+      h3 {
+        font-size: px(24);
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: -0.48px;
+        color: $color-neutral-black;
+      }
+
+      p {
+        font-size: px(16);
+        line-height: px(24);
+        color: $color-gray-800;
+        max-width: px(600);
+      }
+    }
+  }
+}
+
+.service-user-type-group {
+  header {
+    .van-image {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.highlight {
+  background: $color-primary;
+  color: #fff;
+}
+
+.page-width {
+  padding: 0 px(16)
+}
+
 @media screen and (min-width: #{$mobileSmall}) {
   .hero-section {
     &__inner {
@@ -108,16 +201,85 @@
       }
     }
   }
+
+  .client-user-type-group {
+    header {
+      display: flex;
+    }
+
+  }
+  .client-user-type-group,
+  .service-user-type-group {
+    header {
+      padding: px(200) 0 px(100) 0;
+      gap: px(120);
+      border-bottom: px(1) solid $color-gray-400;
+
+      h2 {
+        font-size: px(32);
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: px(-0.96);
+        padding-bottom: px(32);
+        border-bottom: transparent;
+        color: $color-neutral-black;
+      }
+
+      p {
+        color: $color-gray-800;
+        font-size: px(20);
+        line-height: 140%;
+        padding: px(24) 0 px(50) 0;
+        border-bottom: transparent;
+
+        &.with-border-top {
+          border-top: px(1) solid $color-gray-400;
+        }
+      }
+    }
+
+    .van-image {
+      display: block;
+    }
+    .user-type {
+      display: flex;
+      gap: px(100);
+      padding: px(64) 0;
+
+      &.invert {
+        flex-direction: row-reverse;
+      }
+
+      &__avatars {
+        padding: px(36) 0 px(36) px(36);
+        background: $color-gray-200;
+        border-radius: px(102);
+        display: flex;
+        gap: px(24);
+        overflow: hidden;
+        width: 50%;
+
+        .avatar {
+          border-radius: px(95);
+          border: 8px solid rgba(255, 255, 255, 0.50);
+          width: px(95);
+          height: px(95);
+          overflow: hidden;
+        }
+      }
+
+      &__details {
+        display: grid;
+        gap: px(12);
+        width: 50%;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: #{$tabletMidWidth}) {
   .hero-section {
     &__inner {
-      // h2 {
-      //   font-size: px(96);
-      //   line-height: px(100);
-      // }
-
       .hero-subtitle-container {
         display: flex;
         justify-content: flex-end;
@@ -150,11 +312,17 @@
 @media screen and (min-width: #{$tablet}) {
   .hero-section {
     &__inner {
-      h2 {
+      h1 {
         font-size: px(84);
         line-height: px(100);
       }
     }
+  }
+  .service-user-type-group {
+    header {
+      display: flex;
+    }
+
   }
 }
 
@@ -177,10 +345,11 @@
 
 @media screen and (min-width: #{$laptopSmallWidth}) and (max-width: #{$laptopWidth}) {
   .hero-section {
-    h2 {
+    h1 {
       font-size: px(96);
       line-height: px(100);
     }
+
     .achievements {
       &__inner {
         width: 50%;
@@ -193,13 +362,15 @@
   .page-width {
     width: 80%;
     margin: auto;
+    padding: px(0)
   }
 
   .hero-section {
-    h2 {
+    h1 {
       font-size: px(96);
       line-height: px(100);
     }
+
     .achievements {
       &__inner {
         width: 60%;

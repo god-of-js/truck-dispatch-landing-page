@@ -14,7 +14,7 @@ export default function TopNav() {
           <Image src={logo} alt='truck dispatch logo'/>
           <span>Truck <br /> Dispatch</span>
         </Link>
-        <div className={styles.nav_links}>
+        {/* <div className={styles.nav_links}>
           <ul>
             <li>
               <a href="#home">Home</a>
@@ -23,7 +23,7 @@ export default function TopNav() {
             <li><a href="">Contact</a></li>
             <li><a href="">Blog</a></li>
           </ul>
-        </div>
+        </div> */}
         <div className={styles.actions_container}>
           <a href="https://dashboard.gettruckdispatch.com/auth/join/agent" className={styles.get_started}>
             <UiButton>
