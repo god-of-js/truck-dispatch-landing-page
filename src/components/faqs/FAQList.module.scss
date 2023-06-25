@@ -2,47 +2,45 @@
 @import '../../styles/variables.scss';
 
 .faqs {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .faq_item {
-    overflow: hidden;
+  overflow: hidden;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1.5rem 0;
+    font-size: px(16);
+    font-weight: 600;
+    line-height: 140%;
+    font-family: 'thiccboi-SemiBold';
+    color: $color-gray-700;
+    transition: all .5s ease-in;
+  }
+
+  &:not(:first-child) {
     .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        padding: 1.5rem 0;
-				font-size: 1.25rem;
-				font-family: 'thiccboi-SemiBold';
-        font-weight: 600;
-				color: $color-gray-700;
-        transition: all .5s ease-in;
+      border-top: 1px solid $color-gray-200;
     }
+  }
 
-    &:not(:first-child) {
-        .header {
-					border-top: 1px solid $color-gray-200;
-        }
+  .faq_item_answer {
+    font-size: px(14);
+    font-weight: 400;
+    line-height: px(24);
+    color: $color-gray-800;
+    max-height: 0;
+    overflow: hidden;
+
+    &_show_content {
+      max-height: 9999px;
+      transition: all .5s cubic-bezier(1, 0, 1, 0);
     }
-
-    .answer {
-        font-size: 1rem;
-        color: $color-gray-800;
-				line-height: 1.5rem;
-        max-height: 0;
-        overflow: hidden;
-        transition: all .5s cubic-bezier(0,1,0,1);
-
-        &_show_content{
-          max-height: 9999px;
-          transition: all .5s cubic-bezier(1,0,1,0);  
-          font-size: 1rem;
-          color: $color-gray-800;
-          line-height: 1.5rem;
-
-        }
-    }
+  }
 }

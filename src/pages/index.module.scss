@@ -193,6 +193,7 @@
         margin-top: px(12);
       }
     }
+
     .people-business-list {
       width: 100%;
 
@@ -238,6 +239,82 @@
       }
     }
   }
+}
+
+.contact-us {
+  padding: px(122) 0;
+  text-align: center;
+
+  &__card {
+    background: $color-primary;
+    border-radius: px(16);
+    color: #fff;
+    overflow: hidden;
+    padding: 0;
+
+    .get-in-touch {
+      padding: px(74) px(16) px(69) px(16);
+      font-size: px(32);
+      font-weight: 700;
+      line-height: 140%;
+      letter-spacing: px(-0.64);
+    }
+
+    .action-links {
+      display: grid;
+      gap: px(4);
+
+      a {
+        padding: px(32) px(8);
+        background: $color-primary-50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        gap: px(10);
+        font-size: px(14);
+        font-weight: 600;
+        line-height: px(14);
+        letter-spacing: px(0.28);
+      }
+    }
+  }
+}
+
+.faqs-container {
+  padding: px(122) 0;
+
+  .faqs {
+    display: grid;
+    gap: px(64);
+
+    .faqs-hero-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: px(22);
+
+      h3 {
+        font-size: px(32);
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: px(-0.64);
+        color: $color-neutral-black;
+      }
+  
+      p {
+        font-size: px(20);
+        color: $color-gray-800;
+        line-height: 140%;
+      }
+      button {
+        margin-top: px(20)
+      }
+    }
+
+
+  }
+
 }
 
 .highlight {
@@ -395,6 +472,34 @@
           margin-top: px(12);
         }
       }
+    }
+  }
+
+  .contact-us {
+    padding: px(200) 0;
+
+    &__card {
+      .get-in-touch {
+        padding: px(56) px(0) px(65) px(0);
+        font-size: px(48);
+        letter-spacing: px(-0.96)
+      }
+
+      .action-links {
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+
+  .faqs-container {
+    .faqs {
+      display: flex;
+      gap: px(100);
+    }
+
+    .faqs-hero-section {
+      min-width: px(385);
+      max-width: px(385);
     }
   }
 }
