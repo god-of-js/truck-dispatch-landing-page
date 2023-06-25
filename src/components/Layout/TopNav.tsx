@@ -25,9 +25,9 @@ export default function TopNav() {
           </ul>
         </div> */}
         <div className={styles.actions_container}>
-          <a href="https://dashboard.gettruckdispatch.com/auth/join/agent" className={styles.get_started}>
+          <a href="https://dashboard.gettruckdispatch.com/auth/login" className={styles.get_started}>
             <UiButton>
-              Get Started
+              Log in
             </UiButton>
           </a>
         </div>

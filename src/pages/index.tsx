@@ -36,7 +36,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <section id='home' className={styles['hero-section']}>
+        <section className={styles['hero-section']}>
           <div className={styles['hero-section__inner']}>
             <div className={styles["page-width"]}>
               <h1>
@@ -47,7 +47,7 @@ export default function Home() {
                   <p>
                     With vetted professional transporters, goods security, insurance, we promise a swift, reliable, and sustainable road freight transport.
                   </p>
-                  <a href="https://dashboard.gettruckdispatch.com/auth/join/agent">
+                  <a href="https://dashboard.gettruckdispatch.com/auth/join">
                     <UiButton>
                       Get Started
                     </UiButton>
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="client-user-type-group" className={`${styles['page-width']} ${styles['client-user-type-group']}`}>
+        <section className={`${styles['page-width']} ${styles['client-user-type-group']}`}>
           <header>
             <h2>
               Transport solutions for Businesses & Individuals to  <span className={styles.highlight}>Solve</span> any cargo transport problems
@@ -115,16 +115,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="service-user-type-group" className={`${styles['page-width']} ${styles['service-user-type-group']}`}>
+        <section className={`${styles['page-width']} ${styles['service-user-type-group']}`}>
           <header>
             <div className={styles["van-image"]}>
               <Image src={Van} alt="Truckdispatch van image" />
             </div>
             <div className='heading-content-beside-image'>
               <h2>
-                 <span className={styles.highlight}>Better</span> working experience & proper Truck Management 
+                <span className={styles.highlight}>Better</span> working experience & proper Truck Management
               </h2>
-              <p>Whether you’re an individual or a company, we have solutions available for you. See the category that best fits you.</p>
+              <p>For transporters/truck drivers & transport companies of any size, we have a complete toolbox of practical solutions to manage your every day hassles and provide you with mouth watering jobs.</p>
             </div>
           </header>
           <div className={`${styles['user-type']} ${styles['invert']}`}>
@@ -148,6 +148,20 @@ export default function Home() {
               <p>These are institutions or organizations of any size who directly or indirectly have  cargo in need of Transport.</p>
               <a href="">
                 <UiButton variant="primary-text" size="text"> <span>CONTINUE AS A COMPANY</span><UiIcon icon="ArrowRight" /></UiButton>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section className={styles["logistics-is-a-peoples-business"]}>
+          <div className={`${styles['page-width']} ${styles['logistics-is-a-peoples-business__inner']}`}>
+            <div className={styles["peoples-business-hero-section"]}>
+              <Image src={TruckImgRounded} alt='truck image' />
+              <h3>Logistics is a people's business. We are convinced the best value is created by personal touch.</h3>
+
+              <a href="https://dashboard.gettruckdispatch.com/auth/join">
+                <UiButton>
+                  Get Started
+                </UiButton>
               </a>
             </div>
           </div>

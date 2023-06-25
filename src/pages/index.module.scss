@@ -87,10 +87,12 @@
   }
 }
 
+.client-user-type-group {
+  border-bottom: px(1) solid $color-gray-400;
+}
+
 .client-user-type-group,
 .service-user-type-group {
-  border-bottom: px(1) solid $color-gray-400;
-
   header {
     padding: px(100) 0 px(50) 0;
     gap: px(100);
@@ -171,13 +173,25 @@
   }
 }
 
+.logistics-is-a-peoples-business {
+  padding-top: px(50);
+  padding-bottom: px(85);
+  background: $color-gray-200;
+
+  &__inner {
+    display: grid;
+    gap: px(64);
+  }
+}
+
 .highlight {
   background: $color-primary;
   color: #fff;
 }
 
 .page-width {
-  padding: 0 px(16)
+  padding-left: px(16);
+  padding-right: px(16);
 }
 
 @media screen and (min-width: #{$mobileSmall}) {
@@ -208,6 +222,7 @@
     }
 
   }
+
   .client-user-type-group,
   .service-user-type-group {
     header {
@@ -241,6 +256,7 @@
     .van-image {
       display: block;
     }
+
     .user-type {
       display: flex;
       gap: px(100);
@@ -307,6 +323,31 @@
       }
     }
   }
+
+  .logistics-is-a-peoples-business {
+    padding-top: px(100);
+    padding-bottom: px(100);
+
+    &__inner {
+      display: flex;
+      gap: px(100);
+
+      .peoples-business-hero-section {
+        display: grid;
+        gap: px(28);
+
+        h3 {
+          font-size: px(32);
+          font-weight: 700;
+          line-height: 140%;
+          letter-spacing: px(-0.64);
+        }
+        button {
+          margin-top: px(12);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: #{$tablet}) {
@@ -318,6 +359,7 @@
       }
     }
   }
+
   .service-user-type-group {
     header {
       display: flex;
