@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import styles from '@/styles/policies.module.scss';
+import styles from './policies.module.scss';
 
 export default function TermsAndConditions() {
     return (

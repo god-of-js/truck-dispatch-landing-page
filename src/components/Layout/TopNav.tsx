@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '@/styles/TopNav.module.scss'
+import styles from './TopNav.module.scss'
+import logo from '../../assets/logo (1).svg'
 
 import UiButton from '../ui/UiButton';
 
@@ -9,23 +10,24 @@ export default function TopNav() {
   return (
     <nav className={styles.top_nav}>
       <div className={styles.top_nav_inner}>
-        <Link href="/">
-          <Image src="/truck-dispatch-logo-with-text.svg" alt="Truckdispatch logo" width="250" height="250" />
+        <Link href="/" className={styles.logo_container}>
+          <Image src={logo} alt='truck dispatch logo'/>
+          <span>Truck <br /> Dispatch</span>
         </Link>
+        {/* <div className={styles.nav_links}>
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div> */}
         <div className={styles.actions_container}>
-          <a href="https://dashboard.gettruckdispatch.com/auth/join/agent" className={styles.get_started}>
-            <UiButton size="s" textCasing="capitalize" isSquare>
-              Get Started
-            </UiButton>
-          </a>
-          <a href="https://dashboard.gettruckdispatch.com/auth/login">
-            <UiButton
-              size="s"
-              textCasing="capitalize"
-              isSquare
-              variant="secondary"
-            >
-              Login
+          <a href="https://dashboard.gettruckdispatch.com/auth/login" className={styles.get_started}>
+            <UiButton>
+              Log in
             </UiButton>
           </a>
         </div>

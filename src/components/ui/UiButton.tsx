@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/UiButton.module.scss';
+import styles from './UiButton.module.scss';
 
 const textTransformations = ['uppercase', 'lowercase', 'capitalize'];
 interface Props {
@@ -26,7 +26,7 @@ interface Props {
   onClick?: () => void;
 }
 
-type Sizes = 'large' | 'md' | 's';
+type Sizes = 'large' | 'md' | 's' | 'text';
 
 export default function UiButton({
   children,
@@ -39,7 +39,7 @@ export default function UiButton({
   size = 'md',
   isFullWidth = false,
 }: Props) {
-  function generateStyleBasedOnprops(): Record<string, string> {
+  function generateStyleBasedOnprops(): Record<string, string | number> {
     const styledObj = getSize();
 
     styledObj.opacity = disabled || loading ? '0.6' : '1';
@@ -51,10 +51,20 @@ export default function UiButton({
 
   function getSize() {
     const sizeFiller = (padding: number, height: number): Record<string, string> => ({
-      padding: `${padding}px`,
+      padding: ` 16px ${padding}px`,
       height: `${height}px`
     })
 
+    const textStyling: Record<string, string | number> = {
+        fontSize: '12px',
+        fontWeight: 600,
+        lineHeight: '12px',
+        letterSpacing: '0.24px'
+      }
+
+    if (size === 'text') {
+      return textStyling;
+    }
     if (size === 's') {
       return sizeFiller(16, 36)
     }
@@ -63,7 +73,7 @@ export default function UiButton({
       return sizeFiller(16, 52)
     }
 
-    return sizeFiller(16, 44)
+    return sizeFiller(46, 46)
 
   }
 

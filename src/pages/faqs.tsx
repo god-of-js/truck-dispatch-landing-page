@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import styles from '@/styles/FAQs.module.scss';
+import styles from './FAQs.module.scss';
 const FAQList = dynamic(() => import('@/components/faqs/FAQList'));
 
 export default function FAQs() {

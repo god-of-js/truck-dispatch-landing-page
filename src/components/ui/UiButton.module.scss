@@ -1,28 +1,31 @@
-@import './variables.scss';
+@import '../../styles/variables.scss';
 
 .ui_button {
   border: none;
-  cursor: 'pointer';
+  cursor: pointer;
   display: inline-flex;
+  gap: 8px;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
-  letter-spacing: 0.4px;
-  line-height: 1.45;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 14px;
   text-align: center;
+  font-family: 'thiccboi-Regular';
   text-transform: uppercase;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 8px;
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
+  transition: all .2s ease-in;
 
   &.primary {
     background-color: $color-primary;
     color: white;
 
     &:hover {
-      background-color: $color-primary-600;
+      box-shadow: rgb(20, 0, 13) 5px 5px,
     }
   }
   &.danger {
@@ -38,6 +41,11 @@
     background: transparent;
     border-color: transparent;
     color: $color-primary;
+    padding: 0;
+
+    svg {
+      fill: $color-primary;
+    }
   }
 
   &.neutral {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import styles from '@/styles/FAQList.module.scss';
+import styles from './FAQList.module.scss';
 import UiIcon from '../ui/UiIcon';
+
 interface Props {
   isMini?: boolean;
 }
@@ -33,6 +34,14 @@ export default function FAQList({ isMini }: Props) {
   ];
   const listToRender = isMini ? list.slice(0, 5) : list;
   const [active, setActive] = useState(list[0].question);
+  const [open, setOpen] = useState<number | boolean>(false)
+
+  const toggleOpen = (index: number) => {
+    if (open === index) {
+      return setOpen(false)
+    }
+    setOpen(index)
+  }
 
   function isActive(question: string) {
     return active === question;
@@ -44,17 +53,19 @@ export default function FAQList({ isMini }: Props) {
         <li key={index} className={styles.faq_item}>
           <div
             className={styles.header}
-            style={isActive(item.question) ? {borderBottom: 'transparent'} : {}}
-            onClick={() =>
+            style={isActive(item.question) ? { color: '#15131B' } : {}}
+            onClick={() => {
               setActive(isActive(item.question) ? '' : item.question)
+              toggleOpen(index)
+            }
             }
           >
             <div>{item.question}</div>
             <UiIcon icon={isActive(item.question) ? 'CaretUp' : 'CaretDown'} />
           </div>
-          {isActive(item.question) && (
+          {(
             <p
-              className={styles.answer}
+              className={`${open === index ? styles.faq_item_answer_show_content : ''} ${styles.faq_item_answer}`}
               dangerouslySetInnerHTML={{ __html: item.answer }}
             />
           )}

@@ -1,0 +1,63 @@
+@import '../../styles/sizes.scss';
+@import '../../styles/variables.scss';
+
+.top_nav {
+  width: 100%;
+  height: px(96);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: px(1) solid $color-gray-400;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 2;
+
+  &_inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: px(16);
+    padding-right: px(16);
+
+    .logo_container {
+      display: flex;
+      align-items: center;
+      gap: .2rem;
+
+      span {
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+
+    .nav_links {
+      ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        li {
+          font-weight: 400;
+          font-size: 16px;
+          font-family: 'thiccboi-medium';
+          color: $color-gray-700;
+        }
+      }
+    }
+
+    @media screen and (min-width: #{$laptopWidth}) {
+      width: 80%;
+      padding: px(0);
+    }
+
+    @media screen and (min-width: #{$desktopWidth}) {
+      width: 70%;
+    }
+  }
+}
