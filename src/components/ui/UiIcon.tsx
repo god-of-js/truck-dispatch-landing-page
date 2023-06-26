@@ -24,6 +24,9 @@ import {
   ShieldCheck,
   SignOut,
   Suitcase,
+  LinkedinLogo,
+  TwitterLogo,
+  InstagramLogo,
   Star,
   Truck,
   User,
@@ -32,6 +35,9 @@ import {
 } from 'phosphor-react';
 // These icons should be arranged alphabetically for easy sorting
 const icons = {
+  LinkedinLogo: <LinkedinLogo />,
+  TwitterLogo: <TwitterLogo />,
+  InstagramLogo: <InstagramLogo />,
   ArrowLeft: <ArrowLeft />,
   ArrowRight: <ArrowRight />,
   ArrowUpRight: <ArrowUpRight />,

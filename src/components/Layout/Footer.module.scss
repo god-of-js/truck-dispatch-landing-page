@@ -3,133 +3,104 @@
 
 .footer {
   background-color: $color-gray-200;
-  display: flex;
-  justify-content: center;
-  padding: 5rem 0;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
   .footer_inner {
-    width: 83%;
-    max-width: 1400px;
-    color: $color-gray-100;
-    min-height: px(100);
-    .footer_cta{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: black;
-      border-bottom: 1px solid $color-gray-400;
+    margin: auto;
+    padding: 0 px(16);
+
+    .footer_cta {
+      display: grid;
+      gap: px(32);
+      padding: px(64) 0;
+      border-bottom: px(1) solid $color-gray-400;
 
       h3 {
-        color: $color-gray-900;
+        font-size: px(32);
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: px(-0.64);
+        max-width: px(450);
       }
     }
-    .logo_links_container{
-      border-bottom: 1px solid $color-gray-400;
+
+    footer {
+      padding: px(64) 0;
+      border-bottom: px(1) solid $color-gray-400;
+      display: grid;
+      gap: px(64);
+
+      h3 {
+        font-size: px(16);
+        font-weight: 700;
+        line-height: px(24);
+      }
+
+      p {
+        font-size: px(14);
+        line-height: px(22);
+      }
+
       .logo_container {
-        h3{
-          font-size: 1rem;
-          margin-bottom: 1.8rem;
-        }
-
-        p {
-          color: $color-gray-600;
-          font-size: 0.8rem;
-          font-weight: 400;
-          font-family: 'thiccboi-Regular';
-          line-height: 1.375rem;
-        }
-    
-      }
-      .list_container {
-        color: black;
-        width: 75%;
         display: grid;
-        grid-template-columns: auto;
-        ul {
-          list-style: none;
-  
-          .list_title {
-            font-size: px(16);
-            font-weight: bold;
-            margin-bottom: 1.31rem;
-          }
-  
-          li {
-            a {
-              line-height: 2.5rem;
+        gap: px(30);
+        color: $color-gray-600;
 
-              color: $color-gray-900;
-              font-size: .875rem;
-              font-weight: 400;
-              font-family: 'thiccboi-Regular';
-            }
-          }
+        .social_links {
+          display: flex;
+          gap: px(34);
+          font-size: px(24);
         }
       }
+
+      ul {
+        .list_title {
+          margin-bottom: px(21);
+          font-size: px(16);
+          font-weight: 700;
+          line-height: px(24);
+        }
+
+        li {
+          font-size: px(14);
+          line-height: px(40);
+        }
+      }
+
+
     }
 
-    .copyright{
+    .copyright {
       color: #464056;
-      padding-top: 4rem;
-      font-size: 0.75rem;
+      padding: px(64) 0;
+      font-size: px(12);
+      letter-spacing: px(0.6);
     }
-    
 
-    @media only screen and (min-width: #{$mobile}) {
-      // width: 80%;
-      flex-direction: row;
-      .list_container {
-        display: grid;
+    @media screen and (min-width: #{$tablet}) {
+      .footer_cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: px(32);
+      }
+
+      footer {
         grid-template-columns: auto auto;
       }
     }
-    @media only screen and (min-width: #{$tabletMidWidth}) {
-      // width: 80%;
-      flex-direction: row;
-      .list_container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        column-gap: 3rem;
-      }
+
+    @media screen and (min-width: #{$laptopWidth}) {
+      width: 80%;
+      padding: px(0);
     }
 
-    @media only screen and (min-width: #{$tabletLargeWidth}) {
-      .footer_cta {
-        padding-bottom: 4rem;
-        h3 {
-          max-width:511px;
-          font-size: 2rem;
-          line-height: 2.8rem;
-        }
-      }
-
-      .logo_links_container {
-        color: black;
-        display: flex;
-        justify-content: space-between;
-        gap: 7rem;
-        padding: 3.75rem 0;
-
-        
-
-
-        .logo_container{
-          width: 35%;
-          p{
-            margin-bottom: 1.875rem;
-          }
-          .social_links{
-            display: flex;
-            align-items: center;
-            gap: 2.1rem;
-          }
-        }
-        .list_container {
-          width: 45%;
-          display: grid;
-          grid-template-columns: auto auto auto;
-        }
-      }
-
+    @media screen and (min-width: #{$desktopWidth}) {
+      width: 70%;
     }
   }
 }

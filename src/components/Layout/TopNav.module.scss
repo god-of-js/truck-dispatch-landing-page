@@ -51,18 +51,6 @@
       }
     }
 
-    @media only screen and (min-width: #{$mobileSmall}) {
-      .actions_container {
-        display: flex;
-        align-items: center;
-        gap: px(12);
-
-        .get_started {
-          display: block;
-        }
-      }
-    }
-
     @media screen and (min-width: #{$laptopWidth}) {
       width: 80%;
       padding: px(0);
