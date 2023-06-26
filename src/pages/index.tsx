@@ -1,3 +1,4 @@
+
 import Head from 'next/head';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
@@ -221,7 +222,7 @@ export default function Home() {
           <div className={`${styles['page-width']} ${styles['logistics-is-a-peoples-business__inner']}`}>
             <div className={styles["peoples-business-hero-section"]}>
               <Image src={TruckImgRounded} alt='truck image' />
-              <h3>Logistics is a people's business. We are convinced the best value is created by personal touch.</h3>
+              <h3>Logistics is a {"people's"} business. We are convinced the best value is created by personal touch.</h3>
 
               <a href="https://dashboard.gettruckdispatch.com/auth/join">
                 <UiButton>
