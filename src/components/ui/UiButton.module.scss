@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/sizes.scss';
 
 .ui_button {
   border: none;
@@ -93,5 +94,26 @@
     background-color: white;
     border: 1px solid $color-gray-400;
     color: $color-gray-400;
+  }
+
+  &.text {
+    font-size: px(12);
+    font-weight: 600;
+    line-height: px(12);
+    letter-spacing: px(0.24);
+  }
+
+  &.s {
+    padding: px(16);
+    height: px(36);
+  }
+
+  &.md {
+    padding: px(16) px(46);
+    height: px(46);
+  }
+  &.large {
+    padding: px(16);
+    height: px(52);
   }
 }

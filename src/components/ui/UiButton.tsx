@@ -54,17 +54,6 @@ export default function UiButton({
       padding: ` 16px ${padding}px`,
       height: `${height}px`
     })
-
-    const textStyling: Record<string, string | number> = {
-        fontSize: '12px',
-        fontWeight: 600,
-        lineHeight: '12px',
-        letterSpacing: '0.24px'
-      }
-
-    if (size === 'text') {
-      return textStyling;
-    }
     if (size === 's') {
       return sizeFiller(16, 36)
     }
@@ -79,8 +68,7 @@ export default function UiButton({
 
   return (
     <button
-      className={`${styles.ui_button} ${styles[variant || 'primary']}`}
-      style={{...generateStyleBasedOnprops()}}
+      className={`${styles.ui_button} ${styles[variant || 'primary']} ${styles[size]}`}
       onClick={onClick}
       disabled={disabled || loading}
       type={type}
