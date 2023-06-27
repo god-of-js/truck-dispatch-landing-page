@@ -47,17 +47,17 @@
       }
 
       h3 {
-        font-size: px(20);
+        font-size: px(16);
         line-height: 140%;
         width: fit-content;
       }
 
       p {
-        font-size: px(10);
+        font-size: px(8);
         font-weight: 400;
         font-family: 'thiccboi-Regular';
         line-height: 1.5rem;
-        width: 90%;
+        width: 100%;
         color: $color-gray-800;
       }
 
@@ -65,6 +65,7 @@
         background-color: $color-primary-200;
         padding: px(16);
         border-radius: px(8);
+        display: none;
       }
     }
 
@@ -130,13 +131,14 @@
     display: grid;
     gap: px(50);
     padding: px(32) 0;
-
     &__avatars {
       padding: px(36) 0 px(36) px(36);
       background: $color-gray-200;
       border-radius: px(102);
       display: flex;
+      overflow: hidden;
       gap: px(16);
+      width: 100%;
 
       .avatar {
         border: px(8) solid rgba(255, 255, 255, 0.50);
@@ -337,6 +339,22 @@
   .hero-section {
     &__inner {
 
+      .achievements {
+        padding: px(32);
+  
+        h3 {
+          font-size: px(20);
+        }
+  
+        p {
+          font-size: px(10);
+          width: 90%;
+        }
+  
+        .verified-container {
+          display: block;
+        }
+      }
       .highway-images {
         .truck-image {
           margin-left: px(-450)
@@ -411,7 +429,6 @@
         border-radius: px(102);
         display: flex;
         gap: px(16);
-        overflow: hidden;
         width: 50%;
       }
 
@@ -511,14 +528,6 @@
 }
 
 @media screen and (min-width: #{$tablet}) {
-  .hero-section {
-    &__inner {
-      h1 {
-        font-size: px(84);
-        line-height: px(100);
-      }
-    }
-  }
 
   .service-user-type-group {
     header {
@@ -528,23 +537,30 @@
   }
 }
 
-@media screen and (min-width: #{$tabletLargeWidth}) {
+@media screen and (min-width: 1016px) {
   .hero-section {
     &__inner {
 
-      .achievements {
-        h3 {
-          font-size: px(32);
-        }
-
-        p {
-          font-size: px(16);
-        }
+      h1 {
+        font-size: px(84);
+        line-height: px(100);
       }
     }
   }
 }
 
+@media screen and (min-width: #{$laptopSmallWidth}) {
+
+  .achievements {
+    h3 {
+      font-size: px(32);
+    }
+
+    p {
+      font-size: px(16);
+    }
+  }
+}
 @media screen and (min-width: #{$laptopSmallWidth}) and (max-width: #{$laptopWidth}) {
   .hero-section {
     h1 {

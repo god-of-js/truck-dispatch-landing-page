@@ -28,11 +28,11 @@ const FAQList = dynamic(() => import('@/components/faqs/FAQList'));
 
 export default function Home() {
   const shipperAvatars = [
-    Shipper1,
-    Shipper2,
     Shipper3,
+    Shipper2,
+    Shipper5,
     Shipper4,
-    Shipper5
+    Shipper1,
   ];
 
   const transporterAvatars = [
@@ -106,7 +106,7 @@ export default function Home() {
           <div className={styles['hero-section__inner']}>
             <div className={styles["page-width"]}>
               <h1>
-                Transform <Image src={TruckImgRounded} alt='truck image' /> your Road Freight Transport Experience
+                Transform <Image src={TruckImgRounded} alt='truck image' /> your road freight transport experience
               </h1>
               <div className={styles['hero-subtitle-container']}>
                 <div className={styles['hero-subtitle-container__inner']}>

@@ -31,23 +31,13 @@
 
       span {
         font-weight: 700;
-        font-size: 24px;
+        font-size: 20px;
       }
     }
 
-    .nav_links {
-      ul {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        gap: 3rem;
-
-        li {
-          font-weight: 400;
-          font-size: 16px;
-          font-family: 'thiccboi-medium';
-          color: $color-gray-700;
-        }
+    button {
+      &.md {
+        padding: px(16) px(32) !important
       }
     }
 
