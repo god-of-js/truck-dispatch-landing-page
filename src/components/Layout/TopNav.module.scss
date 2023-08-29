@@ -3,7 +3,6 @@
 
 .top_nav {
   width: 100%;
-  height: px(96);
   margin: auto;
   display: flex;
   justify-content: center;
@@ -11,42 +10,97 @@
   top: 0;
   left: 0;
   right: 0;
-  border-bottom: px(1) solid $color-gray-400;
+  border-bottom: px(1) solid $color-gray-20;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(8px);
   z-index: 2;
 
   &_inner {
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: px(16);
-    padding-right: px(16);
+    padding: 26px 0;
+    max-width: $max-screen-width;
 
-    .logo_container {
-      display: flex;
-      align-items: center;
-      gap: .2rem;
+  }
 
-      span {
-        font-weight: 700;
-        font-size: 20px;
+  ul {
+    list-style-type: none;
+    gap: px(8);
+    margin-top: px(8);
+    display: grid;
+
+    li {
+      height: 100%;
+      border-radius: px(8);
+      padding: px(4) px(12);
+      font-size: px(14);
+      font-style: normal;
+      font-weight: 600;
+      line-height: px(24);
+      color: $color-gray-70;
+
+      &.active,
+      &:hover {
+        background: $color-primary-10;
+        color: $color-primary;
+      }
+
+      a {
+        height: 100%;
+        display: block;
+        display: flex;
+        align-items: center;
       }
     }
+  }
 
-    button {
-      &.md {
-        padding: px(16) px(32) !important
-      }
+  button {
+    max-height: px(48);
+  }
+
+  .hide_in_mobile {
+    display: none;
+  }
+
+  @media screen and (min-width: #{$tabletSmallWidth}) {
+    .hide_in_mobile {
+      display: block;
     }
 
-    @media screen and (min-width: #{$laptopWidth}) {
+    .hide_in_large {
+      display: none;
+    }
+
+    ul {
+      display: flex !important;
+      background: $color-gray-20;
+      height: px(48);
+      padding: px(4);
+      border-radius: px(12);
+      margin-top: 0;
+
+      li {
+
+        &.active,
+        &:hover {
+          background: $color-gray-50;
+          color: $color-gray-90;
+        }
+      }
+
+    }
+  }
+
+  @media screen and (min-width: #{$laptopWidth}) {
+    &_inner {
       width: 80%;
-      padding: px(0);
     }
+  }
 
-    @media screen and (min-width: #{$desktopWidth}) {
+  @media screen and (min-width: #{$desktopWidth}) {
+    &_inner {
       width: 70%;
     }
   }

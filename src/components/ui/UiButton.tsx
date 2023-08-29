@@ -35,37 +35,8 @@ export default function UiButton({
   loading = false,
   variant = 'primary',
   type = 'submit',
-  textCasing = 'uppercase',
   size = 'md',
-  isFullWidth = false,
 }: Props) {
-  function generateStyleBasedOnprops(): Record<string, string | number> {
-    const styledObj = getSize();
-
-    styledObj.opacity = disabled || loading ? '0.6' : '1';
-    styledObj.textTransform = textTransformations.includes(textCasing) ? textCasing : 'uppercase';
-
-    if (isFullWidth) styledObj.width = '100%';
-    return styledObj;
-  }
-
-  function getSize() {
-    const sizeFiller = (padding: number, height: number): Record<string, string> => ({
-      padding: ` 16px ${padding}px`,
-      height: `${height}px`
-    })
-    if (size === 's') {
-      return sizeFiller(16, 36)
-    }
-
-    if (size === 'large') {
-      return sizeFiller(16, 52)
-    }
-
-    return sizeFiller(46, 46)
-
-  }
-
   return (
     <button
       className={`${styles.ui_button} ${styles[variant || 'primary']} ${styles[size]}`}
