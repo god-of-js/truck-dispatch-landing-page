@@ -29,7 +29,7 @@
     color: white;
 
     &:hover {
-      box-shadow: var($box-shadow-primary);
+      box-shadow: $box-shadow-primary;
     }
   }
 

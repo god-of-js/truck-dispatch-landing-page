@@ -1,13 +1,6 @@
 
 import Head from 'next/head';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
 import styles from './index.module.scss'
-import Link from "next/link";
-import TruckImgRounded from '../assets/Truck-img-rounded.svg';
-import HeroTruck from '../assets/hero-truck-full.svg'
-import verifiedCheck from '../assets/verified-check.svg'
-import RoadImage from '../assets/Road.svg'
 import Shipper1 from '../assets/shipper-1.jpeg'
 import Shipper2 from '../assets/shipper-2.jpeg'
 import Shipper3 from '../assets/shipper-3.jpeg'
@@ -18,13 +11,8 @@ import Transporter2 from '../assets/transporter-2.jpeg'
 import Transporter3 from '../assets/transporter-3.jpeg'
 import Transporter4 from '../assets/transporter-4.jpeg'
 import Transporter5 from '../assets/transporter-5.jpeg'
-import Van from '../assets/van.jpeg'
-
-
-const UiButton = dynamic(() => import('@/components/ui/UiButton'));
-const UiAvatar = dynamic(() => import('@/components/ui/UiAvatar'));
-const UiIcon = dynamic(() => import('@/components/ui/UiIcon'));
-const FAQList = dynamic(() => import('@/components/faqs/FAQList'));
+import HeroSection from '@/components/landing-page-components/HeroSection';
+import ProductDemo from '@/components/landing-page-components/ProductDemo';
 
 export default function Home() {
   const shipperAvatars = [
@@ -101,7 +89,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={styles.main}>
+        <HeroSection
+          title="Transform your <br /> Road freight & Cargo Delivery experience"
+          subtitle="With vetted transporters, goods security, insurance, we promise a swift, reliable, and sustainable road freight transport."
+          btnActionText='Get Started'
+          btnActionUrl="/"
+        />
+        <ProductDemo />
       </main>
     </>
   )

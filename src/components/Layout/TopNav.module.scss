@@ -16,13 +16,12 @@
   z-index: 2;
 
   &_inner {
-    width: 95%;
+    width: $screen-width;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px 0;
+    height: px(90);
     max-width: $max-screen-width;
-
   }
 
   ul {
