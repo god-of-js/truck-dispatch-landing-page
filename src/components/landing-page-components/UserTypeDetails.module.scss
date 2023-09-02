@@ -1,0 +1,124 @@
+@import '../../styles/sizes.scss';
+@import '../../styles/variables.scss';
+
+.user_type_details {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &.with_avatar {
+        padding-top: px(48);
+
+        &.aligned_to_right {
+            padding-left: px(50);
+
+            .content {
+                margin-right: px(50);
+            }
+        }
+
+        &.aligned_to_left {
+            padding-right: px(50);
+
+            .content {
+                margin-left: px(50);
+            }
+        }
+
+        .content {
+            margin-bottom: px(26);
+        }
+
+    }
+
+    .content {
+        position: relative;
+        flex-grow: 1;
+        height: 100%;
+
+        h3 {
+            color: $color-neutralBlack;
+            font-size: px(24);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: px(-0.48);
+            margin-top: px(40);
+        }
+
+        p {
+            color: $color-gray-80;
+            font-size: px(16);
+            font-style: normal;
+            font-weight: 400;
+            line-height: px(24);
+            margin-top: px(12);
+            margin-bottom: px(48);
+        }
+
+        .action_container {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    .avatars_container {
+        display: flex;
+
+        &__inner {
+            display: flex;
+            align-items: center;
+            gap: px(12);
+            width: fit-content;
+            background: white;
+            border-radius: px(116);
+        }
+
+        &.align_right {
+
+            // justify-content: flex-end;
+            .avatars_container__inner {
+                margin-right: -120px;
+            }
+        }
+
+        &.align_left {
+
+            // justify-content: flex-start;
+            .avatars_container__inner {
+                margin-left: -120px;
+            }
+        }
+
+        .avatar {
+            img {
+                width: px(62);
+                height: px(62);
+                border-radius: px(62);
+                border: px(5) solid $color-gray-30;
+                object-fit: cover;
+                object-position: center top;
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$tablet}) {
+        .avatars_container {
+            &__inner {
+                padding: 0 px(48);
+                height: px(140);
+            }
+
+            .avatar {
+                img {
+                    width: px(100);
+                    height: px(100);
+                    border-radius: px(100);
+                    border-width: px(8);
+                }
+            }
+        }
+
+    }
+}

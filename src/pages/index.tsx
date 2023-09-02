@@ -13,6 +13,7 @@ import Transporter4 from '../assets/transporter-4.jpeg'
 import Transporter5 from '../assets/transporter-5.jpeg'
 import HeroSection from '@/components/landing-page-components/HeroSection';
 import ProductDemo from '@/components/landing-page-components/ProductDemo';
+import UserTypes from '@/components/landing-page-components/UserTypes';
 
 export default function Home() {
   const shipperAvatars = [
@@ -97,6 +98,7 @@ export default function Home() {
           btnActionUrl="/"
         />
         <ProductDemo />
+        <UserTypes />
       </main>
     </>
   )
