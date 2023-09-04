@@ -14,6 +14,7 @@ import Transporter5 from '../assets/transporter-5.jpeg'
 import HeroSection from '@/components/landing-page-components/HeroSection';
 import ProductDemo from '@/components/landing-page-components/ProductDemo';
 import UserTypes from '@/components/landing-page-components/UserTypes';
+import BenefitsOfTruckdispatch from '@/components/landing-page-components/BenefitsOfTruckdispatch';
 
 export default function Home() {
   const shipperAvatars = [
@@ -30,21 +31,6 @@ export default function Home() {
     Transporter3,
     Transporter4,
     Transporter5
-  ]
-
-  const peopleBenefits = [
-    {
-      title: 'Market Expertise',
-      paragraph: 'Our organization comprises of leaders in the transport business with over 40 years experience.'
-    },
-    {
-      title: 'Personal Contact',
-      paragraph: 'Customer support and various means of communication available to take care of your professional needs.'
-    },
-    {
-      title: 'Operational Excellence',
-      paragraph: 'Long-term partnerships with vetted professional transporters.'
-    },
   ]
 
   const clipboardTick = <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,6 +85,7 @@ export default function Home() {
         />
         <ProductDemo />
         <UserTypes />
+        <BenefitsOfTruckdispatch />
       </main>
     </>
   )
