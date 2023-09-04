@@ -9,27 +9,16 @@
 
     &.with_avatar {
         padding-top: px(48);
-
-        &.aligned_to_right {
-            padding-left: px(50);
-
-            .content {
-                margin-right: px(50);
-            }
-        }
-
-        &.aligned_to_left {
-            padding-right: px(50);
-
-            .content {
-                margin-left: px(50);
-            }
-        }
+        padding-right: px(50);
 
         .content {
+            margin-left: px(50);
             margin-bottom: px(26);
-        }
 
+            h3 {
+                margin-top: px(40);
+            }
+        }
     }
 
     .content {
@@ -44,7 +33,6 @@
             font-weight: 700;
             line-height: 140%;
             letter-spacing: px(-0.48);
-            margin-top: px(40);
         }
 
         p {
@@ -64,41 +52,54 @@
     }
 
     .avatars_container {
-        display: flex;
-
         &__inner {
             display: flex;
             align-items: center;
-            gap: px(12);
             width: fit-content;
+            justify-content: space-between;
+            gap: px(12);
             background: white;
             border-radius: px(116);
-        }
-
-        &.align_right {
-
-            // justify-content: flex-end;
-            .avatars_container__inner {
-                margin-right: -120px;
-            }
-        }
-
-        &.align_left {
-
-            // justify-content: flex-start;
-            .avatars_container__inner {
-                margin-left: -120px;
-            }
+            padding: px(28) px(16);
+            z-index: 1;
+            position: relative;
+            margin-left: -60px;
         }
 
         .avatar {
             img {
-                width: px(62);
-                height: px(62);
-                border-radius: px(62);
+                width: px(68);
+                height: px(68);
+                border-radius: px(68);
                 border: px(5) solid $color-gray-30;
                 object-fit: cover;
                 object-position: center top;
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$mobileSmall}) {
+        .avatars_container {
+            .avatar {
+                img {
+                    width: px(80);
+                    height: px(80);
+                    border-radius: px(80);
+                    border-width: px(8);
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$mobile}) {
+        .avatars_container {
+            .avatar {
+                img {
+                    width: px(98);
+                    height: px(98);
+                    border-radius: px(98);
+                    border-width: px(8);
+                }
             }
         }
     }
@@ -110,6 +111,18 @@
                 height: px(140);
             }
 
+            &.align_right {
+                .avatars_container__inner {
+                    margin-right: -120px;
+                }
+            }
+
+            &.align_left {
+                .avatars_container__inner {
+                    margin-left: -120px;
+                }
+            }
+
             .avatar {
                 img {
                     width: px(100);
@@ -119,6 +132,50 @@
                 }
             }
         }
+    }
 
+    @media screen and (min-width: #{$tabletMidWidth}) {
+        &.with_avatar {
+            &.aligned_to_right {
+                padding-left: px(50);
+                padding-right: 0;
+
+                .content {
+                    margin-right: px(50);
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .avatars_container {
+            &.align_right {
+                .avatars_container__inner {
+                    margin-right: -120px;
+                    margin-left: 0;
+                }
+            }
+
+        }
+
+    }
+
+    @media screen and (min-width: #{$laptopSmallWidth}) {
+        &.with_avatar {
+            &.aligned_to_right {
+                padding-left: px(50);
+
+                .content {
+                    margin-right: px(50);
+                }
+            }
+
+            &.aligned_to_left {
+                padding-right: px(50);
+
+                .content {
+                    margin-left: px(50);
+                }
+            }
+        }
     }
 }

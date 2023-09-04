@@ -47,6 +47,19 @@ export default function UserTypes() {
         }
     ];
 
+    const organizationalUserTypes: UserType[] = [
+        {
+            label: 'Companies',
+            description: 'For Companies with cargo transport needs, we have a large pool of vetted and trusted transporters/individuals and transport companies ready to handle your cargo. You can transport huge volumes and  large cargos easily and safe.',
+            actionLink: '',
+        },
+        {
+            label: 'Transport Companies',
+            description: 'For Transport companies of any size, we have a complete toolbox of practical solutions to manage your every day hassles',
+            actionLink: '',
+        },
+    ]
+
     return (
         <section className={styles.user_types_section}>
             <div className={styles.user_types_banner}>
@@ -59,8 +72,11 @@ export default function UserTypes() {
                 </div>
             </div>
 
-            <div className={styles.double_grid}>
+            <div className={styles.user_types_grid}>
                 {singularUserTypes.map((userType) => <div key={userType.label} className={styles.gray_bg}><UserTypeDetails userType={userType} /></div>)}
+            </div>
+            <div className={styles.user_type_without_avatar_grid}>
+                {organizationalUserTypes.map((userType, index) => <div key={index} className={styles.user_type_item}><UserTypeDetails userType={userType} /></div>)}
             </div>
         </section>
     )

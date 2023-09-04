@@ -4,8 +4,7 @@
 .user_types_section {
     width: $screen-width;
     max-width: $max-screen-width;
-    // TODO: calc properly
-    margin-bottom: px(50);
+    margin-bottom: px(200);
 
 }
 
@@ -72,10 +71,30 @@
     }
 }
 
-.double_grid {
+.user_types_grid {
     display: grid;
     gap: px(24);
-    @media screen and (min-width: #{$mobileLargeWidth}) {
+    @media screen and (min-width: #{$tabletMidWidth}) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.user_type_without_avatar_grid {
+    grid-column: 1 / span 2;
+    background: $color-gray-20;
+    border-radius: px(32);
+    padding: px(14);
+    display: grid;
+    gap: px(24);
+    margin-top: px(24);
+
+    .user_type_item {
+        background: white;
+        padding: px(24) px(40);
+        border-radius: px(20);
+    }
+
+    @media screen and (min-width: #{$tabletSmallWidth}) {
         grid-template-columns: repeat(2, 1fr);
     }
 }
