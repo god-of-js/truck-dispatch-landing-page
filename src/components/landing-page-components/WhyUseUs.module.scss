@@ -1,0 +1,28 @@
+@import '../../styles/sizes.scss';
+@import '../../styles/variables.scss';
+
+.why_use_us {
+    width: $screen-width;
+    max-width: $max-screen-width;
+    display: flex;
+    justify-content: space-between;
+    gap: px(80);
+    margin-bottom: px(200);
+
+    .hero_section {
+        max-width: px(550);
+        h4 {
+            font-size: px(32);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: px(-0.64);
+            margin-top: px(28);
+            margin-bottom: px(32);
+        }
+
+        button {
+            min-width: px(182);
+        }
+    }
+}

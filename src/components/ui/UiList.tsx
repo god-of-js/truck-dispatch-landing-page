@@ -1,37 +1,27 @@
 import { useState } from 'react';
 import styles from './UiList.module.scss';
 
-interface Data {
+export interface Data {
   title: string;
   subtitle: string;
+  icon: React.ReactNode;
   boldSubtitleStarter?: string;
 }
 interface Props {
   data: Data[];
 }
 export default function ListComponent({ data }: Props) {
-  const [active, setActive] = useState(data[0].title);
-  const activeColor = 'rgb(102, 112, 133)'
   return (
-    <>
+    <ul className={styles.ui_list}>
       {data.map((item, index) => (
-        <div key={index} className={styles.ui_list} onClick={() => setActive(item.title)}>
-          <div className={styles.indicator}>
-            <div className={styles.indicator_inner}>
-              <div className={styles.line} style={item.title === active ? { borderTop: `1px solid ${activeColor}`} : {}} />
-              <div className={styles.square} style={item.title === active? {background: 'white'} : {}} />
-            </div>
+        <li key={index}>
+          <div className={styles.icon_container}>{item.icon}</div>
+          <div className={styles.content_container}>
+            <h5>{item.title}</h5>
+            <p>{item.subtitle}</p>
           </div>
-          <div className={styles.content}>
-            <div className={styles.heading}>{item.title}</div>
-            {item.title === active && (
-              <div className={styles.subtitle}>
-                <b>{item.boldSubtitleStarter}</b> {item.subtitle}
-              </div>
-            )}
-          </div>
-        </div>
+        </li>
       ))}
-    </>
+    </ul>
   );
 }

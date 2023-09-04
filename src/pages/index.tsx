@@ -1,38 +1,12 @@
 
 import Head from 'next/head';
 import styles from './index.module.scss'
-import Shipper1 from '../assets/shipper-1.jpeg'
-import Shipper2 from '../assets/shipper-2.jpeg'
-import Shipper3 from '../assets/shipper-3.jpeg'
-import Shipper4 from '../assets/shipper-4.jpeg'
-import Shipper5 from '../assets/shipper-5.jpeg'
-import Transporter1 from '../assets/transporter-1.jpeg'
-import Transporter2 from '../assets/transporter-2.jpeg'
-import Transporter3 from '../assets/transporter-3.jpeg'
-import Transporter4 from '../assets/transporter-4.jpeg'
-import Transporter5 from '../assets/transporter-5.jpeg'
 import HeroSection from '@/components/landing-page-components/HeroSection';
 import ProductDemo from '@/components/landing-page-components/ProductDemo';
 import UserTypes from '@/components/landing-page-components/UserTypes';
-import BenefitsOfTruckdispatch from '@/components/landing-page-components/BenefitsOfTruckdispatch';
+import WhyUseUs from '@/components/landing-page-components/WhyUseUs';
 
 export default function Home() {
-  const shipperAvatars = [
-    Shipper3,
-    Shipper2,
-    Shipper5,
-    Shipper4,
-    Shipper1,
-  ];
-
-  const transporterAvatars = [
-    Transporter1,
-    Transporter2,
-    Transporter3,
-    Transporter4,
-    Transporter5
-  ]
-
   const clipboardTick = <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="clipboard-tick">
       <g id="vuesax/bold/clipboard-tick">
@@ -85,7 +59,7 @@ export default function Home() {
         />
         <ProductDemo />
         <UserTypes />
-        <BenefitsOfTruckdispatch />
+        <WhyUseUs />
       </main>
     </>
   )
