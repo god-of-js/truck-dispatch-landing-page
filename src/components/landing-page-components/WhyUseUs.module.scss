@@ -4,7 +4,7 @@
 .why_use_us {
     width: $screen-width;
     max-width: $max-screen-width;
-    display: flex;
+    display: grid;
     justify-content: space-between;
     gap: px(80);
     margin-bottom: px(200);
@@ -24,5 +24,13 @@
         button {
             min-width: px(182);
         }
+    }
+
+    @media screen and (min-width: #{$tabletMidWidth}) {
+        display: flex;
+        gap: px(20);
+    }
+    @media screen and (min-width: #{$tablet}) {
+        gap: px(80);
     }
 }
