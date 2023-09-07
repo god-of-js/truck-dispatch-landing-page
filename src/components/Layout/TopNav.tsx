@@ -19,7 +19,7 @@ export default function TopNav() {
     },
     {
       name: 'About Us',
-      link: '/about-us',
+      link: '/about',
       external: false
     },
     {
