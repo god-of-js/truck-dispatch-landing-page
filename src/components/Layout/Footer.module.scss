@@ -12,6 +12,8 @@
   .footer_inner {
     margin: auto;
     padding: 0 px(16);
+    width: $screen-width;
+    max-width: $max-screen-width;
 
     .footer_cta {
       display: grid;
@@ -26,13 +28,17 @@
         letter-spacing: px(-0.64);
         max-width: px(450);
       }
+      button {
+        min-width: px(180);
+      }
     }
 
     footer {
       padding: px(64) 0;
       border-bottom: px(1) solid $color-gray-40;
-      display: grid;
       gap: px(64);
+      display: flex;
+      flex-direction: column;
 
       h3 {
         font-size: px(16);
@@ -49,12 +55,20 @@
         display: grid;
         gap: px(30);
         color: $color-gray-60;
+        width: fit-content;
+        height: fit-content;
 
         .social_links {
           display: flex;
           gap: px(34);
           font-size: px(24);
         }
+      }
+
+      .list_container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: px(40);
       }
 
       ul {
@@ -68,10 +82,10 @@
         li {
           font-size: px(14);
           line-height: px(40);
+          font-weight: 400;
+          color: $color-gray-90;
         }
       }
-
-
     }
 
     .copyright {
@@ -81,7 +95,7 @@
       letter-spacing: px(0.6);
     }
 
-    @media screen and (min-width: #{$tablet}) {
+    @media screen and (min-width: #{$mobileLargeWidth}) {
       .footer_cta {
         display: flex;
         justify-content: space-between;
@@ -89,18 +103,18 @@
         gap: px(32);
       }
 
+      .list_container {
+        width: 50%;
+      }
+
       footer {
-        grid-template-columns: auto auto;
+        justify-content: space-between;
+        flex-direction: row;
       }
     }
 
     @media screen and (min-width: #{$laptopWidth}) {
-      width: 80%;
       padding: px(0);
-    }
-
-    @media screen and (min-width: #{$desktopWidth}) {
-      width: 70%;
     }
   }
 }
