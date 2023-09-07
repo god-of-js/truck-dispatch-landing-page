@@ -14,7 +14,6 @@
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.28px;
-
   text-align: center;
   font-family: 'thiccboi-Regular';
   text-transform: uppercase;
@@ -27,6 +26,15 @@
   &.primary {
     background-color: $color-primary;
     color: white;
+
+    &:hover {
+      box-shadow: $box-shadow-primary;
+    }
+  }
+
+  &.white {
+    background-color: whitee;
+    color: $color-primary;
 
     &:hover {
       box-shadow: $box-shadow-primary;

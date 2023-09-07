@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './UiButton.module.scss';
 
-const textTransformations = ['uppercase', 'lowercase', 'capitalize'];
 interface Props {
   children?: React.ReactNode;
   disabled?: boolean;
@@ -10,6 +9,7 @@ interface Props {
   | 'primary'
   | 'secondary'
   | 'neutral'
+  | 'white'
   | 'primary-outlined'
   | 'secondary-outlined'
   | 'primary-text'
