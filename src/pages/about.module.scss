@@ -83,6 +83,15 @@
             text-align: center;
             letter-spacing: px(-0.96);
         }
+        .align {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: px(32);
+        }
+        .hidden_in_mobile {
+            display: none;
+        }
     }
 
     @media screen and (min-width: #{$tabletSmallWidth}) {
@@ -113,7 +122,7 @@
                 text-align: left;
             }
 
-            .align_to_right {
+            .align {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
@@ -122,6 +131,12 @@
                 h2 {
                     text-align: right;
                 }
+            }
+            .hidden_in_mobile {
+                display: block;
+            }
+            .hidden_in_large {
+                display: none;
             }
         }
     }

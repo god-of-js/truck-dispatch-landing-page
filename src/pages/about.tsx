@@ -70,7 +70,6 @@ export default function AboutUs() {
                         Through the utilization of cutting-edge technology and innovative solutions, we aim to optimize the supply chain ecosystem, ensuring seamless, secure, and timely delivery of goods. By providing a platform that prioritizes efficiency and reliability, we empower businesses to thrive and prosper in today's dynamic marketplace.
                     </p>
                     <p>
-
                         With a relentless commitment to excellence, we are dedicated to shaping the future of logistics and enabling seamless connections between shippers and transporters.</p>
                 </div>
             </section>
@@ -79,10 +78,17 @@ export default function AboutUs() {
                 <UiList data={whyTruckDispatch} />
             </section>
             <section className={styles.customer_insights}>
-                <UiList data={whyTruckDispatch} />
-                <div className={styles.align_to_right}>
+                <div className={`${styles.align} ${styles.hidden_in_large}`}>
                     <h2>Our Core <br /> Values</h2>
                     <Image src={RoundedTruckImage} alt="Truckdispatch" />
+                </div>
+                <UiList data={whyTruckDispatch} />
+                <div className={styles.hidden_in_mobile}>
+                    <div className={styles.align}>
+
+                    <h2>Our Core <br /> Values</h2>
+                    <Image src={RoundedTruckImage} alt="Truckdispatch" />
+                    </div>
                 </div>
             </section>
             <ContactUs />
