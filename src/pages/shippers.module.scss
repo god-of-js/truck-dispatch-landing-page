@@ -1,0 +1,100 @@
+@import '../styles/sizes.scss';
+@import '../styles/variables.scss';
+
+.shippers_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .benefits {
+        max-width: $max-screen-width;
+        width: $screen-width;
+        padding: px(130) 0;
+
+        header {
+            display: grid;
+            gap: px(32);
+            padding-bottom: px(64);
+
+            h2 {
+                color: $color-neutralBlack;
+                text-align: center;
+                font-size: px(40);
+                font-style: normal;
+                font-weight: 700;
+                line-height: px(40);
+                letter-spacing: px(-0.8);
+                text-align: center;
+            }
+
+            .header_line {
+                background: $color-gray-40;
+                padding-top: px(1);
+                height: fit-content;
+                flex-grow: 1;
+            }
+
+        }
+
+        .benefits__list {
+            display: grid;
+            gap: px(20);
+        }
+
+        .get_started {
+            background: $color-primary;
+            padding: px(48);
+            padding-bottom: px(16);
+            border-radius: px(32);
+
+            .content {
+                display: grid;
+                gap: px(24);
+            }
+
+            p {
+                color: #FFF;
+                font-size: px(32);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                letter-spacing: px(-0.64);
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$tabletSmallWidth}) {
+        .benefits {
+            header {
+                display: flex;
+                gap: px(64);
+                align-items: center;
+
+                h2 {
+                    font-size: px(48);
+                    line-height: px(56);
+                    letter-spacing: px(-0.96);
+                    width: fit-content;
+                    text-align: left;
+                }
+            }
+
+            .benefits__list {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .get_started {
+                grid-column: span 3;
+
+                button { 
+                    width: px(140);
+                }
+            }
+        }
+
+    }
+}

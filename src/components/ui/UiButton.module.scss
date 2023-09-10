@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   line-height: 14px;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.28px;
@@ -52,6 +52,14 @@
     }
   }
 
+  &.neutral {
+    background: $color-gray-30;
+    color: $color-neutralBlack;
+
+    svg {
+      fill: $color-neutralBlack;
+    }
+  }
   &.secondary {
     background-color: $color-primary-10;
     color: $color-primary;

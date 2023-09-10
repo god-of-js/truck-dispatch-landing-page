@@ -23,6 +23,7 @@ export default function Home() {
           subtitle="With vetted transporters, goods security, insurance, we promise a swift, reliable, and sustainable road freight transport."
           btnActionText='Get Started'
           btnActionUrl="/"
+          
         />
         <ProductDemo />
         <UserTypes />

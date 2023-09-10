@@ -1,0 +1,40 @@
+@import '../styles/sizes.scss';
+@import '../styles/variables.scss';
+
+.benefit_card {
+    background: $color-gray-20;
+    border-radius: px(32);
+    padding: px(12);
+    padding-bottom: px(28);
+    display: grid;
+    gap: px(28);
+
+    .hero_container {
+        background-color: white;
+        border-radius: px(20);
+        padding: px(28) px(20) px(20) px(20);
+        display: flex;
+        justify-content: center;
+    }
+
+    .content {
+        padding: 0 px(12);
+        h3 {
+            color: $color-neutralBlack;
+            font-size: px(24);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: px(-0.48);
+            margin-bottom: px(12);
+        }
+
+        p {
+            font-size: px(16);
+            font-style: normal;
+            font-weight: 400;
+            line-height: px(24);
+            color: $color-gray-80;
+        }
+    }
+}
