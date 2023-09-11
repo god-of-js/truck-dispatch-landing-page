@@ -6,8 +6,10 @@ import Security from '@/assets/security.jpeg'
 import Ratings from '@/assets/ratings.jpeg'
 import DigitalizedComputer from '@/assets/digitalized-computer.jpeg'
 import HandShake from '@/assets/handshake.jpeg'
+import Van from '@/assets/van.svg'
 import BenefitCard from '@/components/BenefitCard';
 import UiButton from '@/components/ui/UiButton';
+import Image from 'next/image';
 
 export default function ShippersPage() {
     const benefits = [
@@ -37,6 +39,7 @@ export default function ShippersPage() {
             subtitle: 'Our logistics professionals have the experience to assist shippers and carriers. With our dedicated support team around Nigeria, we are just a call away.'
         }
     ]
+
     return (
         <div className={styles.shippers_page}>
             <HeroSection title="Experience <br /> seamless & efficient transportation" btnActionText="Get Started" btnActionUrl="" subtitle="Our commitment to reliability ensures stress-free shipments, while our transparent cost structure provides clarity and peace of mind for shippers." />
@@ -53,7 +56,9 @@ export default function ShippersPage() {
                         <p>Start enjoying better working experience & transport solutions tailored for you.</p>
                         <UiButton variant='white'>Get Started</UiButton>
                         </div>
-
+                        <div className={styles.img_container}>
+                            <Image src={Van} alt="Truckdispatch truck" />
+                        </div>
                     </div>
                 </div>
             </div>
