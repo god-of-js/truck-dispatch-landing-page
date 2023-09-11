@@ -68,10 +68,40 @@
 
             .img_container {
                 padding-top: px(60);
+
                 img {
                     margin-left: px(0);
                 }
             }
+        }
+    }
+
+    .how_it_works {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: px(64);
+        padding-top: px(100);
+        padding-bottom: px(200);
+        max-width: $max-screen-width;
+        width: $screen-width;
+
+        h2 {
+            color: $color-neutralBlack;
+            font-size: px(40);
+            font-style: normal;
+            font-weight: 700;
+            line-height: px(48);
+            letter-spacing: px(-0.8);
+            text-align: center;
+        }
+
+        &__list {
+            display: grid;
+            gap: px(20);
+        }
+        button {
+            min-width: px(182);
         }
     }
 
@@ -80,7 +110,7 @@
             .get_started {
                 .img_container {
                     img {
-                      margin-left: px(60)
+                        margin-left: px(60)
                     }
                 }
             }
@@ -110,9 +140,10 @@
             .get_started {
                 grid-column: span 2;
 
-                button { 
+                button {
                     width: px(140);
                 }
+
                 .img_container {
                     display: flex;
                     justify-content: flex-end;
@@ -124,6 +155,7 @@
             }
         }
     }
+
     @media screen and (min-width: #{$mobileLargeWidth}) {
         .benefits {
             .get_started {
@@ -137,6 +169,7 @@
             }
         }
     }
+
     @media screen and (min-width: #{$tabletSmallWidth}) {
         .benefits {
             .benefits__list {
@@ -147,7 +180,20 @@
                 grid-column: span 3;
             }
         }
+        .how_it_works {
+            h2 {
+                font-size: px(48);
+                line-height: px(56);
+                letter-spacing: px(-0.96);
+            }
+
+            &__list {
+                grid-template-columns: auto auto;
+            }
+        }
+    
     }
+
     @media screen and (min-width: #{$tabletLargeWidth}) {
         .benefits {
             .benefits__list {

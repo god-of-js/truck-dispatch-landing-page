@@ -3,16 +3,57 @@
 
 .ui_list {
     list-style-type: none;
-    padding: px(24) px(40);
     border-radius: px(20);
     background: $color-gray-20;
+
+    &.with_vertical_line {
+        padding: px(40);
+
+        li {
+            overflow: visible;
+            .content_container {
+                padding-bottom: px(40);
+                border-bottom: px(1) solid $color-gray-40;
+            }
+
+            .indicator {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+                overflow: visible;
+            
+                .horizontal_line {
+                    background: $color-gray-40;
+                    width: px(1);
+                    height: 120%;
+                    margin: px(10) 0;
+                }
+            }
+
+            &:last-child {
+                .indicator {
+                    .horizontal_line {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.without_vertical_line {
+        padding: px(24) px(40);
+
+        li {
+            padding-bottom: px(40);
+            border-bottom: px(1) solid $color-gray-40;
+        }
+    }
 
     li {
         display: flex;
         gap: px(20);
         padding-top: px(40);
-        padding-bottom: px(40);
-        border-bottom: px(1) solid $color-gray-40;
 
         &:first-child {
             padding-top: 0;
@@ -21,7 +62,14 @@
         &:last-child {
             padding-bottom: 0;
             border-color: transparent;
+
+            .content_container {
+                padding-bottom: 0;
+                border-color: transparent;
+            }
+
         }
+
         .icon_container {
             height: fit-content;
             width: fit-content;
