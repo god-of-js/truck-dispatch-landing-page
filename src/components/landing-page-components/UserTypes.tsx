@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import styles from './UserTypes.module.scss';
-import Van from '../../assets/van.jpeg'
-import Shipper1 from '../../assets/shipper-1.jpeg'
-import Shipper2 from '../../assets/shipper-2.jpeg'
-import Shipper3 from '../../assets/shipper-3.jpeg'
-import Shipper4 from '../../assets/shipper-4.jpeg'
-import Shipper5 from '../../assets/shipper-5.jpeg'
-import Transporter1 from '../../assets/transporter-1.jpeg'
-import Transporter2 from '../../assets/transporter-2.jpeg'
-import Transporter3 from '../../assets/transporter-3.jpeg'
-import Transporter4 from '../../assets/transporter-4.jpeg'
-import Transporter5 from '../../assets/transporter-5.jpeg'
+import Van from '../../assets/van.svg'
+import Shipper1 from '../../assets/shipper-1.jpg'
+import Shipper2 from '../../assets/shipper-2.jpg'
+import Shipper3 from '../../assets/shipper-3.jpg'
+import Shipper4 from '../../assets/shipper-4.jpg'
+import Shipper5 from '../../assets/shipper-5.jpg'
+import Transporter1 from '../../assets/transporter-1.jpg'
+import Transporter2 from '../../assets/transporter-2.jpg'
+import Transporter3 from '../../assets/transporter-3.jpg'
+import Transporter4 from '../../assets/transporter-4.jpg'
+import Transporter5 from '../../assets/transporter-5.jpg'
 import UserTypeDetails, { UserType } from './UserTypeDetails';
 
 export default function UserTypes() {
@@ -21,7 +21,6 @@ export default function UserTypes() {
         Shipper4,
         Shipper1,
     ];
-
     const transporterAvatars = [
         Transporter1,
         Transporter2,

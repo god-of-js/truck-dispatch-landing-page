@@ -53,7 +53,7 @@ export default function AboutUs() {
     return (
         <div className={styles.about_us}>
             <section className={styles.hero_section}>
-                <h1>Hi There! <br /> We’re TruckDispatch</h1>
+                <h1>Hi There! <br /> {"We’re"} TruckDispatch</h1>
             </section>
             <section className={styles.company_profile}>
                 <div className={styles.company_profile__content}>
