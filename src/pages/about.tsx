@@ -3,6 +3,7 @@ import UiList from '../components/ui/UiList'
 import RoundedTruckImage from '@/assets/rounded-truck-img.svg'
 import ContactUs from '@/components/landing-page-components/ContactUs'
 import Image from 'next/image'
+import Head from 'next/head'
 
 export default function AboutUs() {
     const whyTruckDispatch = [
@@ -51,47 +52,56 @@ export default function AboutUs() {
         },
     ]
     return (
-        <div className={styles.about_us}>
-            <section className={styles.hero_section}>
-                <h1>Hi There! <br /> {"We’re"} TruckDispatch</h1>
-            </section>
-            <section className={styles.company_profile}>
-                <div className={styles.company_profile__content}>
-                    <h2>Our History</h2>
-                    <p>Truck dispatch was established in 2023 by <b>Eze Henry</b>  and <b>Eze Chisom</b>, driven by their profound upbringing in the freight industry and their keen observation of existing limitations within the logistics sector.</p>
-                    <p>
-                        Recognizing the imperative need for solutions, they embarked on a mission to optimize the industry by leveraging their extensive family network of experienced transporters, which collectively spans over 40 years of freight expertise.</p>
-                    <p>Harnessing their combined technical proficiency and business acumen, the brothers set out to alleviate the challenges plaguing the logistics sector, offering innovative and efficient solutions to meet the evolving demands of the industry.</p>
-                </div>
-                <div className={styles.company_profile__content}>
-                    <h2>Our Mission</h2>
-                    <p>At TruckDispatch, our mission is to revolutionize the freight industry by enhancing operational efficiency and addressing security concerns.
-                        <br />
-                        Through the utilization of cutting-edge technology and innovative solutions, we aim to optimize the supply chain ecosystem, ensuring seamless, secure, and timely delivery of goods. By providing a platform that prioritizes efficiency and reliability, we empower businesses to thrive and prosper in {"today's"} dynamic marketplace.
-                    </p>
-                    <p>
-                        With a relentless commitment to excellence, we are dedicated to shaping the future of logistics and enabling seamless connections between shippers and transporters.</p>
-                </div>
-            </section>
-            <section className={styles.customer_insights}>
-                <h2>But Why <br /> TruckDispatch <br /> you ask?</h2>
-                <UiList data={whyTruckDispatch} />
-            </section>
-            <section className={styles.customer_insights}>
-                <div className={`${styles.align} ${styles.hidden_in_large}`}>
-                    <h2>Our Core <br /> Values</h2>
-                    <Image src={RoundedTruckImage} alt="Truckdispatch" />
-                </div>
-                <UiList data={whyTruckDispatch} />
-                <div className={styles.hidden_in_mobile}>
-                    <div className={styles.align}>
+        <>
+            <Head>
+                <title>About Us - TruckDispatch - Freight Transportation Services | Connect with Verified Carriers and Shippers</title>
+                <meta name="description" content="TruckDispatch connects freight carriers and truck owners with shippers in need of transportation. Whether you're shipping goods across town or across the country, we can help you find the right truck to get the job done. Contact us today to learn more about our services." />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-                    <h2>Our Core <br /> Values</h2>
-                    <Image src={RoundedTruckImage} alt="Truckdispatch" />
+            <div className={styles.about_us}>
+                <section className={styles.hero_section}>
+                    <h1>Hi There! <br /> {"We’re"} TruckDispatch</h1>
+                </section>
+                <section className={styles.company_profile}>
+                    <div className={styles.company_profile__content}>
+                        <h2>Our History</h2>
+                        <p>Truck dispatch was established in 2023 by <b>Eze Henry</b>  and <b>Eze Chisom</b>, driven by their profound upbringing in the freight industry and their keen observation of existing limitations within the logistics sector.</p>
+                        <p>
+                            Recognizing the imperative need for solutions, they embarked on a mission to optimize the industry by leveraging their extensive family network of experienced transporters, which collectively spans over 40 years of freight expertise.</p>
+                        <p>Harnessing their combined technical proficiency and business acumen, the brothers set out to alleviate the challenges plaguing the logistics sector, offering innovative and efficient solutions to meet the evolving demands of the industry.</p>
                     </div>
-                </div>
-            </section>
-            <ContactUs />
-        </div>
+                    <div className={styles.company_profile__content}>
+                        <h2>Our Mission</h2>
+                        <p>At TruckDispatch, our mission is to revolutionize the freight industry by enhancing operational efficiency and addressing security concerns.
+                            <br />
+                            Through the utilization of cutting-edge technology and innovative solutions, we aim to optimize the supply chain ecosystem, ensuring seamless, secure, and timely delivery of goods. By providing a platform that prioritizes efficiency and reliability, we empower businesses to thrive and prosper in {"today's"} dynamic marketplace.
+                        </p>
+                        <p>
+                            With a relentless commitment to excellence, we are dedicated to shaping the future of logistics and enabling seamless connections between shippers and transporters.</p>
+                    </div>
+                </section>
+                <section className={styles.customer_insights}>
+                    <h2>But Why <br /> TruckDispatch <br /> you ask?</h2>
+                    <UiList data={whyTruckDispatch} />
+                </section>
+                <section className={styles.customer_insights}>
+                    <div className={`${styles.align} ${styles.hidden_in_large}`}>
+                        <h2>Our Core <br /> Values</h2>
+                        <Image src={RoundedTruckImage} alt="Truckdispatch" />
+                    </div>
+                    <UiList data={whyTruckDispatch} />
+                    <div className={styles.hidden_in_mobile}>
+                        <div className={styles.align}>
+
+                            <h2>Our Core <br /> Values</h2>
+                            <Image src={RoundedTruckImage} alt="Truckdispatch" />
+                        </div>
+                    </div>
+                </section>
+                <ContactUs />
+            </div>
+        </>
     )
 }

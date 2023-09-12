@@ -11,6 +11,7 @@ import BenefitCard from '@/components/BenefitCard';
 import UiButton from '@/components/ui/UiButton';
 import UiList from '@/components/ui/UiList';
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function ShippersPage() {
     const benefits = [
@@ -92,39 +93,47 @@ export default function ShippersPage() {
     ]
 
     return (
-        <div className={styles.shippers_page}>
-            <HeroSection title="Experience <br /> seamless & efficient transportation" btnActionText="Get Started" btnActionUrl="" subtitle="Our commitment to reliability ensures stress-free shipments, while our transparent cost structure provides clarity and peace of mind for shippers." />
-            <section className={styles.benefits}>
-                <header>
-                    <h2>Exclusive benefits <br /> for Shippers</h2>
-                    <div className={styles.header_line} />
-                </header>
-                <div className={styles.benefits__list}>
-                    {benefits.map((benefit, index) => <BenefitCard key={index} benefit={benefit} />)}
-                    <div className={styles.get_started}>
-                        <div className={styles.content}>
+        <>
+            <Head>
+                <title>Shippers - TruckDispatch - Freight Transportation Services | Connect with Verified Carriers and Shippers</title>
+                <meta name="description" content="TruckDispatch connects freight carriers and truck owners with shippers in need of transportation. Whether you're shipping goods across town or across the country, we can help you find the right truck to get the job done. Contact us today to learn more about our services." />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <div className={styles.shippers_page}>
+                <HeroSection title="Experience <br /> seamless & efficient transportation" btnActionText="Get Started" btnActionUrl="" subtitle="Our commitment to reliability ensures stress-free shipments, while our transparent cost structure provides clarity and peace of mind for shippers." />
+                <section className={styles.benefits}>
+                    <header>
+                        <h2>Exclusive benefits <br /> for Shippers</h2>
+                        <div className={styles.header_line} />
+                    </header>
+                    <div className={styles.benefits__list}>
+                        {benefits.map((benefit, index) => <BenefitCard key={index} benefit={benefit} />)}
+                        <div className={styles.get_started}>
+                            <div className={styles.content}>
 
-                            <p>Start enjoying better working experience & transport solutions tailored for you.</p>
-                            <UiButton variant='white'>Get Started</UiButton>
-                        </div>
-                        <div className={styles.img_container}>
-                            <Image src={Van} alt="Truckdispatch truck" />
+                                <p>Start enjoying better working experience & transport solutions tailored for you.</p>
+                                <UiButton variant='white'>Get Started</UiButton>
+                            </div>
+                            <div className={styles.img_container}>
+                                <Image src={Van} alt="Truckdispatch truck" />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section className={styles.how_it_works}>
-                <h2>How it works</h2>
-                <div className={styles.how_it_works__list}>
-                    <UiList data={howItWorks.slice(0, 2)} withVerticalLine />
-                    <UiList data={howItWorks.slice(2, 4)} withVerticalLine />
-                </div>
-                <a href="https://dashboard.gettruckdispatch.com/auth/join">
-                    <UiButton>Get Started</UiButton>
-                </a>
-            </section>
-            <ContactUs />
+                </section>
+                <section className={styles.how_it_works}>
+                    <h2>How it works</h2>
+                    <div className={styles.how_it_works__list}>
+                        <UiList data={howItWorks.slice(0, 2)} withVerticalLine />
+                        <UiList data={howItWorks.slice(2, 4)} withVerticalLine />
+                    </div>
+                    <a href="https://dashboard.gettruckdispatch.com/auth/join">
+                        <UiButton>Get Started</UiButton>
+                    </a>
+                </section>
+                <ContactUs />
 
-        </div>
+            </div>
+        </>
     )
 }

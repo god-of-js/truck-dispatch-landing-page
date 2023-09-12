@@ -1,8 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
+import Head from 'next/head';
 import styles from './policies.module.scss';
 
 export default function TermsAndConditions() {
     return (
+        <>
+        <Head>
+          <title>Terms and Conditions - TruckDispatch - Freight Transportation Services | Connect with Verified Carriers and Shippers</title>
+          <meta name="description" content="TruckDispatch connects freight carriers and truck owners with shippers in need of transportation. Whether you're shipping goods across town or across the country, we can help you find the right truck to get the job done. Contact us today to learn more about our services." />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <main className={styles.policies}>
 
             <h2>General contracting terms and conditions</h2>
@@ -269,6 +277,6 @@ export default function TermsAndConditions() {
                 </p>
                 <p>Thank you for using our Truckdispatch company services. If you have any questions or concerns about these terms and conditions, please contact us.</p>
             </section>
-        </main>
+        </main></>
     )
 }
