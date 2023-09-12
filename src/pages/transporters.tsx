@@ -2,9 +2,9 @@ import styles from './transporters.module.scss';
 import HeroSection from "@/components/landing-page-components/HeroSection";
 import ContactUs from '@/components/landing-page-components/ContactUs';
 import FirstPlace from '@/assets/first-place.jpeg'
-import Security from '@/assets/security.jpeg'
-import Ratings from '@/assets/ratings.jpeg'
-import DigitalizedComputer from '@/assets/digitalized-computer.jpeg'
+import RockHand from '@/assets/rockhand.jpeg'
+import Woohhoo from '@/assets/woohhoo.jpeg'
+import Diamond from '@/assets/diamond.jpeg'
 import Van from '@/assets/van.svg'
 import BenefitCard from '@/components/BenefitCard';
 import UiButton from '@/components/ui/UiButton';
@@ -19,17 +19,17 @@ export default function TransportersPage() {
             subtitle: 'Assigned trips are pre-paid, with payment processing handled seamlessly and automatically. Once you submit the loading proof, payment is swiftly initiated, ensuring a hassle-free experience for you.'
         },
         {
-            img: Security,
+            img: RockHand,
             title: 'Less admin work',
             subtitle: 'We will go through cumbersome tender processes for you! Pick the routes that fit you best without the administrative hassle. This way, you can grow sustainably while avoiding transport packages that you are not 100% comfortable with.'
         },
         {
-            img: Ratings,
+            img: Woohhoo,
             title: 'Plan your transports',
             subtitle: 'View all transports assigned to you in a detailed manner to assist in planning. this helps you plan better by understanding each transport\'s details and timing. This way, you can use your resources, time, and efforts wisely, making sure everything goes smoothly.'
         },
         {
-            img: DigitalizedComputer,
+            img: Diamond,
             title: 'Deals',
             subtitle: 'Engage in a wide array of advantageous opportunities, including but not limited to enticing referral bonuses, exclusive promotions, and a plethora of other enticing deals. '
         },

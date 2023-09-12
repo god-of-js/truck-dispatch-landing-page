@@ -34,7 +34,7 @@ export default function TopNav() {
     },
     {
       name: 'Blog',
-      link: 'medium.com',
+      link: '/blog',
       external: true
     },
     {
