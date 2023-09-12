@@ -1,0 +1,74 @@
+@import '../../styles/sizes.scss';
+@import '../../styles/variables.scss';
+
+.contact_us {
+    width: $screen-width;
+    max-width: $max-screen-width;
+    margin: auto;
+    margin-bottom: px(100);
+    border-radius: px(32);
+    background: $color-primary-60;
+    overflow: hidden;
+
+    .content {
+        padding: px(77) px(47);
+        background: $color-primary;
+
+        h4 {
+            text-align: center;
+            font-size: px(32);
+            font-style: normal;
+            font-weight: 700;
+            line-height: px(40);
+            letter-spacing: px(-0.64);
+            color: white;
+        }
+
+        .action_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: px(32);
+            gap: px(12);
+
+            a {
+                width: 100%;
+            }
+
+            button {
+                display: block;
+                width: 100%;
+                min-width: px(150);
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$mobileLargeWidth}) {
+        .content {
+            .action_container {
+                flex-direction: row;
+                button, a {
+                  width: fit-content;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$tabletMidWidth}) {
+        .content {
+            padding: px(100);
+            width: 60%;
+
+            h4 {
+                text-align: left;
+                font-size: px(48);
+                line-height: px(56);
+                letter-spacing: px(-0.96);
+            }
+            .action_container {
+                justify-content: flex-start;
+            }
+        }
+    }
+}

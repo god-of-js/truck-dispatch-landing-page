@@ -1,0 +1,55 @@
+@import '../../styles/sizes.scss';
+@import '../../styles/variables.scss';
+
+.product_demo {
+    position: relative;
+    max-width: $max-screen-width;
+    width: $screen-width;
+    height: 70vh;
+    background: $color-gray-40;
+    border-radius: px(24);
+    margin-top: px(96);
+    padding: px(24);
+
+    &_banner {
+        background-image: url('../../assets/trip-details.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;    
+        height: 100%;
+        width: 100%;
+        border-radius: px(20)
+    }
+
+    img {
+        border-radius: px(20);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .watch_demo {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 70%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 10%;
+
+        button {
+            border-radius: px(33);
+            position: relative;
+            overflow: hidden;
+            border: px(8) solid $color-primary-10;
+        }
+    }
+
+    @media screen and (min-width: #{$tabletSmallWidth}) {
+        padding: px(56);
+        border-radius: px(64);
+    }
+}

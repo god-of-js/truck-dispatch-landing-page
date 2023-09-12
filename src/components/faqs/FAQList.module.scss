@@ -20,13 +20,13 @@
     font-weight: 600;
     line-height: 140%;
     font-family: 'thiccboi-SemiBold';
-    color: $color-gray-700;
+    color: $color-gray-70;
     transition: all .5s ease-in;
   }
 
   &:not(:first-child) {
     .header {
-      border-top: 1px solid $color-gray-200;
+      border-top: 1px solid $color-gray-20;
     }
   }
 
@@ -34,7 +34,7 @@
     font-size: px(14);
     font-weight: 400;
     line-height: px(24);
-    color: $color-gray-800;
+    color: $color-gray-80;
     max-height: 0;
     overflow: hidden;
 

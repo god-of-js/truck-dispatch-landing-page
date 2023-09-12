@@ -19,6 +19,28 @@ export default function Footer() {
       isExternal: false,
     },
   ];
+  const companyLinkList = [
+    {
+      title: 'About',
+      link: '/about',
+      isExternal: false,
+    },
+    {
+      title: 'Blog',
+      link: '/contact',
+      isExternal: false,
+    },
+    {
+      title: 'FAQs',
+      link: '/contact',
+      isExternal: false,
+    },
+    {
+      title: 'Contact',
+      link: '/contact',
+      isExternal: false,
+    },
+  ];
   const year = new Date().getFullYear();
   return (
     <div className={styles.footer}>
@@ -46,6 +68,20 @@ export default function Footer() {
             </div>
           </div>
           <div className={styles.list_container}>
+            <ul>
+              <div className={styles.list_title}>Company</div>
+              {companyLinkList.map((child, childIndex) => (
+                <li key={childIndex}>
+                  {child.isExternal ? (
+                    <a href={child.link} target="_blank">
+                      {child.title}
+                    </a>
+                  ) : (
+                    <Link href={child.link}>{child.title}</Link>
+                  )}
+                </li>
+              ))}
+            </ul>
             <ul>
               <div className={styles.list_title}>Policies</div>
               {helpList.map((child, childIndex) => (

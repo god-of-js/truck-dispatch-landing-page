@@ -1,0 +1,143 @@
+@import '../styles/sizes.scss';
+@import '../styles/variables.scss';
+
+.about_us {
+    .hero_section {
+        min-height: 60vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        h1 {
+            color: $color-gray-90;
+            text-align: center;
+            font-size: px(52);
+            font-style: normal;
+            font-weight: 700;
+            line-height: px(52);
+            letter-spacing: px(-1.92);
+            margin-bottom: px(64);
+        }
+    }
+
+    .company_profile {
+        width: $screen-width;
+        max-width: $max-screen-width;
+        margin: auto;
+        background: $color-gray-30;
+        border-radius: px(32);
+        padding: px(16);
+        display: grid;
+        gap: px(20);
+
+        &__content {
+            background: white;
+            border-radius: px(20);
+            padding: px(20) px(16);
+
+            h2 {
+                color: $color-neutralBlack;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                letter-spacing: px(-0.48);
+                margin-bottom: px(12);
+            }
+
+            p {
+                color: $color-gray-80;
+                font-size: px(20);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                margin-bottom: px(20);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            b {
+                font-weight: 700;
+                color: $color-neutralBlack;
+            }
+        }
+
+    }
+
+    .customer_insights {
+        width: $screen-width;
+        max-width: $max-screen-width;
+        margin: auto;
+        padding: px(100) 0;
+        border-bottom: px(1) solid $color-gray-40;
+        display: grid;
+        gap: px(100);
+
+        h2 {
+            font-size: px(40);
+            font-style: normal;
+            font-weight: 700;
+            line-height: px(48);
+            text-align: center;
+            letter-spacing: px(-0.96);
+        }
+        .align {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: px(32);
+        }
+        .hidden_in_mobile {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: #{$tabletSmallWidth}) {
+        .hero_section {
+            h1 {
+                font-size: px(96);
+                line-height: px(100);
+                margin-bottom: px(120);
+            }
+        }
+
+        .company_profile {
+            padding: px(40);
+            gap: px(40);
+
+            &__content {
+                padding: px(32) px(40);
+            }
+        }
+
+        .customer_insights {
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+
+            h2 {
+                font-size: px(48);
+                font-size: px(56);
+                text-align: left;
+            }
+
+            .align {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: px(32);
+                
+                h2 {
+                    text-align: right;
+                }
+            }
+            .hidden_in_mobile {
+                display: block;
+            }
+            .hidden_in_large {
+                display: none;
+            }
+        }
+    }
+}
