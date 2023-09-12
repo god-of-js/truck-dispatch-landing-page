@@ -67,7 +67,7 @@ export default function AboutUs() {
                     <h2>Our Mission</h2>
                     <p>At TruckDispatch, our mission is to revolutionize the freight industry by enhancing operational efficiency and addressing security concerns.
                         <br />
-                        Through the utilization of cutting-edge technology and innovative solutions, we aim to optimize the supply chain ecosystem, ensuring seamless, secure, and timely delivery of goods. By providing a platform that prioritizes efficiency and reliability, we empower businesses to thrive and prosper in today's dynamic marketplace.
+                        Through the utilization of cutting-edge technology and innovative solutions, we aim to optimize the supply chain ecosystem, ensuring seamless, secure, and timely delivery of goods. By providing a platform that prioritizes efficiency and reliability, we empower businesses to thrive and prosper in {"today's"} dynamic marketplace.
                     </p>
                     <p>
                         With a relentless commitment to excellence, we are dedicated to shaping the future of logistics and enabling seamless connections between shippers and transporters.</p>
