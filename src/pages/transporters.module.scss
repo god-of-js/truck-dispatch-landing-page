@@ -1,0 +1,213 @@
+@import '../styles/sizes.scss';
+@import '../styles/variables.scss';
+
+.shippers_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .benefits {
+        max-width: $max-screen-width;
+        width: $screen-width;
+        padding: px(130) 0;
+
+        header {
+            display: grid;
+            gap: px(32);
+            padding-bottom: px(64);
+
+            h2 {
+                color: $color-neutralBlack;
+                text-align: center;
+                font-size: px(40);
+                font-style: normal;
+                font-weight: 700;
+                line-height: px(40);
+                letter-spacing: px(-0.8);
+                text-align: center;
+            }
+
+            .header_line {
+                background: $color-gray-40;
+                padding-top: px(1);
+                height: fit-content;
+                flex-grow: 1;
+            }
+
+        }
+
+        .benefits__list {
+            display: grid;
+            gap: px(20);
+        }
+
+        .get_started {
+            background: $color-primary;
+            padding: px(48);
+            padding-bottom: px(16);
+            border-radius: px(32);
+            overflow: hidden;
+
+            .content {
+                display: grid;
+                gap: px(24);
+                min-width: px(360);
+            }
+
+            p {
+                color: #FFF;
+                font-size: px(32);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                letter-spacing: px(-0.64);
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .img_container {
+                padding-top: px(60);
+
+                img {
+                    margin-left: px(0);
+                }
+            }
+        }
+    }
+
+    .how_it_works {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: px(64);
+        padding-top: px(100);
+        padding-bottom: px(200);
+        max-width: $max-screen-width;
+        width: $screen-width;
+
+        h2 {
+            color: $color-neutralBlack;
+            font-size: px(40);
+            font-style: normal;
+            font-weight: 700;
+            line-height: px(48);
+            letter-spacing: px(-0.8);
+            text-align: center;
+        }
+
+        &__list {
+            display: grid;
+            gap: px(20);
+        }
+        button {
+            min-width: px(182);
+        }
+    }
+
+    @media screen and (min-width: #{$mobileSmall}) {
+        .benefits {
+            .get_started {
+                .img_container {
+                    img {
+                        margin-left: px(60)
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$mobile}) {
+        .benefits {
+            header {
+                display: flex;
+                gap: px(64);
+                align-items: center;
+
+                h2 {
+                    font-size: px(48);
+                    line-height: px(56);
+                    letter-spacing: px(-0.96);
+                    width: fit-content;
+                    text-align: left;
+                }
+            }
+
+            .benefits__list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .get_started {
+                grid-column: span 2;
+
+                button {
+                    width: px(140);
+                }
+
+                .img_container {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    img {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$mobileLargeWidth}) {
+        .benefits {
+            .get_started {
+                .img_container {
+                    padding-top: 0;
+
+                    img {
+                        margin-top: px(-40);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$tabletSmallWidth}) {
+        .benefits {
+            .benefits__list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .get_started {
+                grid-column: span 3;
+                display: flex;
+                padding: px(80) px(80);
+                gap: px(40);
+            }
+        }
+        .how_it_works {
+            h2 {
+                font-size: px(48);
+                line-height: px(56);
+                letter-spacing: px(-0.96);
+            }
+
+            &__list {
+                grid-template-columns: auto auto;
+            }
+        }
+    }
+
+    @media screen and (min-width: #{$tabletLargeWidth}) {
+        .benefits {
+            .benefits__list {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .get_started {
+                grid-column: span 4;
+                display: flex;
+                padding: px(119) px(120);
+                gap: px(80);
+            }
+        }
+    }
+}
