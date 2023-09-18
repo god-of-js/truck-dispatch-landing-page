@@ -54,7 +54,7 @@
       .logo_container {
         display: grid;
         gap: px(30);
-        color: $color-gray-60;
+        color: $color-gray-90;
         width: fit-content;
         height: fit-content;
 
@@ -69,16 +69,16 @@
         display: grid;
         grid-template-columns: auto auto;
         gap: px(40);
-      }
 
-      ul {
         .list_title {
           margin-bottom: px(21);
           font-size: px(16);
           font-weight: 700;
           line-height: px(24);
         }
+      }
 
+      ul {
         li {
           font-size: px(14);
           line-height: px(40);
