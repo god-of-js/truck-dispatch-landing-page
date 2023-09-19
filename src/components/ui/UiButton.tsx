@@ -19,6 +19,7 @@ interface Props {
   | 'danger';
   size?: Sizes;
   type?: 'submit' | 'button';
+  ariaLabel?: string;
   textCasing?: 'uppercase' | 'lowercase' | 'capitalize';
   isSquare?: boolean;
   /** This prop decides if we want the button to fit the content or be full width */
@@ -31,11 +32,13 @@ type Sizes = 'large' | 'md' | 's' | 'text';
 export default function UiButton({
   children,
   onClick,
+  ariaLabel,
   disabled = false,
   loading = false,
   variant = 'primary',
   type = 'submit',
   size = 'md',
+  
 }: Props) {
   return (
     <button
@@ -43,6 +46,7 @@ export default function UiButton({
       onClick={onClick}
       disabled={disabled || loading}
       type={type}
+      aria-label={ariaLabel}
     >
       {loading ? <span>Loading...</span> : children}
     </button>

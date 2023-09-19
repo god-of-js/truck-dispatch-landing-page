@@ -21,7 +21,13 @@ export default function UserTypeDetails({ userType }: Props) {
         {userType.avatars && <div className={`${styles.avatars_container} ${styles[`align_${userType.avatarContainerDirection}`]}`}>
             <div className={styles.avatars_container__inner}>
                 {userType.avatars.map((avatar, index) => (<div key={index} className={styles.avatar}>
-                    <Image src={avatar} alt="Truckdispatch Transporters" />
+                    <Image 
+                      src={avatar} 
+                      alt="Truckdispatch Transporters" 
+                      width={82} 
+                      height={82}
+                      sizes="(min-width: 580px) 82px, (min-width: 420px) 64px, 59px"
+                      />
                 </div>))}
             </div>
         </div>}

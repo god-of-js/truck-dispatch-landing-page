@@ -55,7 +55,7 @@ export default function TopNav() {
           </li>)}
         </ul>
         <div className={styles.hide_in_large}>
-          <UiButton variant="neutral" onClick={() => setIsSidebarVisible(true)}>
+          <UiButton variant="neutral" ariaLabel='Toggle mobile menu' onClick={() => setIsSidebarVisible(true)}>
             <svg width="20" height="12" viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg">
               <g id="vuesax/linear/menu">
                 <g id="menu">
