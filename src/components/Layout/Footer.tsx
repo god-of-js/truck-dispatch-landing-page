@@ -62,40 +62,46 @@ export default function Footer() {
               Driving Efficiency, Connecting the Supply Chain
             </p>
             <div className={styles.social_links}>
-              <a href="https://www.linkedin.com/company/truckdispatch/" target="_blank"><UiIcon icon="LinkedinLogo" size="24"/></a>
-              <a href="https://www.instagram.com/gettruckdispatch/" target="_blank"><UiIcon icon="InstagramLogo" size="24"/></a>
+              <a href="https://www.linkedin.com/company/truckdispatch/" target="_blank" title="Visit our linkedin page"><UiIcon icon="LinkedinLogo" size="24"/></a>
+              <a href="https://www.instagram.com/gettruckdispatch/" target="_blank" title="Visit our linkedin page"><UiIcon icon="InstagramLogo" size="24"/></a>
               {/* <a href="https://www.instagram.com/gettruckdispatch/" target="_blank"><UiIcon icon="TwitterLogo" size="24"/></a> */}
             </div>
           </div>
           <div className={styles.list_container}>
-            <ul>
-              <div className={styles.list_title}>Company</div>
-              {companyLinkList.map((child, childIndex) => (
-                <li key={childIndex}>
-                  {child.isExternal ? (
-                    <a href={child.link} target="_blank">
-                      {child.title}
-                    </a>
-                  ) : (
-                    <Link href={child.link}>{child.title}</Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-            <ul>
-              <div className={styles.list_title}>Policies</div>
-              {helpList.map((child, childIndex) => (
-                <li key={childIndex}>
-                  {child.isExternal ? (
-                    <a href={child.link} target="_blank">
-                      {child.title}
-                    </a>
-                  ) : (
-                    <Link href={child.link}>{child.title}</Link>
-                  )}
-                </li>
-              ))}
-            </ul>
+            <div>
+              <h4 className={styles.list_title}>Company</h4>
+              <ul>
+                {companyLinkList.map((child, childIndex) => (
+                  <li key={childIndex}>
+                    {child.isExternal ? (
+                      <a href={child.link} target="_blank">
+                        {child.title}
+                      </a>
+                    ) : (
+                      <Link href={child.link}>{child.title}</Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className={styles.list_title}>Policies</h4>
+              <ul>
+                {helpList.map((child, childIndex) => (
+                  <li key={childIndex}>
+                    {child.isExternal ? (
+                      <a href={child.link} target="_blank">
+                        {child.title}
+                      </a>
+                    ) : (
+                      <Link href={child.link}>{child.title}</Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+              
+            </div>
           </div>
         </footer>
         <p className={styles.copyright}>
