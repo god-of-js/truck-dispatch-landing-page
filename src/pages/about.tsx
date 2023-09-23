@@ -69,7 +69,7 @@ export default function AboutUs() {
                         <h2>Our History</h2>
                         <p>Truck dispatch was established in 2023 by <b>Eze Chisom</b>, driven by his profound upbringing in the freight industry and his keen observation of existing limitations within the logistics sector.</p>
                         <p>
-                            Recognizing the imperative need for solutions, he embarked on a mission to optimize the industry by leveraging their extensive family network of experienced transporters, which collectively spans over 40 years of freight expertise.</p>
+                            Recognizing the imperative need for solutions, he embarked on a mission to optimize the industry by leveraging his extensive family network of experienced transporters, which collectively spans over 40 years of freight expertise.</p>
                         <p>Harnessing his business acumen, he set out to alleviate the challenges plaguing the logistics sector, offering innovative and efficient solutions to meet the evolving demands of the industry.</p>
                     </div>
                     <div className={styles.company_profile__content}>
