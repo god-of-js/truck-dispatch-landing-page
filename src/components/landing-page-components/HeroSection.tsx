@@ -6,21 +6,16 @@ interface Props {
     subtitle: string;
     btnActionText: string;
     btnUrl: string;
-    isBtnUrlActive?:boolean;
     isActionExternal?: boolean
 }
-export default function HeroSection({ title, subtitle, btnActionText, btnUrl, isBtnUrlActive }: Props) {
+export default function HeroSection({ title, subtitle, btnActionText, btnUrl }: Props) {
     return (
         <section className={styles.hero_section}>
             <h1 dangerouslySetInnerHTML={{__html: title}} />
             <p>{subtitle}</p>
-            {isBtnUrlActive?
               <a href={`${btnUrl}`}>
                  <UiButton>{btnActionText}</UiButton>
-              </a>
-            :
-            <UiButton>{btnActionText}</UiButton>
-            }
+              </a>    
         </section>
     )
 }

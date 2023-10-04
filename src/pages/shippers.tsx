@@ -101,7 +101,7 @@ export default function ShippersPage() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.shippers_page}>
-                <HeroSection title="Experience <br /> seamless & efficient transportation" btnActionText="Get Started" isBtnUrlActive btnUrl='https://dashboard.gettruckdispatch.com/auth/join' subtitle="Our commitment to reliability ensures stress-free shipments, while our transparent cost structure provides clarity and peace of mind for shippers." />
+                <HeroSection title="Experience <br /> seamless & efficient transportation" btnActionText="Get Started"  btnUrl='https://dashboard.gettruckdispatch.com/auth/join' subtitle="Our commitment to reliability ensures stress-free shipments, while our transparent cost structure provides clarity and peace of mind for shippers." />
                 <section className={styles.benefits}>
                     <header>
                         <h2>Exclusive benefits <br /> for Shippers</h2>

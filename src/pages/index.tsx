@@ -23,7 +23,6 @@ export default function Home() {
           subtitle="With vetted transporters, goods security, insurance, we promise a swift, reliable, and sustainable road freight transport."
           btnActionText='Get Started'
           btnUrl="https://dashboard.gettruckdispatch.com/auth/join"
-          isBtnUrlActive
         />
         <ProductDemo />
         <UserTypes />
