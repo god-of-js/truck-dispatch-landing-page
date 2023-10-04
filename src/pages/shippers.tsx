@@ -101,7 +101,7 @@ export default function ShippersPage() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.shippers_page}>
-                <HeroSection title="Experience <br /> seamless & efficient transportation" btnActionText="Get Started" btnActionUrl="" subtitle="Our commitment to reliability ensures stress-free shipments, while our transparent cost structure provides clarity and peace of mind for shippers." />
+                <HeroSection title="Experience <br /> seamless & efficient transportation" btnActionText="Get Started" isBtnUrlActive btnUrl='https://dashboard.gettruckdispatch.com/auth/join' subtitle="Our commitment to reliability ensures stress-free shipments, while our transparent cost structure provides clarity and peace of mind for shippers." />
                 <section className={styles.benefits}>
                     <header>
                         <h2>Exclusive benefits <br /> for Shippers</h2>
@@ -111,9 +111,10 @@ export default function ShippersPage() {
                         {benefits.map((benefit, index) => <BenefitCard key={index} benefit={benefit} />)}
                         <div className={styles.get_started}>
                             <div className={styles.content}>
-
                                 <p>Start enjoying better working experience & transport solutions tailored for you.</p>
-                                <UiButton variant='white'>Get Started</UiButton>
+                                <a href="https://dashboard.gettruckdispatch.com/auth/join">
+                                   <UiButton variant='white'>Get Started</UiButton>
+                                </a>
                             </div>
                             <div className={styles.img_container}>
                                 <Image src={Van} alt="Truckdispatch truck" />

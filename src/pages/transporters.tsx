@@ -117,7 +117,7 @@ export default function TransportersPage() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.shippers_page}>
-                <HeroSection title="Supercharge <br /> your business growth with us" btnActionText="Get Started" btnActionUrl="" subtitle="Access a wide range of loads, enjoy fast payments, streamline administrative tasks, and efficiently manage your fleet." />
+                <HeroSection title="Supercharge <br /> your business growth with us" btnActionText="Get Started" isBtnUrlActive btnUrl='https://dashboard.gettruckdispatch.com/auth/join' subtitle="Access a wide range of loads, enjoy fast payments, streamline administrative tasks, and efficiently manage your fleet." />
                 <section className={styles.benefits}>
                     <header>
                         <h2>Exclusive benefits <br /> for Transporters</h2>
@@ -129,7 +129,9 @@ export default function TransportersPage() {
                             <div className={styles.content}>
 
                                 <p>Start enjoying better working experience & transport solutions tailored for you.</p>
-                                <UiButton variant='white'>Get Started</UiButton>
+                                <a href="https://dashboard.gettruckdispatch.com/auth/join">
+                                  <UiButton variant='white'>Get Started</UiButton>
+                                </a>
                             </div>
                             <div className={styles.img_container}>
                                 <Image src={Van} alt="Truckdispatch truck" />
