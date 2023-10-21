@@ -5,15 +5,17 @@ interface Props {
     title: string;
     subtitle: string;
     btnActionText: string;
-    btnActionUrl: string;
+    btnUrl: string;
     isActionExternal?: boolean
 }
-export default function HeroSection({ title, subtitle, btnActionText, btnActionUrl }: Props) {
+export default function HeroSection({ title, subtitle, btnActionText, btnUrl }: Props) {
     return (
         <section className={styles.hero_section}>
             <h1 dangerouslySetInnerHTML={{__html: title}} />
             <p>{subtitle}</p>
-            <UiButton>{btnActionText}</UiButton>
+              <a href={`${btnUrl}`}>
+                 <UiButton>{btnActionText}</UiButton>
+              </a>    
         </section>
     )
 }
