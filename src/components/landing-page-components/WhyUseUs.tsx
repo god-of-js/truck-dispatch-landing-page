@@ -32,7 +32,9 @@ export default function WhyUseUs() {
         <div className={styles.hero_section}>
             <Image src={RoundedTruckImage} alt="Truckdispatch gettruckdispatch" />
             <h4>Logistics is a {"people's"} business. We are convinced the best value is created by personal touch.</h4>
-            <UiButton>GET STARTED</UiButton>
+            <a href="https://dashboard.gettruckdispatch.com/auth/join">
+             <UiButton>GET STARTED</UiButton>
+            </a>
         </div>
         <UiList data={peopleBenefits} />
     </section>

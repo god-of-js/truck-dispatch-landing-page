@@ -27,12 +27,12 @@ export default function Footer() {
     },
     {
       title: 'Blog',
-      link: '/contact',
+      link: '/blog',
       isExternal: false,
     },
     {
       title: 'FAQs',
-      link: '/contact',
+      link: '/faqs',
       isExternal: false,
     },
     {

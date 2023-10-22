@@ -22,8 +22,7 @@ export default function Home() {
           title="Transform your <br /> Road freight & Cargo Delivery experience"
           subtitle="With vetted transporters, goods security, insurance, we promise a swift, reliable, and sustainable road freight transport."
           btnActionText='Get Started'
-          btnActionUrl="/"
-          
+          btnUrl="https://dashboard.gettruckdispatch.com/auth/join"
         />
         <ProductDemo />
         <UserTypes />
