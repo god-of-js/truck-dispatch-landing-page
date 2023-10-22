@@ -8,7 +8,7 @@ export default function FAQs() {
         <>
             <Head>
                 <title>Blog - TruckDispatch - Freight Transportation Services | Connect with Verified Carriers and Shippers</title>
-                <meta name="description" content="Explore our FAQ section for answers to frequently asked questions about TruckDispatch." />
+                <meta name="description" content="Explore our FAQ section for answers to frequently asked questions about TruckDispatch, including inquiries related to road freight. Find the information you need to make the most of our services and streamline your road freight operations." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

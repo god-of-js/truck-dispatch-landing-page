@@ -96,7 +96,7 @@ export default function ShippersPage() {
         <>
             <Head>
                 <title>Shippers - TruckDispatch - Freight Transportation Services | Connect with Verified Carriers and Shippers</title>
-                <meta name="description" content="Explore our platform designed for shippers, connecting you with trusted carriers and transport solutions. Simplify your logistics and streamline your shipping processes with TruckDispatch." />
+                <meta name="description" content="Explore our platform designed for shippers, connecting you with trusted carriers and transport solutions, specializing in road freight. Simplify your logistics and streamline your road freight shipping processes with TruckDispatch." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

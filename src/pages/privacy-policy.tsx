@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
     <>
       <Head>
         <title>Privacy Policy - TruckDispatch - Freight Transportation Services | Connect with Verified Carriers and Shippers</title>
-        <meta name="description" content="Review our policies on TruckDispatch, including our privacy policy, terms of service, and shipping guidelines. We're committed to transparency and ensuring a smooth experience for all users." />
+        <meta name="description" content="Review our policies on TruckDispatch, including our privacy policy, terms of service, and shipping guidelines, which cover various aspects, including those related to road freight. We're committed to transparency and ensuring a smooth experience for all users." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

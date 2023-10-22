@@ -7,7 +7,7 @@ export default function TermsAndConditions() {
         <>
         <Head>
           <title>Terms and Conditions - TruckDispatch - Freight Transportation Services | Connect with Verified Carriers and Shippers</title>
-          <meta name="description" content="Navigate the legal framework of TruckDispatch with our comprehensive terms and agreements. Gain clarity on our policies, ensuring a secure and trustworthy partnership." />
+          <meta name="description" content="Navigate the legal framework of TruckDispatch with our comprehensive terms and agreements, which encompass various aspects, including those related to road freight. Gain clarity on our policies, ensuring a secure and trustworthy partnership." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
