@@ -62,7 +62,7 @@ export default function UserTypes() {
     return (
         <section className={styles.user_types_section}>
             <div className={styles.user_types_banner}>
-                <Image src={Van} alt="TruckDispatch Van" />
+                <Image src={Van} alt="TruckDispatch gettruckdispatch Van" />
                 <div className={styles.user_types_banner__content}>
                     <h2>Transport solutions for
                         Businesses & Individuals to <span className={styles.purple_text}>Solve</span> any cargo transport problems.</h2>

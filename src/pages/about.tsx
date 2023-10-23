@@ -55,7 +55,7 @@ export default function AboutUs() {
         <>
             <Head>
                 <title>About Us - TruckDispatch - Freight Transportation Services | Connect with Verified Carriers and Shippers</title>
-                <meta name="description" content="TruckDispatch connects freight carriers and truck owners with shippers in need of transportation. Whether you're shipping goods across town or across the country, we can help you find the right truck to get the job done. Contact us today to learn more about our services." />
+                <meta name="description" content="Discover our story and mission at TruckDispatch, where we are dedicated to connecting freight carriers and truck owners with shippers to provide efficient road freight transportation solutions. Learn about our commitment to streamlining the road freight industry and delivering top-quality service." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
