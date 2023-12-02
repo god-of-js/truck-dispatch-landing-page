@@ -67,6 +67,10 @@
     .hide_in_mobile {
       display: block;
     }
+    .action_btns {
+      display: flex;
+      gap: 4px;
+    }
 
     .hide_in_large {
       display: none;

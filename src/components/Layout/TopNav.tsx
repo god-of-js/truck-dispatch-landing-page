@@ -66,27 +66,37 @@ export default function TopNav() {
               </g>
             </svg>
           </UiButton>
-
         </div>
-        <a href="https://dashboard.gettruckdispatch.com/auth/join" className={`${styles.get_started} ${styles.hide_in_mobile}`}>
-          <UiButton variant="secondary">
-            GET STARTED
-          </UiButton>
-        </a>
+        <div className={`${styles.action_btns} ${styles.hide_in_mobile}`}>
+          <a href="https://dashboard.gettruckdispatch.com/auth/login">
+            <UiButton variant="neutral" textCasing="capitalize">
+              Log In
+            </UiButton>
+          </a>
+          <a href="https://dashboard.gettruckdispatch.com/auth/join">
+            <UiButton variant="secondary" textCasing="capitalize">
+              <b>Get Started</b> for free!
+            </UiButton>
+          </a>
+        </div>
       </div>
-        <div className={styles.hide_in_large}>
-          <UiModal isVisible={isSidebarVisible} onClose={() => setIsSidebarVisible(false)}>
-            <ul>
-              {routes.map((route, index) => <li key={index} className={router.pathname === route.link ? styles.active : ''} onClick={() => setIsSidebarVisible(false)}>
-                <Link href={route.link}>{route.name}</Link>
-              </li>)}
-              <li>
-                <a href="https://dashboard.gettruckdispatch.com/auth/join">
-                  Get Started
-                </a></li>
-            </ul>
-          </UiModal>
-        </div>
+      <div className={styles.hide_in_large}>
+        <UiModal isVisible={isSidebarVisible} onClose={() => setIsSidebarVisible(false)}>
+          <ul>
+            {routes.map((route, index) => <li key={index} className={router.pathname === route.link ? styles.active : ''} onClick={() => setIsSidebarVisible(false)}>
+              <Link href={route.link}>{route.name}</Link>
+            </li>)}
+            <li>
+              <a href="https://dashboard.gettruckdispatch.com/auth/login">
+                Log In
+              </a></li>
+            <li>
+              <a href="https://dashboard.gettruckdispatch.com/auth/join">
+                Get Started
+              </a></li>
+          </ul>
+        </UiModal>
+      </div>
     </nav>
   );
 }

@@ -35,6 +35,7 @@ export default function UiButton({
   ariaLabel,
   disabled = false,
   loading = false,
+  textCasing = 'uppercase',
   variant = 'primary',
   type = 'submit',
   size = 'md',
@@ -47,6 +48,7 @@ export default function UiButton({
       disabled={disabled || loading}
       type={type}
       aria-label={ariaLabel}
+      style={{ textTransform: textCasing}}
     >
       {loading ? <span>Loading...</span> : children}
     </button>
