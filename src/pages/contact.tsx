@@ -23,8 +23,8 @@ export default function ContactPage() {
   const [loading, setLoading] = useState(false);
 
   function onSubmit () {
-    setLoading(true)
-    axios.post('https://api.gettruckdispatch.com/api/v0.1/marketing/send-message', contactData)
+    // setLoading(true)
+    axios.post('http://localhost:5000/api/v0.1/marketing/send-message', contactData)
     .then(()=>{
       setLoading(false)
       Toast.success({msg:'Your message has been recorded, we will get to you shortly'})
