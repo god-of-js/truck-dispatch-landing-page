@@ -32,16 +32,15 @@ export default function ProductDemo() {
       {openVideoModal && (
         <UiModal
           position="center"
-          // bgVariant="light"
           isVisible={openVideoModal}
           onClose={() => setOpenVideoModal(false)}
         >
           <VideoPlayerWrapper>
             <ReactPlayer
               className="react-player"
-              url="video/shippers.MP4"
-              height="55vh"
-              width="fit-content"
+              url="video/truckdispatch-demo.MP4"
+              height="60vh"
+              width="100%"
               controls={true}
             />
           </VideoPlayerWrapper>
@@ -58,11 +57,11 @@ const VideoPlayerWrapper = styled.div`
   position: relative;
   overflow: hidden;
   padding-bottom: 24px;
+
   @media only screen and (max-width: ${sizes.mobile}) {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
   }
 `;
