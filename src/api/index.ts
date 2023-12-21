@@ -11,5 +11,5 @@ console.log(BACKEND_URL);
 
 
 export default function sendMessage (message: Message) {
-  return instance.post(BACKEND_URL, message)
+  return instance.get(`${BACKEND_URL}`)
 }
