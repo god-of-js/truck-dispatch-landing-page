@@ -35,6 +35,7 @@ export default function ContactPage() {
         message:'',
       })
     }) .catch((error)=>{
+        setLoading(false)
         console.log(error);
     })
   }
@@ -97,7 +98,7 @@ export default function ContactPage() {
                 label='Message*'
                 error={errors.message}
                 />
-                <UiButton >
+                <UiButton loading={loading}>
                   Submit
                   <UiIcon icon='ArrowRight'/>
                 </UiButton>
