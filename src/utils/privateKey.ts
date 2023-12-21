@@ -1,1 +1,3 @@
-export const BACKEND_URL = 'https://api.gettruckdispatch.com/api/v0.1/';
+export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL + '/api/v0.1';
+console.log(BACKEND_URL);
+  
