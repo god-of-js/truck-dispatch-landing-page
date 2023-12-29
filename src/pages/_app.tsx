@@ -1,7 +1,8 @@
-import type { AppProps } from 'next/app'
-import { IntercomProvider } from '@/utils/intercomProvider'
-import Layout from '@/components/Layout/Layout'
-import '@/styles/globals.scss'
+import type { AppProps } from "next/app";
+import { IntercomProvider } from "@/utils/intercomProvider";
+import Layout from "@/components/Layout/Layout";
+import "@/styles/globals.scss";
+import "../variables.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -10,5 +11,5 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Layout>
     </IntercomProvider>
-  )
+  );
 }

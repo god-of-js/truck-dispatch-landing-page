@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/utils/intercom.js", "src/utils/intercom.js", "src/utils/intercomProvider.js", "src/utils/intercomProvider.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src", "src/utils/intercom.js", "src/utils/intercom.js", "src/utils/intercomProvider.js", "src/utils/intercomProvider.js"],
   "exclude": ["node_modules"]
 }
