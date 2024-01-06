@@ -38,9 +38,9 @@ export default function ProductDemo() {
           <VideoPlayerWrapper>
             <ReactPlayer
               className="react-player"
-              url="video/truckdispatch-demo.MP4"
-              height="60vh"
-              width="100%"
+              url="https://www.youtube.com/watch?v=n_kxIfte0Rs"
+              height="55vh"
+              width="85%"
               controls={true}
             />
           </VideoPlayerWrapper>
