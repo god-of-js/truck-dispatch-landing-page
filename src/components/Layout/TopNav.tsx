@@ -1,12 +1,14 @@
+import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./TopNav.module.scss";
 import logo from "../../assets/full-logo.svg";
 
-import UiButton from "../ui/UiButton";
 import { useRouter } from "next/router";
-import UiModal from "../ui/UiModal";
+
+const UiButton = dynamic(() => import("../ui/UiButton"));
+const UiModal = dynamic(() => import("../ui/UiModal"));
 
 export default function TopNav() {
   const router = useRouter();
