@@ -4,7 +4,7 @@ import FirstPlace from "@/assets/first-place.jpeg";
 import RockHand from "@/assets/rockhand.jpeg";
 import Woohhoo from "@/assets/woohhoo.jpeg";
 import Diamond from "@/assets/diamond.jpeg";
-import Van from "@/assets/van.svg";
+import Van from "@/assets/van.png";
 import Image from "next/image";
 import Head from "next/head";
 

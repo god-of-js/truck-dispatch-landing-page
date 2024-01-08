@@ -5,7 +5,7 @@ import Security from "@/assets/security.jpeg";
 import Ratings from "@/assets/ratings.jpeg";
 import DigitalizedComputer from "@/assets/digitalized-computer.jpeg";
 import HandShake from "@/assets/handshake.jpeg";
-import Van from "@/assets/van.svg";
+import Van from "@/assets/van.png";
 import Image from "next/image";
 import Head from "next/head";
 
