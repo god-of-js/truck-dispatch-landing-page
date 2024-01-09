@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import styles from "./WhyUseUs.module.scss";
-import RoundedTruckImage from "../../assets/rounded-truck-img.svg";
+import RoundedTruckImage from "../../assets/rounded-truck-img.png";
 import Image from "next/image";
 import { Data } from "../ui/UiList";
 

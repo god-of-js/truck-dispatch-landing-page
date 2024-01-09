@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./TopNav.module.scss";
-import logo from "../../assets/full-logo.svg";
+import logo from "../../assets/full-logo.png";
 
 import { useRouter } from "next/router";
 
