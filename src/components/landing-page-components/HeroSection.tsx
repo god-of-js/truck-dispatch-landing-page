@@ -1,21 +1,26 @@
 import UiButton from "../ui/UiButton";
-import styles from './HeroSection.module.scss';
+import styles from "./HeroSection.module.scss";
 
 interface Props {
-    title: string;
-    subtitle: string;
-    btnActionText: string;
-    btnUrl: string;
-    isActionExternal?: boolean
+  title: string;
+  subtitle: string;
+  btnActionText: string;
+  btnUrl: string;
+  isActionExternal?: boolean;
 }
-export default function HeroSection({ title, subtitle, btnActionText, btnUrl }: Props) {
-    return (
-        <section className={styles.hero_section}>
-            <h1 dangerouslySetInnerHTML={{__html: title}} />
-            <p>{subtitle}</p>
-              <a href={`${btnUrl}`}>
-                 <UiButton>{btnActionText}</UiButton>
-              </a>    
-        </section>
-    )
+export default function HeroSection({
+  title,
+  subtitle,
+  btnActionText,
+  btnUrl,
+}: Props) {
+  return (
+    <section className={styles.hero_section}>
+      <h1 dangerouslySetInnerHTML={{ __html: title }} />
+      <p>{subtitle}</p>
+      <a href={`${btnUrl}`}>
+        <UiButton>{btnActionText}</UiButton>
+      </a>
+    </section>
+  );
 }
