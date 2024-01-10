@@ -10,30 +10,28 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          TruckDispatch - Freight Transportation & Truck Dispatch Services
-        </title>
+        <title>TruckDispatch - Freight & Truck Dispatch Services</title>
         <meta
           name="description"
-          content="TruckDispatch connects freight carriers and truck owners with shippers in need of transportation. Whether you're shipping goods across town or across the country, we can help you find the right truck to get the job done. Contact us today to learn more about our road freight services."
+          content="TruckDispatch streamlines freight logistics, connecting carriers, truck owners, and shippers for efficient transportation. Ship goods locally or nationally. Contact us for excellence.."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="keywords"
-          content="truck dispatch, truck dispatch services, freight transportation, road freight, cargo delivery, vetted transporters, dispatch company"
-        />
-        <meta name="author" content="https://www.gettruckdispatch.com/" />
-        <meta name="publisher" content="https://www.gettruckdispatch.com/" />
 
         {/* opengraph */}
-        <meta property="og:title" content="Truck Dispatch" />
+        <meta
+          property="og:title"
+          content="Revolutionize your freight experience with TruckDispatch."
+        />
         <meta
           property="og:description"
-          content="TruckDispatch connects freight carriers and truck owners with shippers in need of transportation."
+          content="TruckDispatch connects carriers & truck owners to shippers for efficient transportation. Ship goods locally or nationally. Contact us for top-notch freight services."
         />
         <meta property="og:url" content="https://www.gettruckdispatch.com/" />
         <meta property="og:site_name" content="Truck Dispatch" />
-        <meta property="og:image" content="https://picsum.photos/1200/630" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png"
+        />
         <meta property="og:image:type" content="web" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -42,18 +40,22 @@ export default function Home() {
         <meta name="twitter:image:type" content="web" />
         <meta name="twitter:image:width" content="1200" />
         <meta name="twitter:image:height" content="630" />
-        <meta name="twitter:image" content="https://picsum.photos/1200/630" />
-        <meta name="twitter:title" content="Truck Dispatch" />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png"
+        />
+        <meta
+          name="twitter:title"
+          content="Revolutionize your freight experience with TruckDispatch."
+        />
         <meta
           name="twitter:description"
-          content="TruckDispatch connects freight carriers and truck owners with shippers in need of transportation."
+          content="TruckDispatch connects carriers & truck owners to shippers for efficient transportation. Ship goods locally or nationally. Contact us for top-notch freight services."
         />
         {/* opengraph */}
 
         <link rel="canonical" href="https://www.gettruckdispatch.com/" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="image_src" />
-        <link rel="https://picsum.photos/1200/630" />
       </Head>
 
       <main className={styles.main}>

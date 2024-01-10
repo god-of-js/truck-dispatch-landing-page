@@ -155,16 +155,62 @@ export default function TransportersPage() {
     <>
       <Head>
         <title>
-          Transporters - TruckDispatch - Freight Transportation Services |
-          Connect with Verified Carriers and Shippers
+          Transporters - TruckDispatch - Freight & Truck Dispatch Services
         </title>
         <meta
           name="description"
-          content="Join our network as a transporter or truck owner and gain access to a broad range of shipping opportunities. Find road freight that matches your capacity and expand your business with TruckDispatch."
+          content="Join our network as a transporter or truck owner, access diverse shipping opportunities. Find road freight, expand your business with TruckDispatch."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* opengraph */}
+        <meta
+          property="og:title"
+          content="Explore TruckDispatch, the platform for truck owners."
+        />
+        <meta
+          property="og:description"
+          content="Join our network as a transporter or truck owner, access diverse shipping opportunities. Find road freight, expand your business with TruckDispatch."
+        />
+        <meta
+          property="og:url"
+          content="https://www.gettruckdispatch.com/transporters"
+        />
+        <meta property="og:site_name" content="Truck Dispatch" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png"
+        />
+        <meta property="og:image:type" content="web" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:type" content="web" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png"
+        />
+        <meta
+          name="twitter:title"
+          content="Explore TruckDispatch, the platform for truck owners."
+        />
+        <meta
+          name="twitter:description"
+          content="Join our network as a transporter or truck owner, access diverse shipping opportunities. Find road freight, expand your business with TruckDispatch."
+        />
+        {/* opengraph */}
+
+        <link
+          rel="canonical"
+          href="https://www.gettruckdispatch.com/transporters"
+        />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png" />
       </Head>
+
       <div className={styles.shippers_page}>
         <HeroSection
           title="Supercharge <br /> your business growth with us"
