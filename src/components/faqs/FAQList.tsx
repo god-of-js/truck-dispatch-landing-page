@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import styles from './FAQList.module.scss';
-import UiIcon from '../ui/UiIcon';
+import dynamic from "next/dynamic";
+import React, { useState } from "react";
+import styles from "./FAQList.module.scss";
+
+const UiIcon = dynamic(() => import("../ui/UiIcon"));
 
 interface Props {
   isMini?: boolean;
@@ -12,36 +14,36 @@ export default function FAQList({ isMini }: Props) {
       answer: `The mission of TruckDispatch is to enhance the operational efficiency and efficacy of the freight industry while addressing the security and theft apprehensions of agents. By leveraging advanced technology and innovative solutions, we strive to optimize the supply chain ecosystem and ensure seamless, secure, and timely delivery of goods, thereby enabling businesses to thrive and prosper'`,
     },
     {
-      question: 'Is TruckDispatch free?',
+      question: "Is TruckDispatch free?",
       answer: `TruckDispatch is free for our transporters and they would be paid for every trip they carry out. However, agents are billed only 7% of the bid price they accept.`,
     },
     {
-      question: 'How does TruckDispatch assign trips to transporters?',
+      question: "How does TruckDispatch assign trips to transporters?",
       answer: `At the moment, TruckDispatch does not assign trips to transporters. Instead, TruckDispatch broadcasts trips to our network of transporters. Any transporter interested in the trip sends a bid which can either be accepted by the agent or rejected.`,
     },
     {
-      question: 'How do I get paid as a transporter?',
+      question: "How do I get paid as a transporter?",
       answer: `As a transporter, you can request payment after loading the trip. However, you have to upload the <b>Proof Of Loading</b> which is a video vividly showing the truck plate number and other details of the trip. <br /> No <b>Proof Of Loading (POL) =</b> No Payment`,
     },
     {
-      question: 'What is required for transporter verification?',
+      question: "What is required for transporter verification?",
       answer: `To get verified as a transporter, you need to take a selfie using our app, upload a valid means of identification, home address, a utility bill for your home address, garage address, company address, a guarantor and his identification details as well as his home address. Till a transporter is properly verified, he can't bid for jobs or be granted any job <br /> PS: All details are subject to thorough background checks and investigation.`,
     },
     {
-      question: 'How does TruckDispatch handle fraud?',
+      question: "How does TruckDispatch handle fraud?",
       answer: `TruckDispatch transporters undergo a very thorough verification and vetting process which makes fraud almost impossible. However, TruckDispatch has penalties for transporters who are fraudulent and we eradicate their accounts in case of such. We are also working on a collaboration with the Nigeria Police Force(NPF) hence, all fraud cases would be directly handed over for further investigation and apprehension.`,
     },
   ];
   const listToRender = isMini ? list.slice(0, 5) : list;
   const [active, setActive] = useState(list[0].question);
-  const [open, setOpen] = useState<number | boolean>(false)
+  const [open, setOpen] = useState<number | boolean>(false);
 
   const toggleOpen = (index: number) => {
     if (open === index) {
-      return setOpen(false)
+      return setOpen(false);
     }
-    setOpen(index)
-  }
+    setOpen(index);
+  };
 
   function isActive(question: string) {
     return active === question;
@@ -53,22 +55,23 @@ export default function FAQList({ isMini }: Props) {
         <li key={index} className={styles.faq_item}>
           <div
             className={styles.header}
-            style={isActive(item.question) ? { color: '#15131B' } : {}}
+            style={isActive(item.question) ? { color: "#15131B" } : {}}
             onClick={() => {
-              setActive(isActive(item.question) ? '' : item.question)
-              toggleOpen(index)
-            }
-            }
+              setActive(isActive(item.question) ? "" : item.question);
+              toggleOpen(index);
+            }}
           >
             <div>{item.question}</div>
-            <UiIcon icon={isActive(item.question) ? 'CaretUp' : 'CaretDown'} />
+            <UiIcon icon={isActive(item.question) ? "CaretUp" : "CaretDown"} />
           </div>
-          {(
+          {
             <p
-              className={`${open === index ? styles.faq_item_answer_show_content : ''} ${styles.faq_item_answer}`}
+              className={`${
+                open === index ? styles.faq_item_answer_show_content : ""
+              } ${styles.faq_item_answer}`}
               dangerouslySetInnerHTML={{ __html: item.answer }}
             />
-          )}
+          }
         </li>
       ))}
     </ul>
