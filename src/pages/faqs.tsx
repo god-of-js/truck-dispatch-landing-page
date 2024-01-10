@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import styles from "./FAQs.module.scss";
+
 const FAQList = dynamic(() => import("@/components/faqs/FAQList"));
 
 export default function FAQs() {

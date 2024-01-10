@@ -1,9 +1,13 @@
+import dynamic from "next/dynamic";
 import styles from "./about.module.scss";
-import UiList from "../components/ui/UiList";
-import RoundedTruckImage from "@/assets/rounded-truck-img.svg";
-import ContactUs from "@/components/landing-page-components/ContactUs";
+import RoundedTruckImage from "@/assets/rounded-truck-img.png";
 import Image from "next/image";
 import Head from "next/head";
+
+const UiList = dynamic(() => import("../components/ui/UiList"));
+const ContactUs = dynamic(
+  () => import("@/components/landing-page-components/ContactUs")
+);        
 
 export default function AboutUs() {
   const whyTruckDispatch = [

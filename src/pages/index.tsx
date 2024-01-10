@@ -1,10 +1,22 @@
 import Head from "next/head";
 import styles from "./index.module.scss";
-import HeroSection from "@/components/landing-page-components/HeroSection";
-import ProductDemo from "@/components/landing-page-components/ProductDemo";
-import UserTypes from "@/components/landing-page-components/UserTypes";
-import WhyUseUs from "@/components/landing-page-components/WhyUseUs";
-import ContactUs from "@/components/landing-page-components/ContactUs";
+import dynamic from "next/dynamic";
+
+const HeroSection = dynamic(
+  () => import("@/components/landing-page-components/HeroSection")
+);
+const ProductDemo = dynamic(
+  () => import("@/components/landing-page-components/ProductDemo")
+);
+const UserTypes = dynamic(
+  () => import("@/components/landing-page-components/UserTypes")
+);
+const WhyUseUs = dynamic(
+  () => import("@/components/landing-page-components/WhyUseUs")
+);
+const ContactUs = dynamic(
+  () => import("@/components/landing-page-components/ContactUs")
+);
 
 export default function Home() {
   return (
@@ -13,7 +25,7 @@ export default function Home() {
         <title>TruckDispatch - Freight & Truck Dispatch Services</title>
         <meta
           name="description"
-          content="TruckDispatch streamlines freight logistics, connecting carriers, truck owners, and shippers for efficient transportation. Ship goods locally or nationally. Contact us for excellence.."
+          content="TruckDispatch streamlines freight logistics, connecting carriers, truck owners, and shippers for efficient transportation. Ship goods locally or nationally. Contact us for excellence."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 

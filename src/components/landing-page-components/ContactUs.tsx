@@ -1,5 +1,8 @@
-import UiButton from "../ui/UiButton";
+
+import dynamic from "next/dynamic";
 import styles from "./ContactUs.module.scss";
+
+const UiButton = dynamic(() => import("../ui/UiButton"));
 
 export default function ContactUs() {
   return (
@@ -13,8 +16,7 @@ export default function ContactUs() {
           <a
             title="truckdispatch email"
             href="mailto:support@gettruckdispatch.com"
-            target="_blank"
-          >
+            target="_blank">
             <UiButton variant="white">Contact Us</UiButton>
           </a>
           <UiButton> Get A Quote</UiButton>

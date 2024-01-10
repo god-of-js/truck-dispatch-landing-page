@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./UserTypes.module.scss";
-import Van from "../../assets/van.svg";
+import Van from "../../assets/van.png";
 import Shipper1 from "../../assets/shipper-1.jpg";
 import Shipper2 from "../../assets/shipper-2.jpg";
 import Shipper3 from "../../assets/shipper-3.jpg";
@@ -65,6 +65,7 @@ export default function UserTypes() {
           title="TruckDispatch gettruckdispatch Van"
           alt="TruckDispatch gettruckdispatch Van"
         />
+
         <div className={styles.user_types_banner__content}>
           <h2>
             Transport solutions for Businesses & Individuals to{" "}

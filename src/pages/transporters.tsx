@@ -1,16 +1,22 @@
+import dynamic from "next/dynamic";
 import styles from "./transporters.module.scss";
-import HeroSection from "@/components/landing-page-components/HeroSection";
-import ContactUs from "@/components/landing-page-components/ContactUs";
 import FirstPlace from "@/assets/first-place.jpeg";
 import RockHand from "@/assets/rockhand.jpeg";
 import Woohhoo from "@/assets/woohhoo.jpeg";
 import Diamond from "@/assets/diamond.jpeg";
-import Van from "@/assets/van.svg";
-import BenefitCard from "@/components/BenefitCard";
-import UiButton from "@/components/ui/UiButton";
-import UiList from "@/components/ui/UiList";
+import Van from "@/assets/van.png";
 import Image from "next/image";
 import Head from "next/head";
+
+const UiButton = dynamic(() => import("../components/ui/UiButton"));
+const UiList = dynamic(() => import("../components/ui/UiList"));
+const HeroSection = dynamic(
+  () => import("@/components/landing-page-components/HeroSection")
+);
+const ContactUs = dynamic(
+  () => import("../components/landing-page-components/ContactUs")
+);
+const BenefitCard = dynamic(() => import("@/components/BenefitCard"));
 
 export default function TransportersPage() {
   const benefits = [
@@ -245,6 +251,7 @@ export default function TransportersPage() {
                   title="TruckDispatch gettruckdispatch truck"
                   alt="Truckdispatch truck"
                 />
+
               </div>
             </div>
           </div>

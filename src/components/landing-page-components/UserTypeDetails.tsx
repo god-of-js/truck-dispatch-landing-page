@@ -1,7 +1,10 @@
+
+import dynamic from "next/dynamic";
 import Image, { StaticImageData } from "next/image";
-import UiButton from "../ui/UiButton";
-import UiIcon from "../ui/UiIcon";
 import styles from "./UserTypeDetails.module.scss";
+
+const UiButton = dynamic(() => import("../ui/UiButton"));
+const UiIcon = dynamic(() => import("../ui/UiIcon"));
 
 export interface UserType {
   label: string;
@@ -52,9 +55,10 @@ export default function UserTypeDetails({ userType }: Props) {
         <p>{userType.description}</p>
         <div className={styles.action_container}>
           <UiButton variant="primary-text">
-            LEARN MORE <UiIcon icon="ArrowRight" />{" "}
+            LEARN MORE <UiIcon icon="ArrowRight" />
           </UiButton>
         </div>
+
       </div>
     </div>
   );

@@ -1,10 +1,12 @@
+import dynamic from "next/dynamic";
 import { useState } from "react";
-import UiButton from "../ui/UiButton";
 import styles from "./ProductDemo.module.scss";
-import UiModal from "../ui/UiModal";
-import ReactPlayer from "react-player";
 import styled from "styled-components";
 import sizes from "@/utils/sizes";
+
+const UiButton = dynamic(() => import("../ui/UiButton"));
+const UiModal = dynamic(() => import("../ui/UiModal"));
+const ReactPlayer = dynamic(() => import("react-player"));
 
 export default function ProductDemo() {
   const [openVideoModal, setOpenVideoModal] = useState(false);

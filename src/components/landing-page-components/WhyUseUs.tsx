@@ -1,8 +1,12 @@
+
+import dynamic from "next/dynamic";
 import styles from "./WhyUseUs.module.scss";
-import RoundedTruckImage from "../../assets/rounded-truck-img.svg";
+import RoundedTruckImage from "../../assets/rounded-truck-img.png";
 import Image from "next/image";
-import UiButton from "../ui/UiButton";
-import UiList, { Data } from "../ui/UiList";
+import { Data } from "../ui/UiList";
+
+const UiButton = dynamic(() => import("../ui/UiButton"));
+const UiList = dynamic(() => import("../ui/UiList"));
 
 export default function WhyUseUs() {
   const clipboardIcon = (
@@ -46,14 +50,14 @@ export default function WhyUseUs() {
           title="Truckdispatch gettruckdispatch"
           alt="Truckdispatch gettruckdispatch"
         />
+
         <h4>
           Logistics is a {"people's"} business. We are convinced the best value
           is created by personal touch.
         </h4>
         <a
           title="join truckdispatch"
-          href="https://dashboard.gettruckdispatch.com/auth/join"
-        >
+          href="https://dashboard.gettruckdispatch.com/auth/join">
           <UiButton>GET STARTED</UiButton>
         </a>
       </div>

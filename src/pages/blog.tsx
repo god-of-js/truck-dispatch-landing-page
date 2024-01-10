@@ -1,6 +1,11 @@
-import ContactUs from "@/components/landing-page-components/ContactUs";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import styles from "./blog.module.scss";
+
+const ContactUs = dynamic(
+  () => import("@/components/landing-page-components/ContactUs")
+);
+
 export default function BlogPage() {
   return (
     <>

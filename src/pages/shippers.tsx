@@ -1,17 +1,25 @@
+
+import dynamic from "next/dynamic";
 import styles from "./shippers.module.scss";
-import HeroSection from "@/components/landing-page-components/HeroSection";
-import ContactUs from "@/components/landing-page-components/ContactUs";
 import FirstPlace from "@/assets/first-place.jpeg";
 import Security from "@/assets/security.jpeg";
 import Ratings from "@/assets/ratings.jpeg";
 import DigitalizedComputer from "@/assets/digitalized-computer.jpeg";
 import HandShake from "@/assets/handshake.jpeg";
-import Van from "@/assets/van.svg";
-import BenefitCard from "@/components/BenefitCard";
-import UiButton from "@/components/ui/UiButton";
-import UiList from "@/components/ui/UiList";
+
+import Van from "@/assets/van.png";
 import Image from "next/image";
 import Head from "next/head";
+
+const UiList = dynamic(() => import("../components/ui/UiList"));
+const UiButton = dynamic(() => import("../components/ui/UiButton"));
+const BenefitCard = dynamic(() => import("@/components/BenefitCard"));
+const HeroSection = dynamic(
+  () => import("@/components/landing-page-components/HeroSection")
+);
+const ContactUs = dynamic(
+  () => import("@/components/landing-page-components/ContactUs")
+);
 
 export default function ShippersPage() {
   const benefits = [
@@ -182,6 +190,7 @@ export default function ShippersPage() {
         <link rel="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png" />
       </Head>
 
+
       <div className={styles.shippers_page}>
         <HeroSection
           title="Experience <br /> seamless & efficient transportation"
@@ -216,6 +225,7 @@ export default function ShippersPage() {
                   src={Van}
                   alt="Truckdispatch truck"
                 />
+
               </div>
             </div>
           </div>

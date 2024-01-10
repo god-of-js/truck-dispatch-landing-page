@@ -1,5 +1,8 @@
-import UiButton from "../ui/UiButton";
+
+import dynamic from "next/dynamic";
 import styles from "./HeroSection.module.scss";
+
+const UiButton = dynamic(() => import("../ui/UiButton"));
 
 interface Props {
   title: string;
