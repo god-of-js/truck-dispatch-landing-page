@@ -1,3 +1,4 @@
+
 import dynamic from "next/dynamic";
 import styles from "./shippers.module.scss";
 import FirstPlace from "@/assets/first-place.jpeg";
@@ -5,6 +6,7 @@ import Security from "@/assets/security.jpeg";
 import Ratings from "@/assets/ratings.jpeg";
 import DigitalizedComputer from "@/assets/digitalized-computer.jpeg";
 import HandShake from "@/assets/handshake.jpeg";
+
 import Van from "@/assets/van.png";
 import Image from "next/image";
 import Head from "next/head";
@@ -132,16 +134,63 @@ export default function ShippersPage() {
     <>
       <Head>
         <title>
-          Shippers - TruckDispatch - Freight Transportation Services | Connect
-          with Verified Carriers and Shippers
+          Shippers - TruckDispatch - Freight & Truck Dispatch Services
         </title>
         <meta
           name="description"
-          content="Explore our platform designed for shippers, connecting you with trusted carriers and transport solutions, specializing in road freight. Simplify your logistics and streamline your road freight shipping processes with TruckDispatch."
+          content="Explore our platform for shippers, connecting with trusted carriers and road freight solutions. Simplify logistics with TruckDispatch, streamlining your shipping processes."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* opengraph */}
+        <meta
+          property="og:title"
+          content="Explore TruckDispatch, the platform for shippers."
+        />
+        <meta
+          property="og:description"
+          content="Explore our platform for shippers, connecting with trusted carriers and road freight solutions. Simplify logistics with TruckDispatch, streamlining your shipping processes."
+        />
+        <meta
+          property="og:url"
+          content="https://www.gettruckdispatch.com/shippers"
+        />
+        <meta property="og:site_name" content="Truck Dispatch" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png"
+        />
+        <meta property="og:image:type" content="web" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:type" content="web" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png"
+        />
+        <meta
+          name="twitter:title"
+          content="Explore TruckDispatch, the platform for shippers."
+        />
+        <meta
+          name="twitter:description"
+          content="Explore our platform for shippers, connecting with trusted carriers and road freight solutions. Simplify logistics with TruckDispatch, streamlining your shipping processes."
+        />
+        {/* opengraph */}
+
+        <link
+          rel="canonical"
+          href="https://www.gettruckdispatch.com/shippers"
+        />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png" />
       </Head>
+
+
       <div className={styles.shippers_page}>
         <HeroSection
           title="Experience <br /> seamless & efficient transportation"
@@ -171,7 +220,12 @@ export default function ShippersPage() {
                 </a>
               </div>
               <div className={styles.img_container}>
-                <Image src={Van} alt="Truckdispatch truck" />
+                <Image
+                  title="TruckDispatch gettruckdispatch truck"
+                  src={Van}
+                  alt="Truckdispatch truck"
+                />
+
               </div>
             </div>
           </div>

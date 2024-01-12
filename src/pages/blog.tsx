@@ -10,17 +10,62 @@ export default function BlogPage() {
   return (
     <>
       <Head>
-        <title>
-          Blog - TruckDispatch - Freight Transportation Services | Connect with
-          Verified Carriers and Shippers
-        </title>
+        <title>Blog - TruckDispatch - Freight & Truck Dispatch Services</title>
         <meta
           name="description"
-          content="Explore the latest industry insights, news, and tips on our TruckDispatch blog, covering a wide range of topics, including road freight. Stay informed about trends in the transportation and logistics sector, including the latest developments in road freight management."
+          content="Explore TruckDispatch's blog for industry insights, news, and tips, covering topics like road freight. Stay informed about transportation trends and the latest in road freight management."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="keywords"
+          content="truck dispatch blog, truck industry insights, logistics, logistics insights"
+        />
+
+        {/* opengraph */}
+        <meta
+          property="og:title"
+          content="Explore TruckDispatch Blog for Industry Insights."
+        />
+        <meta
+          property="og:description"
+          content="Explore TruckDispatch's blog for industry insights, news, and tips, covering topics like road freight. Stay informed about transportation trends and the latest in road freight management."
+        />
+        <meta
+          property="og:url"
+          content="https://www.gettruckdispatch.com/blog"
+        />
+        <meta property="og:site_name" content="Truck Dispatch" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png"
+        />
+        <meta property="og:image:type" content="web" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:type" content="web" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png"
+        />
+        <meta
+          name="twitter:title"
+          content="Explore TruckDispatch Blog for Industry Insights."
+        />
+        <meta
+          name="twitter:description"
+          content="Explore TruckDispatch's blog for industry insights, news, and tips, covering topics like road freight. Stay informed about transportation trends and the latest in road freight management."
+        />
+        {/* opengraph */}
+
+        <link rel="canonical" href="https://www.gettruckdispatch.com/blog" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704872874/opengraph-image_xvrtxa_yciokk.png" />
       </Head>
+
       <div className={styles.main}>
         <header>
           <h1>

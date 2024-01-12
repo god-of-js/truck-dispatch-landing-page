@@ -1,3 +1,4 @@
+
 import dynamic from "next/dynamic";
 import styles from "./HeroSection.module.scss";
 

@@ -1,3 +1,4 @@
+
 import dynamic from "next/dynamic";
 import styles from "./WhyUseUs.module.scss";
 import RoundedTruckImage from "../../assets/rounded-truck-img.png";
@@ -44,12 +45,19 @@ export default function WhyUseUs() {
   return (
     <section className={styles.why_use_us}>
       <div className={styles.hero_section}>
-        <Image src={RoundedTruckImage} alt="Truckdispatch gettruckdispatch" />
+        <Image
+          src={RoundedTruckImage}
+          title="Truckdispatch gettruckdispatch"
+          alt="Truckdispatch gettruckdispatch"
+        />
+
         <h4>
           Logistics is a {"people's"} business. We are convinced the best value
           is created by personal touch.
         </h4>
-        <a href="https://dashboard.gettruckdispatch.com/auth/join">
+        <a
+          title="join truckdispatch"
+          href="https://dashboard.gettruckdispatch.com/auth/join">
           <UiButton>GET STARTED</UiButton>
         </a>
       </div>

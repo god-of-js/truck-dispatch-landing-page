@@ -1,3 +1,4 @@
+
 import dynamic from "next/dynamic";
 import Image, { StaticImageData } from "next/image";
 import styles from "./UserTypeDetails.module.scss";
@@ -38,6 +39,7 @@ export default function UserTypeDetails({ userType }: Props) {
               <div key={index} className={styles.avatar}>
                 <Image
                   src={avatar}
+                  title="Truckdispatch gettruckdispatch Transporters"
                   alt="Truckdispatch gettruckdispatch Transporters"
                   width={82}
                   height={82}
@@ -53,9 +55,10 @@ export default function UserTypeDetails({ userType }: Props) {
         <p>{userType.description}</p>
         <div className={styles.action_container}>
           <UiButton variant="primary-text">
-            LEARN MORE <UiIcon icon="ArrowRight" />{" "}
+            LEARN MORE <UiIcon icon="ArrowRight" />
           </UiButton>
         </div>
+
       </div>
     </div>
   );

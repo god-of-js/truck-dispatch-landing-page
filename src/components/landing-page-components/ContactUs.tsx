@@ -1,3 +1,4 @@
+
 import dynamic from "next/dynamic";
 import styles from "./ContactUs.module.scss";
 
@@ -12,7 +13,10 @@ export default function ContactUs() {
           today!
         </h4>
         <div className={styles.action_container}>
-          <a href="mailto:support@gettruckdispatch.com" target="_blank">
+          <a
+            title="truckdispatch email"
+            href="mailto:support@gettruckdispatch.com"
+            target="_blank">
             <UiButton variant="white">Contact Us</UiButton>
           </a>
           <UiButton> Get A Quote</UiButton>

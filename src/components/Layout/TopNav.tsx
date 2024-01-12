@@ -48,8 +48,12 @@ export default function TopNav() {
   return (
     <nav className={styles.top_nav}>
       <div className={styles.top_nav_inner}>
-        <Link href="/">
-          <Image src={logo} alt="truck dispatch logo" />
+        <Link title="logo" href="/">
+          <Image
+            src={logo}
+            alt="truck dispatch logo"
+            title="truck dispatch logo"
+          />
         </Link>
         <ul className={styles.hide_in_mobile}>
           {routes.map((route, index) => (
@@ -57,7 +61,9 @@ export default function TopNav() {
               key={index}
               className={router.pathname === route.link ? styles.active : ""}
             >
-              <Link href={route.link}>{route.name}</Link>
+              <Link title={route.name} href={route.link}>
+                {route.name}
+              </Link>
             </li>
           ))}
         </ul>
@@ -99,12 +105,18 @@ export default function TopNav() {
           </UiButton>
         </div>
         <div className={`${styles.action_btns} ${styles.hide_in_mobile}`}>
-          <a href="https://dashboard.gettruckdispatch.com/auth/login">
+          <a
+            title="join truckdispatch"
+            href="https://dashboard.gettruckdispatch.com/auth/login"
+          >
             <UiButton variant="neutral" textCasing="capitalize">
               Log In
             </UiButton>
           </a>
-          <a href="https://dashboard.gettruckdispatch.com/auth/join">
+          <a
+            title="join truckdispatch"
+            href="https://dashboard.gettruckdispatch.com/auth/join"
+          >
             <UiButton variant="secondary" textCasing="capitalize">
               <b>Get Started</b> for free!
             </UiButton>
@@ -124,7 +136,9 @@ export default function TopNav() {
                 className={router.pathname === route.link ? styles.active : ""}
                 onClick={() => setIsSidebarVisible(false)}
               >
-                <Link href={route.link}>{route.name}</Link>
+                <Link title={route.name} href={route.link}>
+                  {route.name}
+                </Link>
               </li>
             ))}
             <li>

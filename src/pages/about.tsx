@@ -7,7 +7,7 @@ import Head from "next/head";
 const UiList = dynamic(() => import("../components/ui/UiList"));
 const ContactUs = dynamic(
   () => import("@/components/landing-page-components/ContactUs")
-);
+);        
 
 export default function AboutUs() {
   const whyTruckDispatch = [
@@ -113,15 +113,57 @@ export default function AboutUs() {
     <>
       <Head>
         <title>
-          About Us - TruckDispatch - Freight Transportation Services | Connect
-          with Verified Carriers and Shippers
+          About Us - TruckDispatch - Freight & Truck Dispatch Services
         </title>
         <meta
           name="description"
-          content="Discover our story and mission at TruckDispatch, where we are dedicated to connecting freight carriers and truck owners with shippers to provide efficient road freight transportation solutions. Learn about our commitment to streamlining the road freight industry and delivering top-quality service."
+          content="Explore TruckDispatch's story and mission. We connect carriers and truck owners with shippers, ensuring efficient road freight solutions. Discover our commitment to streamlining the industry and delivering top-quality service."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* opengraph */}
+        <meta
+          property="og:title"
+          content="Discover our story and mission at TruckDispatch."
+        />
+        <meta
+          property="og:description"
+          content="At TruckDispatch, we connect carriers and truck owners with shippers, ensuring efficient road freight solutions. Discover our commitment to streamlining the industry and delivering top-quality service"
+        />
+        <meta
+          property="og:url"
+          content="https://www.gettruckdispatch.com/about"
+        />
+        <meta property="og:site_name" content="Truck Dispatch" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704876550/about-us_cxenfl.png"
+        />
+        <meta property="og:image:type" content="web" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:type" content="web" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704876550/about-us_cxenfl.png"
+        />
+        <meta
+          name="twitter:title"
+          content="Discover our story and mission at TruckDispatch."
+        />
+        <meta
+          name="twitter:description"
+          content="At TruckDispatch, we connect carriers and truck owners with shippers, ensuring efficient road freight solutions. Discover our commitment to streamlining the industry and delivering top-quality service"
+        />
+        {/* opengraph */}
+
+        <link rel="canonical" href="https://www.gettruckdispatch.com/about" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="https://res.cloudinary.com/dkngy4g5z/image/upload/v1704876550/about-us_cxenfl.png" />
       </Head>
 
       <div className={styles.about_us}>
