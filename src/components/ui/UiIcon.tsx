@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // These icons should be arranged alphabetically for easy sorting
 import {
   ArrowLeft,
@@ -27,17 +27,21 @@ import {
   LinkedinLogo,
   TwitterLogo,
   InstagramLogo,
+  FacebookLogo,
+  YoutubeLogo,
   Star,
   Truck,
   User,
   UsersThree,
   X,
-} from 'phosphor-react';
+} from "phosphor-react";
 // These icons should be arranged alphabetically for easy sorting
 const icons = {
   LinkedinLogo: <LinkedinLogo />,
   TwitterLogo: <TwitterLogo />,
   InstagramLogo: <InstagramLogo />,
+  YoutubeLogo: <YoutubeLogo />,
+  FacebookLogo: <FacebookLogo />,
   ArrowLeft: <ArrowLeft />,
   ArrowRight: <ArrowRight />,
   ArrowUpRight: <ArrowUpRight />,
@@ -74,6 +78,6 @@ interface Props {
   icon: Icons;
   size?: string;
 }
-export default function UiIcon({ icon, size = '16' }: Props) {
-  return <div style={{ fontSize: size + 'px'}}>{icons[icon]}</div>;
+export default function UiIcon({ icon, size = "16" }: Props) {
+  return <div style={{ fontSize: size + "px" }}>{icons[icon]}</div>;
 }

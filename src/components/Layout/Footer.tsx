@@ -1,7 +1,8 @@
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
-import dynamic from "next/dynamic";
+import { Icon } from "phosphor-react";
+import { Icons } from "../ui/UiIcon";
 
 const UiButton = dynamic(() => import("../ui/UiButton"));
 const UiIcon = dynamic(() => import("../ui/UiIcon"));
@@ -41,6 +42,29 @@ export default function Footer() {
       isExternal: false,
     },
   ];
+
+  const socialLinks = [
+    {
+      link: "https://www.instagram.com/gettruckdispatch/",
+      title: "Instagram",
+      logo: "InstagramLogo",
+    },
+    {
+      link: "https://www.facebook.com/gettruckdispatch/",
+      title: "Facebook",
+      logo: "FacebookLogo",
+    },
+    {
+      link: "https://www.linkedin.com/company/truckdispatch/",
+      title: "Linkedin",
+      logo: "LinkedinLogo",
+    },
+    {
+      link: "https://www.youtube.com/@truckdispatch942/videos",
+      title: "Youtube",
+      logo: "YoutubeLogo",
+    },
+  ];
   const year = new Date().getFullYear();
   return (
     <div className={styles.footer}>
@@ -58,21 +82,11 @@ export default function Footer() {
             </Link>
             <p>Driving Efficiency, Connecting the Supply Chain</p>
             <div className={styles.social_links}>
-              <a
-                href="https://www.linkedin.com/company/truckdispatch/"
-                target="_blank"
-                title="Visit our linkedin page"
-              >
-                <UiIcon icon="LinkedinLogo" size="24" />
-              </a>
-              <a
-                href="https://www.instagram.com/gettruckdispatch/"
-                target="_blank"
-                title="Visit our linkedin page"
-              >
-                <UiIcon icon="InstagramLogo" size="24" />
-              </a>
-              {/* <a href="https://www.instagram.com/gettruckdispatch/" target="_blank"><UiIcon icon="TwitterLogo" size="24"/></a> */}
+              {socialLinks.map((sociallink) => (
+                <a href={sociallink.link} target="_blank">
+                  <UiIcon icon={sociallink.logo as Icons} size="24" />
+                </a>
+              ))}
             </div>
           </div>
           <div className={styles.list_container}>
