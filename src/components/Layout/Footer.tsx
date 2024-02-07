@@ -82,8 +82,8 @@ export default function Footer() {
             </Link>
             <p>Driving Efficiency, Connecting the Supply Chain</p>
             <div className={styles.social_links}>
-              {socialLinks.map((sociallink) => (
-                <a href={sociallink.link} target="_blank">
+              {socialLinks.map((sociallink, index) => (
+                <a key={index} href={sociallink.link} target="_blank">
                   <UiIcon icon={sociallink.logo as Icons} size="24" />
                 </a>
               ))}
