@@ -1,6 +1,7 @@
 import UiField from "./UiField";
 import styles from './UiInput.module.scss';
-
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input/input';
 
 export type OnChangeParams = { name: string; value: string | null };
 interface Props {
@@ -11,6 +12,7 @@ interface Props {
    * formData.confirm_password, the name prop should be confirm_password.
    */
   name: string;
+  type?: 'text' | 'phone'
   error?: string;
   disabled?: boolean;
   inputRef?: React.RefObject<HTMLInputElement>;
@@ -20,6 +22,7 @@ interface Props {
 export default function UiInput({
   label,
   name,
+  type,
   value,
   placeholder,
   disabled,
@@ -32,10 +35,26 @@ export default function UiInput({
       onChange({ name: e.target.name, value: e.target.value });
   }
 
+  function sendPhone(value: string | null | undefined) {
+    onChange({ name, value: value || null });
+  }
+
   return (
     <UiField label={label} error={error}>
       <div className={styles.input_wrapper}>
-        <input 
+          {type === 'phone' ? (
+          <div className={styles.phone_wrapper}>
+            <div className={styles.phone_tag}>+234</div>
+            <PhoneInput
+              value={`${value}` || ''}
+              country="NG"
+              className={`${styles.phone_input} ${error && styles.error}`}
+              placeholder="e.g: 08034283438"
+              onChange={(e) => sendPhone(e)}
+            />
+          </div>
+        ) : (
+          <input 
           className={`${styles.ui_input} ${error && styles.error}`}
           type="text" 
           value={value || ''}
@@ -44,6 +63,8 @@ export default function UiInput({
           ref={inputRef}
           disabled={disabled}
           onChange={sendValue}/>
+        )}
+        
       </div>
     </UiField>
   );

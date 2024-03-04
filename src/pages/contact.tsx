@@ -8,33 +8,34 @@ import UiTextArea from '@/components/ui/UiTextArea';
 import UiButton from '@/components/ui/UiButton';
 import UiIcon from '@/components/ui/UiIcon';
 import contactSchema from '@/utils/validations/contactSchema';
-import instance from '@/api/AxiosInstance';
 import { Toast } from '@/utils/toast';
-import axios from "axios";
-
+import sendMessage from '@/api';
 
 export default function ContactPage() {
   const [contactData, setContactData] = useState({
     name: '',
     email: '',
+    phone:'',
     companyName: '',
     message:'',
   })
   const [loading, setLoading] = useState(false);
 
-  function onSubmit () {
-    // setLoading(true)
-    axios.post('http://localhost:5000/api/v0.1/marketing/send-message', contactData)
+  function onSubmit () {    
+    setLoading(true)
+    sendMessage(contactData)  
     .then(()=>{
       setLoading(false)
       Toast.success({msg:'Your message has been recorded, we will get to you shortly'})
       setContactData({
         name: '',
         email: '',
+        phone:'',
         companyName: '',
         message:'',
       })
     }) .catch((error)=>{
+        setLoading(false)
         console.log(error);
     })
   }
@@ -67,26 +68,34 @@ export default function ContactPage() {
                 value={contactData.name}
                 onChange={handleChange}
                 error={errors.name}
-                label='Name'
+                label='Name*'
                 />
                 <UiInput 
                 name='email'
                 value={contactData.email}
                 onChange={handleChange}
                 error={errors.email}
-                label='Email'
+                label="Email Address*"
+                />
+                <UiInput 
+                name='phone'
+                type='phone'
+                value={contactData.phone}
+                onChange={handleChange}
+                error={errors.phone}
+                label='Phone*'
                 />
                 <UiInput 
                 name='companyName'
                 value={contactData.companyName}
                 onChange={handleChange}
-                label='Company name'
+                label='Company Name*'
                 />
                 <UiTextArea
                 name='message'
                 value={contactData.message}
                 onChange={handleChange}
-                label='Message'
+                label='Message*'
                 error={errors.message}
                 />
                 <UiButton loading={loading}>
