@@ -16,12 +16,12 @@
   z-index: 2;
 
   &_inner {
+    max-width: $max-screen-width;
     width: $screen-width;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: px(90);
-    max-width: $max-screen-width;
   }
 
   ul {
@@ -63,10 +63,11 @@
     display: none;
   }
 
-  @media screen and (min-width: #{$tabletSmallWidth}) {
+  @media screen and (min-width: #{$tablet}) {
     .hide_in_mobile {
       display: block;
     }
+
     .action_btns {
       display: flex;
       gap: 4px;
@@ -85,26 +86,12 @@
       margin-top: 0;
 
       li {
-
         &.active,
         &:hover {
           background: $color-gray-50;
           color: $color-gray-90;
         }
       }
-
-    }
-  }
-
-  @media screen and (min-width: #{$laptopWidth}) {
-    &_inner {
-      width: 80%;
-    }
-  }
-
-  @media screen and (min-width: #{$desktopWidth}) {
-    &_inner {
-      width: 70%;
     }
   }
 }
