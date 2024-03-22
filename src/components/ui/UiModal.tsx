@@ -8,7 +8,7 @@ import sizes from "@/utils/sizes";
 
 type Size = "lg" | "md" | "sm";
 type Position = "center" | "right";
-type BG = "dark" | "light";
+type BackgroundVariant = "dark" | "light";
 
 interface Props {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ interface Props {
   size?: Size;
   title?: string;
   hideModalClose?: boolean;
-  bgVariant?: BG;
+  bgVariant?: BackgroundVariant;
   onClose: () => void;
   goPrev?: () => void;
   isVisible: boolean;
@@ -137,11 +137,17 @@ function positionStyling({ position, size }: CardProps) {
     }
   `;
 }
+
 function getWidth(size?: Size) {
   if (size === "sm") return `width: ${px(540)};`;
 
   if (size === "md") return `width: ${px(724)};`;
+
   return `width: 50%;`;
+}
+
+function getBackgroundVariant(bgVariant?: BackgroundVariant) {
+  return bgVariant === "dark" ? "var(--color-gray-20)" : "#ffffff";
 }
 const Modal = styled.div`
   width: 100%;
@@ -151,12 +157,12 @@ const Modal = styled.div`
 interface CardProps {
   size?: Size;
   position?: Position;
-  bgVariant?: BG;
+  bgVariant?: BackgroundVariant;
 }
+
 const ModalCard = styled.div<CardProps>`
-  background: ${({ bgVariant }) =>
-    bgVariant === "dark" ? "var(--color-gray-20)" : "#ffffff"};
-  border-top-left-radius: px(8)};
+  background: ${({ bgVariant }) => getBackgroundVariant(bgVariant)};
+  border-top-left-radius: ${px(8)};
   border-top-right-radius: ${px(8)};
   height: 100%;
   overflow-y: auto;
