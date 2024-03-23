@@ -7,8 +7,6 @@ interface Message {
   phone:string,
   companyName?: string            
 }
-console.log(BACKEND_URL);
-
 
 export default function sendMessage (message: Message) {
   return instance.get(`${BACKEND_URL}/send-message`)

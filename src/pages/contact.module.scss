@@ -1,44 +1,18 @@
 @import '../styles/sizes.scss';
 @import '../styles/variables.scss';
 
-.main {
-  margin-top: 7rem;
-  margin-bottom: 6.25rem;
+.contact_us {
+  padding: px(140) px(20);
+  max-width: px(500);
+  margin: auto;
+  display: grid;
+  gap: px(12);
 
-  &_inner{
-    margin: auto;
-    padding: 0 px(16);
-    width: $screen-width;
-
-    .hero_section{
-      max-width: px(550);
-
-      h4 {
-        font-size: px(28);
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: px(-0.64);
-        margin-top: px(28);
-        margin-bottom: px(32);
-      }
-    }
-    form{
-      width: 100%;
-      button {
-        margin-top: .5rem;
-      }
-    }
-    
-  }
-
-  @media screen and (min-width: #{$tabletLargeWidth}) {
-    &_inner {
-        padding: 0 px(16);
-        width: $screen-width;
-        max-width: $max-screen-width;
-        display: flex;
-        justify-content: space-between;
-        gap: px(80);
-      }
+  h1 {
+    text-transform: uppercase;
+    font-size: px(24);
+    font-weight: 900;
+    margin-bottom: px(24);
+    text-align: center;
   }
 }
