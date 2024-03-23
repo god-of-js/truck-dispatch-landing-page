@@ -9,5 +9,5 @@ interface Message {
 }
 
 export default function sendMessage (message: Message) {
-  return instance.get(`${BACKEND_URL}/send-message`)
+  return instance.post(`${BACKEND_URL}/marketing/send-message`, message);
 }

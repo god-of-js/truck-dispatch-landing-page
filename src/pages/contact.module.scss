@@ -1,12 +1,11 @@
-@import '../styles/sizes.scss';
-@import '../styles/variables.scss';
+@import "../styles/sizes.scss";
+@import "../styles/variables.scss";
 
 .contact_us {
-  padding: px(140) px(20);
-  max-width: px(500);
+  max-width: $max-screen-width;
+  width: $screen-width;
   margin: auto;
-  display: grid;
-  gap: px(12);
+  padding: px(140) px(20);
 
   h1 {
     text-transform: uppercase;
@@ -14,5 +13,12 @@
     font-weight: 900;
     margin-bottom: px(24);
     text-align: center;
+  }
+
+  &__inner {
+    max-width: px(500);
+    margin: auto;
+    display: grid;
+    gap: px(12);
   }
 }
