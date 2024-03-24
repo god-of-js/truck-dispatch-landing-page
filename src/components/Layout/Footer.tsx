@@ -66,7 +66,7 @@ export default function Footer() {
       logo: "InstagramLogo",
     },
     {
-      link: "https://www.facebook.com/gettruckdispatch/",
+      link: "https://www.facebook.com/profile.php?id=61555470345402&mibextid=LQQJ4d",
       title: "Facebook",
       logo: "FacebookLogo",
     },
