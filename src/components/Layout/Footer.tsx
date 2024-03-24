@@ -1,8 +1,12 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import styles from "./Footer.module.scss";
-import { Icon } from "phosphor-react";
+import Image from "next/image";
+
+import logo from "../../assets/full-logo.svg";
+
 import { Icons } from "../ui/UiIcon";
+
+import styles from "./Footer.module.scss";
 
 const UiButton = dynamic(() => import("../ui/UiButton"));
 const UiIcon = dynamic(() => import("../ui/UiIcon"));
@@ -36,10 +40,22 @@ export default function Footer() {
       link: "/faqs",
       isExternal: false,
     },
+  ];
+  const contactLinkList = [
     {
-      title: "Contact",
+      title: "Contact form",
       link: "/contact",
       isExternal: false,
+    },
+    {
+      title: "E-Mail",
+      link: "mailto:support@gettruckdispatch.com",
+      isExternal: true,
+    },
+    {
+      title: "+2348033298274",
+      link: "tel:+2348033298274",
+      isExternal: true,
     },
   ];
 
@@ -78,7 +94,11 @@ export default function Footer() {
         <footer>
           <div className={styles.logo_container}>
             <Link title="truckdispatch" href="/">
-              <h3>TruckDispatch</h3>
+              <Image
+                src={logo}
+                alt="truck dispatch logo"
+                title="truck dispatch logo"
+              />
             </Link>
             <p>Driving Efficiency, Connecting the Supply Chain</p>
             <div className={styles.social_links}>
@@ -113,6 +133,24 @@ export default function Footer() {
               <h4 className={styles.list_title}>Policies</h4>
               <ul>
                 {helpList.map((child, childIndex) => (
+                  <li key={childIndex}>
+                    {child.isExternal ? (
+                      <a href={child.link} target="_blank">
+                        {child.title}
+                      </a>
+                    ) : (
+                      <Link title={child.title} href={child.link}>
+                        {child.title}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className={styles.list_title}>Contact Us</h4>
+              <ul>
+                {contactLinkList.map((child, childIndex) => (
                   <li key={childIndex}>
                     {child.isExternal ? (
                       <a href={child.link} target="_blank">

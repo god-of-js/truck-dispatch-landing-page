@@ -103,8 +103,11 @@
         gap: px(32);
       }
 
-      .list_container {
-        width: 50%;
+      footer {
+        .list_container {
+          width: 50%;
+          grid-template-columns: auto auto auto;
+        }
       }
 
       footer {
