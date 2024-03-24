@@ -53,7 +53,7 @@ export default function Footer() {
       isExternal: true,
     },
     {
-      title: "+2348033298274",
+      title: "+234 803 3298 274",
       link: "tel:+2348033298274",
       isExternal: true,
     },
