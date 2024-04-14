@@ -1,4 +1,4 @@
-export default {
+const sizes = {
   desktopWidth: "1440px",
   laptopWidth: "1366px",
   laptopSmallWidth: "1200px",
@@ -11,3 +11,5 @@ export default {
   mobileSmall: "414px",
   minResolution: "320px",
 };
+
+export default sizes;
