@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "public/truckdispatch-2d5cd",
     "ignore": [
       "firebase.json",
       "**/.*",
